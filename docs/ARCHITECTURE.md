@@ -459,10 +459,10 @@ critical-move label), `excellent`, `inaccuracy` and `miss` — are **retired**: 
 are no longer produced and no longer shown, because the user named the six he
 wants and said the rest were labels he did not know what they meant.
 
-The bands are **expected-score loss from the mover's point of view** (WintrChess's
-classifier), not raw centipawns — a 100cp loss is trivial at +9.00 and serious at
-equality. The `inaccuracy` band is folded into `good` because the app shows six
-labels, not nine:
+The bands are **expected-score loss from the mover's point of view** (the
+reference classifier), not raw centipawns — a 100cp loss is trivial at +9.00 and
+serious at equality. The `inaccuracy` band is folded into `good` because the app
+shows six labels, not nine:
 
 | Label | Expected-score loss | Roughly, from equality |
 |---|---|---|
@@ -475,7 +475,7 @@ labels, not nine:
 genuine material offer (`sacrificeValue`), a gap of at least 150cp to the
 second-best MultiPV line, not already winning and not a forced reply. A move that
 keeps a clearly won game won (≥ +400) is never relabelled a mistake — that guard
-exists for the mate-to-score transition. Glyphs match WintrChess (★ best, ✓ good,
+exists for the mate-to-score transition. Glyphs follow the familiar convention (★ best, ✓ good,
 📖 book, ? mistake, ?? blunder, !! brilliant).
 
 **A review with no evidence is refused.** If fewer than half the positions return

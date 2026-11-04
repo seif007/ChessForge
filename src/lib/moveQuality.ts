@@ -17,9 +17,9 @@
  * The old table called a move a mistake from 50cp of loss. That is only about
  * 4.6% of a win in an equal position, and it is smaller than the noise in a
  * single shallow search: a perfectly reasonable game came back looking full of
- * mistakes. Both Lichess and WintrChess classify by how much winning chance a
+ * mistakes. Lichess classifies by how much winning chance a
  * move actually gave up, because the same 100cp is trivial at +9.00 and serious
- * at equality. The exact 12%/22% split is WintrChess's `inaccuracy`/`mistake`
+ * at equality. The exact 12%/22% split is the `inaccuracy`/`mistake`
  * boundary folded into the two labels this app shows: with no `inaccuracy`
  * grade, everything below a real mistake is `good`.
  *
@@ -73,7 +73,7 @@ export const QUALITY_META: Record<QualityKind, QualityMeta> = {
   great: { name: 'Great Move', short: '!', color: '#749bbf', glyph: '!' },
   best: { name: 'Best Move', short: '', color: '#81b64c', glyph: '★' },
   excellent: { name: 'Excellent', short: '', color: '#96bc4b', glyph: '✓' },
-  // WintrChess draws `good` as a full tick, so it is the same shape here; the
+  // The reference draws `good` as a full tick, so it is the same shape here; the
   // retired `excellent` keeps its slightly different green on purpose, for old
   // saved games.
   good: { name: 'Good', short: '', color: '#9caf88', glyph: '✓' },
@@ -156,10 +156,10 @@ export const SACRIFICE_COST_CP = 30;
 /**
  * How much expected score a move must give up before it stops being `good`.
  *
- * WintrChess puts its `mistake` boundary at 0.12 expected points. This app does
+ * The `mistake` boundary sits at 0.12 expected points. This app does
  * not show `inaccuracy`, so the 0.08-0.12 `inaccuracy` band is deliberately
  * folded into `good` rather than promoted to a scarier word. 0.12 is therefore
- * the first real mistake, and 0.22 is the first blunder (WintrChess's next
+ * the first real mistake, and 0.22 is the first blunder (the next
  * boundary).
  *
  * These are fractions of a win, not centipawns. In an equal position 0.12 is
@@ -183,7 +183,7 @@ export const BLUNDER_POINT_LOSS = 0.22;
  * Lichess does not have this problem because its win-probability curve is much
  * flatter in that range: 100% to about 81% is below its 20% mistake boundary. 400
  * is where that boundary falls on this app's expected-points curve, so the guard
- * reproduces Lichess's behaviour with the curve WintrChess's bands are stated in.
+ * reproduces Lichess's behaviour with the curve the bands are stated in.
  */
 export const CLEAR_WIN_CP = 400;
 
@@ -224,7 +224,7 @@ export function classifyMove(inp: ClassifyInput): QualityKind {
    * that fact does not need the engine's permission.
    *
    * A checkmate is `best`, not `brilliant`, even when the mating move offers
-   * material: WintrChess short-circuits checkmate to BEST before it considers
+   * material: Checkmate is short-circuited to BEST before it considers
    * brilliant/critical, and a star is the honest badge for "this ended the game".
    */
   if (mateDelivered) return 'best';
@@ -281,7 +281,7 @@ export function classifyMove(inp: ClassifyInput): QualityKind {
      *      refute. What replaced it asks the move's own question — did it cost anything? — rather than
      *      asking about the absolute score, so a sacrifice from a losing position can still qualify.
      *
-     * The remaining guards are WintrChess's "critical move" conditions: a sacrifice in a
+     * The remaining guards are the "critical move" conditions: a sacrifice in a
      * completely winning position is not brilliant, nor is one in a losing position, nor a
      * forced reply to check, nor a promotion. They are conservative on purpose — a missing
      * brilliant is a smaller error than a false one.
@@ -323,7 +323,7 @@ export function classifyMove(inp: ClassifyInput): QualityKind {
    *     mistake   0.12 <= loss < 0.22
    *     blunder   loss >= 0.22
    *
-   * This is WintrChess's classification ladder with its `inaccuracy` band folded
+   * This is the classification ladder with its `inaccuracy` band folded
    * into `good`. The old 50cp/250cp ladder called a 4.6% swing a mistake and made
    * ordinary games look like disaster zones; 0.12 starts at roughly 140cp in an
    * equal position and does not punish a move for losing centipawns that were

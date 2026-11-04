@@ -142,3 +142,6 @@ scripts/ensure.ps1
 
 # Scratch written next to the file under test by a gate that was interrupted mid-run.
 *.tmp
+# Local gate / build logs
+.gates.log
+.apk-build.log

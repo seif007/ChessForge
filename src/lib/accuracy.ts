@@ -6,14 +6,14 @@
  * The analysis screen used to own two copies of this arithmetic — one for the
  * eval bar, one for the review — and the review added a third, different rule
  * for turning a centipawn loss into a move label. The formulas are the part of
- * a game review that users compare against Lichess and WintrChess, so they are
+ * a game review that users compare against Lichess and the reference model, so they are
  * kept in one place, with the sources named next to them.
  *
  * TWO DIFFERENT CURVES, ON PURPOSE
  * ================================
  *  - `winPercent` is Lichess's published win-probability curve. It is used for
  *    the eval bar and for the per-move/game accuracy score.
- *  - `expectedPoints` is the logistic used by WintrChess's classifier. It is
+ *  - `expectedPoints` is the logistic used by the move classifier. It is
  *    used to decide whether a move is good, a mistake or a blunder. The two
  *    curves are almost identical over normal evaluations; keeping each
  *    formula with the thing it was published for avoids inventing a third
@@ -75,7 +75,7 @@ export function winPercent(cp: number): number {
 /**
  * Expected score (0..1) for an evaluation from the side being measured.
  *
- * WintrChess uses this logistic with a 0.0035 gradient for its move
+ * The classifier uses this logistic with a 0.0035 gradient for its move
  * classification bands. Mate scores are folded onto the centipawn scale by the
  * caller, so a forced mate sits at the top of this curve.
  */

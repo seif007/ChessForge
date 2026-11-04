@@ -178,7 +178,7 @@ head('2. the six advertised labels are all reachable, and the bands are the stat
  *
  * A raw 50cp drop used to be a mistake. From equality that is only about 4.6%
  * of a win — below the noise of a shallow search — and it is why a reasonable
- * game came back full of mistakes. The classifier now uses WintrChess's
+ * game came back full of mistakes. The classifier now uses its
  * expected-points ladder with its `inaccuracy` band folded into `good`:
  * 0.12 is the first mistake and 0.22 is the first blunder. From equality that
  * is roughly 140cp and 270cp respectively.

@@ -12,8 +12,9 @@
  *   2. a 50cp drop was called a mistake, which is about 4.6% of a win and below search noise;
  *   3. the game accuracy was a plain mean, which dilutes one real blunder across a game.
  *
- * This gate pins the maths for 2 and 3 against Lichess and WintrChess, and checks the terminal
- * score handling that made a mating move look like a loss.
+ * This gate pins the maths for 2 and 3 against Lichess and the reference
+ * classifier, and checks the terminal score handling that made a mating move
+ * look like a loss.
  */
 
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
