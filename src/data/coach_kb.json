@@ -1,0 +1,2307 @@
+[
+  {
+    "kind": "concept",
+    "name": "weak_squares",
+    "title": "Weak squares and holes",
+    "aka": [
+      "hole",
+      "weak square",
+      "holes"
+    ],
+    "eco": "",
+    "summary": "A weak square is one that can never again be defended by a friendly pawn, so the opponent can settle pieces there.",
+    "detail": "When a pawn advances or disappears, the squares it used to defend become hard to cover, and an enemy piece can occupy them permanently because no pawn can ever chase it away. The most dangerous weak squares sit in the centre or near your king, on ranks 4-6. Trade the defenders of a hole before landing a piece on it, otherwise the invader just gets exchanged. A knight planted on a strong hole often outweighs a pawn.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "squares"
+    ],
+    "keywords": [
+      "weak",
+      "square",
+      "hole",
+      "invasion",
+      "occupy",
+      "outpost"
+    ],
+    "hooks": [
+      "holes",
+      "outposts"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "outpost",
+    "title": "Outposts",
+    "aka": [
+      "outpost square",
+      "strong square"
+    ],
+    "eco": "",
+    "summary": "An outpost is a square in enemy territory that no enemy pawn can ever attack, ideal for a knight.",
+    "detail": "An outpost is typically on the 5th or 6th rank, protected by one of your own pawns and impossible to challenge with enemy pawns, because the relevant enemy pawns have advanced past it or vanished. Knights thrive on outposts: a knight on a protected central outpost radiates into the enemy camp and cannot be evicted by pawns, while a bishop on a strong square controls a long diagonal. The classic pattern is a white knight on d5 supported by the e4 pawn against a Sicilian-type structure.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "squares",
+      "pieces"
+    ],
+    "keywords": [
+      "outpost",
+      "knight",
+      "d5",
+      "e5",
+      "c5",
+      "strong",
+      "square",
+      "anchor"
+    ],
+    "hooks": [
+      "outposts"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "color_complex",
+    "title": "Weak colour complexes",
+    "aka": [
+      "colour complex",
+      "weak colour",
+      "light squares",
+      "dark squares"
+    ],
+    "eco": "",
+    "summary": "When several pawns of one colour stand on the same square colour, the other colour's squares become chronically weak.",
+    "detail": "Pawn chains occupy the colour of the squares they sit on, so a structure like pawns on e6, d5 and c6 (all light squares) leaves the dark squares, above all e5, without pawn cover. The opponent aims the bishop of that colour and heavy pieces at the complex, and once the defending bishop of that colour is traded, knight landings and queen infiltration become permanent threats. The remedy is either to keep the bishop that matches the weak colour or to churn the structure with pawn breaks so new pawns return to defend.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "squares",
+      "bishops"
+    ],
+    "keywords": [
+      "colour",
+      "color",
+      "complex",
+      "light",
+      "dark",
+      "squares",
+      "bishop"
+    ],
+    "hooks": [
+      "color_weakness"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "minority_attack",
+    "title": "Minority attack",
+    "aka": [
+      "minority attack",
+      "carlsbad attack"
+    ],
+    "eco": "",
+    "summary": "Attack with the side of the board where you have FEWER pawns, so trades create weaknesses in the enemy majority.",
+    "detail": "In the Carlsbad structure (White pawns d4 with a2,b2 against Black c6,d5 with a7,b7), White marches a4 and b4-b5 against c6. If Black captures ...cxb5, White replies axb5 and the open a- and c-files plus the lasting weakness of b7 give White targets; if instead White gets bxc6 and Black recaptures ...bxc6, the c6 pawn is left backward on the semi-open c-file where White doubles rooks. Black's standard counters are ...Ne4 to relieve the pressure and the timely ...c5 break, when dxc5 ...d4 races the passed pawns.",
+    "whitePlan": "Play a4 and b4-b5 against Black's c6, with the rooks and queen placed for the c-file (Rc1, Qc2) after the trade bxc6 bxc6.",
+    "blackPlan": "Meet the minority attack with ...Ne4 activity, the ...c5 break at the right moment, or kingside piece play before the queenside is decided.",
+    "tags": [
+      "structure",
+      "strategy",
+      "queenside",
+      "pawn"
+    ],
+    "keywords": [
+      "minority",
+      "attack",
+      "b4-b5",
+      "c6",
+      "weakness",
+      "carlsbad"
+    ],
+    "hooks": [
+      "carlsbad",
+      "queenside_majority_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "iq_pawn",
+    "title": "Isolated queen's pawn",
+    "aka": [
+      "isolated pawn",
+      "IQP",
+      "isolani"
+    ],
+    "eco": "",
+    "summary": "An isolated queen's pawn gives space and open lines for attacking play, but becomes a static weakness in the endgame.",
+    "detail": "The classic isolani sits on d4 for White (d5 for Black) with no friendly pawns on the c- or e-files. The strong side gets free piece play: half-open c- and e-files for the rooks, outposts on d5 and e5, and attacking setups like Bd3, Nc3, Qd3 aiming at the enemy king. The defending side wins by trading pieces, blockading d5 with a knight that no pawn can evict, and pressuring d4 with pieces such as Nf6, Nc6 and Qb6. As pieces come off, the pawn's need for permanent defence outweighs its dynamics, which is why endgames with an isolani are usually lost for its owner.",
+    "whitePlan": "Attacking an isolated queen's pawn: keep the queens on, use the c- and e-files plus the e5/d5 outposts, and attack the king before the pawn becomes weak.",
+    "blackPlan": "Holding an isolated queen's pawn: trade pieces toward an endgame, blockade it (ideally with a knight), and pile piece pressure on it.",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn",
+      "centre"
+    ],
+    "keywords": [
+      "isolated",
+      "IQP",
+      "isolani",
+      "d4",
+      "d5",
+      "blockade",
+      "dynamics"
+    ],
+    "hooks": [
+      "iqp_white",
+      "iqp_black",
+      "isolated_pawn_white_d",
+      "isolated_pawn_black_d"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "backward_pawn",
+    "title": "Backward pawn",
+    "aka": [
+      "backward pawn",
+      "static weakness"
+    ],
+    "eco": "",
+    "summary": "A backward pawn cannot be defended by its fellow pawns and cannot safely advance, so it is a permanent target.",
+    "detail": "A pawn is backward when the pawns on the neighbouring files have advanced past it, leaving it behind on an open or semi-open file where enemy rooks can hit it. Typical examples are the c6 pawn after a Carlsbad trade bxc6 ...bxc6, or Black's d6 in structures where ...e5 has overextended. The exploitation recipe is to double heavy pieces on the pawn's file and either win it outright or tie defenders to it while playing elsewhere. The owner's remedy is a well-timed pawn break that trades the weakness away or transforms the structure.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn"
+    ],
+    "keywords": [
+      "backward",
+      "pawn",
+      "target",
+      "semi-open",
+      "file",
+      "pressure"
+    ],
+    "hooks": [
+      "backward_pawn_white",
+      "backward_pawn_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "doubled_pawns",
+    "title": "Doubled pawns",
+    "aka": [
+      "double pawns",
+      "doubled pawns"
+    ],
+    "eco": "",
+    "summary": "Doubled pawns cannot defend each other and control one file, but they are not always weak.",
+    "detail": "Doubled pawns arise after a capture on a file, most famously Black's c6/c7 pair in the Ruy Lopez Exchange after Bxc6. They are weak when isolated on an open file and unable to advance, and they give the opponent a ready-made attack target. But they also create an extra half-open file for the owner's rook, and doubled centre pawns often gain time and space, which is why openings like the Winawer French (bxc3) or the Exchange Ruy are fully playable. Judge doubled pawns by whether the front one can advance and whether the owner got compensation such as the bishop pair or an open file.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn"
+    ],
+    "keywords": [
+      "doubled",
+      "pawns",
+      "bxc3",
+      "Bxc6",
+      "half-open",
+      "file"
+    ],
+    "hooks": [
+      "doubled_pawns_white",
+      "doubled_pawns_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "hanging_pawns_concept",
+    "title": "Hanging pawns (concept)",
+    "aka": [
+      "hanging pawns"
+    ],
+    "eco": "",
+    "summary": "Two side-by-side pawns on open files control key central squares dynamically but cannot be defended by other pawns.",
+    "detail": "Hanging pawns, classically c5 and d5, control a big central square net and give their owner open files and space for piece play. Their defect is structural: no friendly pawn can ever defend them, so enemy rooks and minor pieces can attack them down the open c- and d-files. The owner must keep the initiative and look for the liberating pushes ...c4 or ...d4; the defender should avoid passive defence and instead attack the pair with pawn breaks like b4 or e4, forcing one pawn to advance so the other is left backward. As the position simplifies, hanging pawns tend to become weaker, so their owner wants queens and rooks on the board.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn",
+      "centre"
+    ],
+    "keywords": [
+      "hanging",
+      "pawns",
+      "c5",
+      "d5",
+      "central",
+      "dynamics",
+      "open",
+      "files"
+    ],
+    "hooks": [
+      "hanging_pawns_white",
+      "hanging_pawns_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "passed_pawn",
+    "title": "Passed pawns",
+    "aka": [
+      "passer",
+      "passed pawn",
+      "outside passer"
+    ],
+    "eco": "",
+    "summary": "A passed pawn has no enemy pawns blocking its path and must be blockaded; its value grows with every step.",
+    "detail": "A passer cannot be stopped by pawns, so the opponent must assign a piece to blockade it, and that piece then loses activity. Push a passed pawn supported by its king and pieces, but count the timing: an advanced passer that outruns its support can simply fall. Two special cases matter: a protected passed pawn (defended by a fellow pawn) is often worth a piece-level advantage in the endgame, and a rook should usually sit BEHIND a passer, own or enemy, so its scope grows as the pawn advances. In rook endings an outside passed pawn on the far wing is the classic decoy that pulls the enemy king away from the real battle.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "pawn",
+      "endgame"
+    ],
+    "keywords": [
+      "passed",
+      "pawn",
+      "passer",
+      "blockade",
+      "promote",
+      "outside",
+      "protected"
+    ],
+    "hooks": [
+      "passed_pawn_white",
+      "passed_pawn_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "pawn_chain",
+    "title": "Pawn chains",
+    "aka": [
+      "pawn chain",
+      "pawn wedge"
+    ],
+    "eco": "",
+    "summary": "In locked pawn chains, attack the BASE of the enemy chain and play on the wing your own chain points to.",
+    "detail": "A pawn chain is only as strong as its rearmost pawn, the base, because that is the only part a pawn can attack; the tip is protected by the whole chain. In the French Advance chain White d4-e5 against Black d5-e6, Black rightly hits the base with ...c5 while White's chain points toward the kingside, where White seeks space and attack. If the enemy attacks the base of your chain faster than you attack his, your entire structure can crumble, so count the tempo race before committing. Chain positions reward piece regrouping first, pawn breaks second.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn"
+    ],
+    "keywords": [
+      "pawn",
+      "chain",
+      "base",
+      "attack",
+      "french",
+      "advance",
+      "locked"
+    ],
+    "hooks": [
+      "closed_center"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "pawn_islands",
+    "title": "Pawn islands",
+    "aka": [
+      "pawn groups",
+      "islands"
+    ],
+    "eco": "",
+    "summary": "Fewer pawn islands usually mean a healthier, easier-to-defend structure.",
+    "detail": "A pawn island is a group of pawns of one colour on connected files, separated from other groups by empty files. Each island is a self-defending unit, so more islands mean more targets: a player with one island against two usually has the sounder long-term structure, especially in endgames where pawns must defend themselves. Island count is a tiebreaker, not a verdict: an isolated pawn is one island and still weak, while three healthy groups with open files for the rooks can be excellent. In time trouble, though, fewer islands means less to calculate.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "pawn"
+    ],
+    "keywords": [
+      "pawn",
+      "islands",
+      "groups",
+      "healthy",
+      "structure",
+      "count"
+    ],
+    "hooks": [],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "open_file",
+    "title": "Open and semi-open files",
+    "aka": [
+      "open file",
+      "semi-open file",
+      "file control"
+    ],
+    "eco": "",
+    "summary": "Rooks belong on open and semi-open files; the first side to double rooks on an open file usually dictates play.",
+    "detail": "An open file has no pawns at all, a semi-open file has only enemy pawns, and both are invasion routes for heavy pieces. The standard technique is Rc1 and Rc2? or Rb1 doubling, then landing a rook on the 7th rank or on an outpost square like c6. Semi-open files are best aimed at a weakness, for example the c-file against a backward c6 pawn in the Carlsbad. If you have no files, create them with pawn breaks; if the opponent contests your file, count the battery: two rooks beat one.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "structure",
+      "strategy",
+      "rooks",
+      "files"
+    ],
+    "keywords": [
+      "open",
+      "semi-open",
+      "file",
+      "rook",
+      "double",
+      "rooks",
+      "invasion",
+      "seventh"
+    ],
+    "hooks": [
+      "open_files",
+      "semi_open_files"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "space",
+    "title": "Space advantage",
+    "aka": [
+      "more space",
+      "space advantage"
+    ],
+    "eco": "",
+    "summary": "More space lets you manoeuvre freely while the opponent's pieces trip over each other; attack on the wing where you are stronger.",
+    "detail": "Space is measured by how far your pawn rows advance into neutral territory; the side with more room can regroup pieces without concessions, while the cramped side must shuffle in a limited order and often accepts a bad piece. The winning technique is restraint: take even more space or prepare a pawn break on the wing where your pawn chain points, as in King's Indian and French structures where the space-gainer attacks on the kingside. The cramped side's counter is the timely exchange of a couple of pieces and a pawn break to fight for territory. Avoid grabbing space with pawn moves that permanently weaken squares behind them.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "space",
+      "wing",
+      "attack"
+    ],
+    "keywords": [
+      "space",
+      "advantage",
+      "cramped",
+      "room",
+      "manoeuvre",
+      "wing",
+      "chain"
+    ],
+    "hooks": [
+      "space"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "king_safety",
+    "title": "King safety",
+    "aka": [
+      "king safety",
+      "pawn shield",
+      "castled king"
+    ],
+    "eco": "",
+    "summary": "A safe king hides behind an intact pawn shield; opened files and missing pawns near it sound the alarm.",
+    "detail": "The safest king is castled behind its original f2/h2 pawns with the g-pawn intact; every pawn move or trade around the king (h3, g3, or losing h2) creates entry squares for enemy heavy pieces. Warning signs are an open or semi-open file pointing at the king, a fianchettoed bishop about to be traded, more attackers than defenders within two moves, and queens still on the board. Defend prophylactically: keep defenders equal to attackers, avoid pawn-grabbing that opens lines, and be ready to return material to slam the door. When your king is safer than the opponent's, seek the attack before simplification.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "king",
+      "safety",
+      "attack"
+    ],
+    "keywords": [
+      "king",
+      "safety",
+      "shield",
+      "castled",
+      "attack",
+      "shelter",
+      "luft"
+    ],
+    "hooks": [
+      "king_danger",
+      "king_safety"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "development",
+    "title": "Development and opening principles",
+    "aka": [
+      "opening principles",
+      "develop pieces"
+    ],
+    "eco": "",
+    "summary": "Openings follow three rules: occupy the centre, develop minor pieces toward it, castle early.",
+    "detail": "The side that activates more firepower first converts development into attack, while undeveloped pieces are spectators. Concretely: fight for central squares with pawns or pieces, bring each minor piece to its best diagonal or file, castle within the first handful of moves, connect the rooks, and only then start pawn adventures. Do not move the same piece twice in the opening without reason, do not bring the queen out early to be chased, and do not grab pawn material while lagging in development. A lead in development is worth roughly a pawn and expires with every trade, so spend it on the initiative.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "opening",
+      "strategy",
+      "principles"
+    ],
+    "keywords": [
+      "development",
+      "develop",
+      "opening",
+      "principles",
+      "castle",
+      "centre",
+      "center",
+      "tempo"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "tempo_initiative",
+    "title": "Tempo and initiative",
+    "aka": [
+      "tempo",
+      "initiative"
+    ],
+    "eco": "",
+    "summary": "A tempo is a unit of move-time; the initiative lets you pose threats while the opponent only answers.",
+    "detail": "Every check, capture and threat that forces a response gains a tempo, and a chain of such moves is the initiative. A development lead is the opening's currency of initiative, and it must be spent: simplify less, open lines, attack. When you have the initiative, avoid trades that relieve the opponent, and when you lack it, trade pieces and return material to neutralise threats. Losing a single tempo often decides sharp openings, which is why moves that develop with a threat are prized.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "opening",
+      "dynamics"
+    ],
+    "keywords": [
+      "tempo",
+      "initiative",
+      "threat",
+      "lead",
+      "development",
+      "forcing"
+    ],
+    "hooks": [
+      "opening",
+      "development"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "exchange",
+    "title": "The exchange",
+    "aka": [
+      "exchange sacrifice",
+      "rook for knight",
+      "quality"
+    ],
+    "eco": "",
+    "summary": "The exchange (rook for minor piece) is worth about half to two-thirds of a pawn on average, but positional context decides.",
+    "detail": "Giving up a rook for a knight or bishop is sound when it buys a permanent feature: a monster knight on an outpost, destruction of the enemy king's shelter, the bishop pair in an open position, or a fortress in a defence. In endgames the exchange tends to grow in value because rooks dominate open boards, so exchange sacrifices belong in the middlegame or in blocked positions. When you win the exchange, activate quickly before the opponent's initiative returns; when you sacrifice it, make sure the compensation is durable and not just two pawns' worth of vibes.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "material",
+      "sacrifice"
+    ],
+    "keywords": [
+      "exchange",
+      "rook",
+      "knight",
+      "bishop",
+      "sacrifice",
+      "compensation"
+    ],
+    "hooks": [],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "bishop_pair",
+    "title": "The bishop pair",
+    "aka": [
+      "two bishops",
+      "bishop pair"
+    ],
+    "eco": "",
+    "summary": "Two bishops cover both colours, rake open positions, and are worth roughly half a pawn as an advantage.",
+    "detail": "The pair works only if the position opens: pawn breaks that clear central files and diagonals turn two bishops into a lasting plus, while locked chains blunt them. The classic way to gain the pair is Bxc6 or Bxc3 structures where the opponent recaptures with a pawn and accepts doubled pawns. Against the pair, close the position, place pawns on the colour of one bishop, and target a specific weakness; with the pair, avoid mass trades and play for open lines and the endgame where the bishops escort passers on both wings.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "bishops",
+      "material"
+    ],
+    "keywords": [
+      "bishop",
+      "pair",
+      "two",
+      "bishops",
+      "open",
+      "position",
+      "diagonals"
+    ],
+    "hooks": [
+      "bishop_pair"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "good_bad_bishop",
+    "title": "Good and bad bishops",
+    "aka": [
+      "bad bishop",
+      "good bishop"
+    ],
+    "eco": "",
+    "summary": "A bishop blocked by its own pawns is bad; put pawns on the OTHER colour to free it.",
+    "detail": "A bishop is bad when its own pawn chain occupies its diagonal, like Black's c8 bishop in many French and King's Indian set-ups; it is good when its pawns stand on the opposite colour, leaving the diagonal open. You fix a bad bishop by trading it, by trading the blocking pawns, or by re-routing outside the chain (Bd7-b5 or Bg4-h3 sorties). Fianchettoed bishops are good by design, which is why trading off an opponent's fianchetto bishop is a classic attacking achievement. In endings with pawns on one wing, the bishop that matches the pawns' colour often becomes the bad one.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "bishops"
+    ],
+    "keywords": [
+      "good",
+      "bad",
+      "bishop",
+      "blocked",
+      "pawn",
+      "chain",
+      "fianchetto",
+      "diagonal"
+    ],
+    "hooks": [
+      "bishop_notes"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "rook_seventh",
+    "title": "Rook on the seventh rank",
+    "aka": [
+      "seventh rank",
+      "pig on the seventh"
+    ],
+    "eco": "",
+    "summary": "A rook on the enemy's second rank eats pawns and cuts the king off, often worth a pawn by itself.",
+    "detail": "On the seventh rank (second from the defender's view) a rook attacks the starting pawn row, ties the enemy king to defence, and supports a passer from behind or the side. Doubled rooks on the seventh are a classic mating and material-winning machine, threatening king and pawns simultaneously. Fight for the seventh via open files and pawn weaknesses; defend against it by keeping an escape square and contesting the file before the rook lands. In rook endings a rook on the seventh with a passed pawn on the far wing is a textbook winning technique.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "rooks",
+      "endgame"
+    ],
+    "keywords": [
+      "rook",
+      "seventh",
+      "rank",
+      "pawns",
+      "doubled",
+      "rooks",
+      "cut",
+      "off"
+    ],
+    "hooks": [
+      "rook_notes"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "blockade",
+    "title": "Blockade",
+    "aka": [
+      "blockading",
+      "blockade square"
+    ],
+    "eco": "",
+    "summary": "Park a piece directly in front of a passed pawn to stop it, ideally one the opponent cannot attack.",
+    "detail": "A blockader stands on the square in front of an enemy passer so it cannot advance; the ideal blockader is a knight, because once the enemy c- and e-pawns are gone nothing can ever kick it (the classic d5 blockade against an isolani). A blockading piece is often temporarily passive but strategically permanent, and can later be released for action once the pawn is neutralised. From Nimzowitsch: restrain, blockade, destroy; first stop the pawn's support, then freeze it, then win it. Against your OWN passer, remember the blockading square is also a support point, so fight for it with pieces.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "pawn",
+      "blockade"
+    ],
+    "keywords": [
+      "blockade",
+      "blockader",
+      "knight",
+      "passed",
+      "pawn",
+      "restrain",
+      "nimzowitsch"
+    ],
+    "hooks": [
+      "passed_pawn_white",
+      "passed_pawn_black"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "prophylaxis",
+    "title": "Prophylaxis",
+    "aka": [
+      "prophylactic move",
+      "thinking in the opponent's shoes"
+    ],
+    "eco": "",
+    "summary": "Before your own plan, ask what the OPPONENT wants, and prevent it if it is dangerous.",
+    "detail": "Prophylaxis is the discipline of considering the opponent's intentions first: his best move, his dream position, his only plan. A prophylactic move improves your worst piece or kills his idea (h3 before g4 storms, Rc1 before b4-b5, a queenside pawn wedge before a kingside race) and only then resumes your plan. It is the core of Capablanca and Karpov's style: the position is stabilised until the opponent's options run out. Overdone, prophylaxis becomes passivity, so always weigh it against the tempo cost of your own threats.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "thinking",
+      "principles"
+    ],
+    "keywords": [
+      "prophylaxis",
+      "prevent",
+      "opponent",
+      "plan",
+      "karpov",
+      "capablanca"
+    ],
+    "hooks": [],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "zugzwang",
+    "title": "Zugzwang",
+    "aka": [
+      "reciprocal zugzwang",
+      "mutual zugzwang"
+    ],
+    "eco": "",
+    "summary": "Zugzwang is when every possible move worsens your position; pawn endings and simple endings revolve around it.",
+    "detail": "In chess you cannot pass, so a position where the side to move must damage itself is lost or drawn on the spot; mutual (reciprocal) zugzwang means whoever must move loses the battle. King-and-pawn endings are decided by zugzwang plus opposition: the defender is squeezed off key squares one tempo at a time. Techniques to impose it are triangulation (taking two moves to lose one) and reserve pawn moves that force the opponent to commit first. Recognising a zugzwang position means counting who runs out of safe moves, so slow play and shuffling are the right strategy for the stronger side.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "strategy",
+      "endgame",
+      "pawn"
+    ],
+    "keywords": [
+      "zugzwang",
+      "opposition",
+      "triangulation",
+      "mutual",
+      "must",
+      "move"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "tactics_vocabulary",
+    "title": "Tactical vocabulary",
+    "aka": [
+      "fork",
+      "pin",
+      "skewer",
+      "discovered attack",
+      "double attack",
+      "deflection"
+    ],
+    "eco": "",
+    "summary": "Most mistakes are forks, pins, skewers, discovered or double attacks, and deflections; name the motif to find it faster.",
+    "detail": "A fork attacks two pieces at once (knights are the champions); a pin fixes a piece in front of a more valuable one along a line; a skewer is a reversed pin (the valuable piece is in front and must move, exposing the rear one); a discovered attack unleashes a second piece by moving the first; a double attack hits two targets with one move; deflection pulls a defender away from its duty. Every blunder in a game review should be labelled with one of these motifs, because naming the pattern trains recognition. Checks, captures and threats, in that order, generate nearly all tactics, so scan them first.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "tactics",
+      "patterns",
+      "mistakes"
+    ],
+    "keywords": [
+      "fork",
+      "pin",
+      "skewer",
+      "discovered",
+      "double",
+      "attack",
+      "deflection",
+      "tactic",
+      "blunder",
+      "mistake"
+    ],
+    "hooks": [
+      "blunder",
+      "mistake",
+      "inaccuracy"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "lpdo",
+    "title": "Loose pieces drop off",
+    "aka": [
+      "LPDO",
+      "undefended pieces",
+      "hanging piece"
+    ],
+    "eco": "",
+    "summary": "An undefended piece is a tactical target: LPDO - loose pieces drop off.",
+    "detail": "Pieces on squares with no pawn or piece support are grist for double attacks: a queen or knight that hits a loose piece plus another target wins material by force. Scan both armies for loose pieces every few moves, especially in open positions after pawn trades, and either defend them, move them to safety, or give them a task that forces an exchange. When you see TWO loose enemy pieces, look for the fork or double attack immediately; when one of YOUR pieces is loose, expect checks that gain tempo against it. Simple hygiene with loose pieces prevents a large share of club-level blunders.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "tactics",
+      "safety",
+      "pieces"
+    ],
+    "keywords": [
+      "loose",
+      "undefended",
+      "hanging",
+      "pieces",
+      "LPDO",
+      "double",
+      "attack"
+    ],
+    "hooks": [
+      "loose_pieces"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "concept",
+    "name": "candidate_moves",
+    "title": "Candidate moves",
+    "aka": [
+      "candidate moves method",
+      "thinking checklist"
+    ],
+    "eco": "",
+    "summary": "Before calculating, list 3 candidate moves: checks, captures, threats, plus the positional move.",
+    "detail": "Strong players generate a short list of plausible moves and calculate those; weak players calculate the first move they see. The checklist is forcing moves first (checks, captures, threats), then the opponent's threat and its answers, then quiet improving moves such as the worst piece's best square. Compare the candidates by evaluating the resulting positions, and only then commit; this keeps calculation ordered and stops one-move hallucinations. In time trouble, run the same checklist in miniature: check, capture, threat.",
+    "whitePlan": "",
+    "blackPlan": "",
+    "tags": [
+      "thinking",
+      "principles",
+      "calculation"
+    ],
+    "keywords": [
+      "candidate",
+      "moves",
+      "checklist",
+      "calculate",
+      "forcing",
+      "checks",
+      "captures",
+      "threats"
+    ],
+    "hooks": [],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "carlsbad",
+    "title": "Carlsbad structure",
+    "aka": [
+      "QGD exchange structure",
+      "carlsbad"
+    ],
+    "eco": "",
+    "summary": "The QGD Exchange structure: White d4 against Black c6+d5, with White's kingside majority against Black's queenside majority.",
+    "detail": "After 1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 the centre is fixed: White's d4 stares at Black's d5 while White has four pawns against three on the kingside and Black three against two on the queenside. This asymmetry defines the plans: White attacks on the wing where he has FEWER pawns, the classic minority attack with a4 and b4-b5 against c6. If the trade bxc6 ...bxc6 happens, Black is left with a backward c6 pawn on the semi-open c-file, which White pressures with Rc1 and doubling; if Black captures ...cxb5 first, axb5 opens the a- and c-files toward Black's game. Black's counterplay is ...Ne4, kingside piece play, and the freeing ...c5 break (met by dxc5 ...d4 with a passed-pawn race).",
+    "whitePlan": "Prepare and execute the minority attack: a4, b4-b5, Qc2 with rook support on the b-file; against ...cxb5 recapture axb5 and play down the open lines; alternative plans are central expansion with e4 or kingside space.",
+    "blackPlan": "Counter with ...Ne4 activity, kingside piece play around the e4 square, or the timely ...c5 break; meet Rc1 pressure with ...Rc8 and keep the c6 pawn defensible.",
+    "tags": [
+      "structure",
+      "closed",
+      "queenside",
+      "qgd"
+    ],
+    "keywords": [
+      "carlsbad",
+      "exchange",
+      "qgd",
+      "minority",
+      "attack",
+      "backward",
+      "c6"
+    ],
+    "hooks": [
+      "carlsbad"
+    ],
+    "moves": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 c6 6.e3 Be7 7.Bd3 Nbd7 8.Nf3 O-O 9.O-O",
+    "fen": "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "iqp",
+    "title": "Isolated queen's pawn structures",
+    "aka": [
+      "IQP structure",
+      "isolani",
+      "panov structure"
+    ],
+    "eco": "",
+    "summary": "White d4 (or Black d5) with no pawn neighbours: space and open lines against a static long-term weakness.",
+    "detail": "The isolani arises from openings like the Panov-Botvinnik Attack, the Semi-Tarrasch and various QGA lines: one pawn on d4 against none on c or e for its owner. The strong side plays Bd3, Nc3, Qd3 or Qe2 and aims pieces at the enemy king, using the half-open c- and e-files and the d5/e5 outposts; the pressure peaks while queens remain. The defender develops to trade pieces, plants a knight on the blockade square d5, and hits d4 with Nf6, Nc6, Qb6 type pressure. The isolani is strong in the middlegame and weak in the endgame, so the defender's trade-counting is the key skill.",
+    "whitePlan": "Attack the isolated d-pawn: Bd3, Qe2 or Qd3, Nc3, Rfe1, and the e5 or d5 breaks at the right moment; keep queens on.",
+    "blackPlan": "Hold the isolated pawn: trade pieces, blockade it with a knight, keep the pawn from advancing, and steer to an endgame.",
+    "tags": [
+      "structure",
+      "open",
+      "centre",
+      "dynamics"
+    ],
+    "keywords": [
+      "isolated",
+      "iqp",
+      "isolani",
+      "panov",
+      "tarrasch",
+      "d4",
+      "d5",
+      "attack",
+      "blockade"
+    ],
+    "hooks": [
+      "iqp_white",
+      "iqp_black"
+    ],
+    "moves": "1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3 e6 6.Nf3 Bb4 7.cxd5 exd5 8.Bd3 O-O 9.O-O",
+    "fen": "rnbqkb1r/pp3ppp/5n2/3p4/3P4/2N5/PP3PPP/R1BQKBNR w KQkq - 0 7",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "hanging_pawns",
+    "title": "Hanging pawns",
+    "aka": [
+      "hanging pawns structure",
+      "c5 d5 pawns"
+    ],
+    "eco": "",
+    "summary": "Two connected pawns on c5+d5 (or c4+d4) on open files: central control and space in exchange for chronic targets.",
+    "detail": "Hanging pawns typically appear after QGA and Semi-Tarrasch manoeuvres: two pawns side by side on open files that no fellow pawn can ever defend. They control a wide square net (b4, d4, c4, e4 for a c5/d5 pair), give their owner the c- and d-files for the rooks, and often include the bishop pair and space. The defects are symmetric: rooks and minor pieces can attack them down the open files, and one forced advance leaves the other backward. The owner wants dynamic piece play and the breaks ...c4 or ...d4; the defender wants to attack them with b4 or e4, or trade into an endgame where they fall.",
+    "whitePlan": "Against hanging pawns: play b4 or e4 to force one pawn forward, pressure the backward survivor down the open files, and avoid being squeezed by their central control.",
+    "blackPlan": "With hanging pawns: fight for the initiative with open-file rooks and the ...c4/...d4 breaks before the opponent consolidates against them.",
+    "tags": [
+      "structure",
+      "open",
+      "centre",
+      "dynamics"
+    ],
+    "keywords": [
+      "hanging",
+      "pawns",
+      "c5",
+      "d5",
+      "open",
+      "files",
+      "backward",
+      "qga"
+    ],
+    "hooks": [
+      "hanging_pawns_white",
+      "hanging_pawns_black"
+    ],
+    "moves": "",
+    "fen": "rnbqkbnr/pp3ppp/4p3/8/2PP4/8/P4PPP/RNBQKBNR w KQkq - 0 1",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "open_sicilian_center",
+    "title": "Open Sicilian centre (Najdorf/Scheveningen family)",
+    "aka": [
+      "open sicilian",
+      "najdorf structure",
+      "scheveningen structure"
+    ],
+    "eco": "",
+    "summary": "White e4 against Black d6+e5 (or e6): an open centre where White has more central space, Black a compact game.",
+    "detail": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 the centre opens and the d- and c-files become battlegrounds; with ...e5 Black gains central space but concedes the d5 hole (a knight there, supported by e4, can never be evicted), while with ...e6 (Scheveningen style) Black keeps ...d5 and ...e5 in reserve behind the small centre. White usually seeks kingside play with f3, Be3, Qd2 and often a pawn storm; Black counterattacks on the queenside with ...a6, ...b5, ...Rb8 or ...Nc6 hitting d4. The side that opens the position first at the right moment usually gets the initiative. Accurate timing of the central breaks (...d5 or ...e5 for Black, e5 or f4 for White) is the heart of these middlegames.",
+    "whitePlan": "Use the d5 outpost (Nd5 jumps supported by e4), kingside space with f4 or f3+Be3+Qd2 and pawn storms; watch the d4 knight's stability after ...e5.",
+    "blackPlan": "Expand on the queenside (...a6, ...b5, ...Rb8), undermine d4 or e4 with ...Nc6/...Nf6 pressure, and time ...d5 or ...e5 to open the centre when White overcommits.",
+    "tags": [
+      "structure",
+      "sicilian",
+      "open",
+      "kingside",
+      "queenside"
+    ],
+    "keywords": [
+      "open",
+      "sicilian",
+      "najdorf",
+      "scheveningen",
+      "d5",
+      "hole",
+      "counterattack"
+    ],
+    "hooks": [
+      "open_sicilian_center"
+    ],
+    "moves": "1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be3 e5 7.Nb3 Be7 8.f3 O-O 9.Qd2 Nbd7",
+    "fen": "rnbqkb1r/pp3ppp/3p1n2/4p3/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 6",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "benoni_structure",
+    "title": "Modern Benoni wedge",
+    "aka": [
+      "benoni",
+      "wedge structure"
+    ],
+    "eco": "",
+    "summary": "White's pawn wedge c4+d5 against Black c5+d6: unbalanced, Black plays ...f5 and ...b5 against White's clamp.",
+    "detail": "After 1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nc3 exd5 5.cxd5 d6 White owns a space-gaining wedge on d5 while Black keeps a Benoni majority on the queenside and the fianchetto bishop on g7. Black's play: kingside space with ...f5 (after ...O-O and ...Nbd7 or ...Re8), the ...b5 lever against the c4 pawn, and piece pressure against d5 and e4. White's play: expand with e4, aim for the e5 square, break with e5 or f4-f5, or expand queenside with b4 (after a3). Because both kings often castle short, the race between White's slow queenside squeeze and Black's dynamic piece play decides the game.",
+    "whitePlan": "Hold the wedge, play e4, develop Nf3 and Be2, and choose between the e5 break, f4-f5 kingside expansion, or queenside expansion with b4.",
+    "blackPlan": "Get ...f5 in for kingside space, lever with ...b5 against c4, pile the g7 bishop and knights against d5/e4, and keep the position open for dynamic play.",
+    "tags": [
+      "structure",
+      "closed",
+      "space",
+      "wedge"
+    ],
+    "keywords": [
+      "benoni",
+      "wedge",
+      "d5",
+      "f5",
+      "b5",
+      "g7",
+      "bishop",
+      "space"
+    ],
+    "hooks": [
+      "kingside_majority_white"
+    ],
+    "moves": "1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nc3 exd5 5.cxd5 d6 6.e4 g6 7.Nf3 Bg7 8.Be2 O-O 9.O-O",
+    "fen": "rnbq1rk1/pp3pbp/3p1np1/2pP4/4P3/2N2N2/PP2BPPP/R1BQ1RK1 b - - 5 9",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "maroczy_bind",
+    "title": "Maroczy bind",
+    "aka": [
+      "maroczy",
+      "accelerated dragon bind"
+    ],
+    "eco": "",
+    "summary": "White pawns c4+e4 clamp the centre against a black fianchetto on g6: space and the c-file against Black's patience.",
+    "detail": "The bind arises most often from the Accelerated Dragon (1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6 5.c4): White's c4 and e4 pawns take the centre and permanently deny Black the ...d5 break. White develops Nc3, Be3 and Nf3 or Nge2, with Rc1 or Bc4 and pressure on the c-file, often expanding with b4 later or landing a knight on d5 (supported by e4). Black accepts a slightly cramped but solid setup and seeks the liberating ...b5 or ...d5, or gradual kingside expansion; the g7 bishop presses the long diagonal against d4 and b2. If White ever trades the d4 knight carelessly, Black gets ...e5 with tempo ideas and the bind loosens.",
+    "whitePlan": "Keep the bind intact: Nc3, Be3, O-O, Rc1 with pressure on the c-file, and either expand queenside with b4 or aim for a knight on d5 supported by e4.",
+    "blackPlan": "Stay solid, trade the right pieces, and prepare ...b5, ...d5 or kingside expansion with ...f5; pressure the d4 square and the long diagonal with the g7 bishop.",
+    "tags": [
+      "structure",
+      "closed",
+      "space",
+      "sicilian"
+    ],
+    "keywords": [
+      "maroczy",
+      "bind",
+      "c4",
+      "e4",
+      "g6",
+      "accelerated",
+      "dragon",
+      "space"
+    ],
+    "hooks": [],
+    "moves": "1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6 5.c4 Nf6 6.Nc3 d6 7.Be2 Bg7 8.O-O O-O 9.Be3",
+    "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/2PNP3/2N1B3/PP2BPPP/R2Q1RK1 b - - 5 9",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "kid_closed",
+    "title": "King's Indian closed centre",
+    "aka": [
+      "kid structure",
+      "mar del plata",
+      "closed kid centre"
+    ],
+    "eco": "",
+    "summary": "White's wedge d5+e4 against Black d6+e5: the classic race, White storms the queenside while Black attacks the king.",
+    "detail": "After 1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5 7.O-O Nc6 8.d5 Ne7 the centre locks and the famous race begins: both kings usually castle short, White's pawn storm runs through b4 and c5 for space and material, while Black's attack goes straight at White's king with ...f5, the g7 bishop, a knight redeploying toward g6, and rook lifts; after exf5, ...gxf5 opens the g-file, and Black creates direct mating threats while White collects queenside material. Timing is everything: the centre is locked, so neither side can be distracted from its wing.",
+    "whitePlan": "Storm the queenside: b4 and c5 with rook support (after preparatory moves like a3 or Rb1), opening files where Black has less space while monitoring Black's kingside timing.",
+    "blackPlan": "Attack the king: ...f5 (met by exf5 ...gxf5, opening the g-file), redeploy the e7 knight to g6, use the g7 bishop on the long diagonal, and open lines with ...f4 or ...g5-g4 at the right moment.",
+    "tags": [
+      "structure",
+      "closed",
+      "kingside",
+      "attack",
+      "kid"
+    ],
+    "keywords": [
+      "kings",
+      "indian",
+      "kid",
+      "d5",
+      "wedge",
+      "f5",
+      "race",
+      "storm"
+    ],
+    "hooks": [
+      "closed_center",
+      "kingside_majority_white",
+      "kid_closed"
+    ],
+    "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5 7.O-O Nc6 8.d5 Ne7 9.Ne1 Nd7 10.Nd3 f5",
+    "fen": "r1bq1rk1/pppnn1bp/3p2p1/3Ppp2/2P1P3/2NN4/PP2BPPP/R1BQ1RK1 w - - 0 11",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "french_chain",
+    "title": "French pawn chain",
+    "aka": [
+      "french structure",
+      "winawer structure",
+      "advance french chain"
+    ],
+    "eco": "",
+    "summary": "Locked chains White d4+e5 against Black d5+e6: attack the base and play on the wing your chain points to.",
+    "detail": "The French family (Advance, Winawer, Classical) features two interlocking chains: White's d4-e5 against Black's d5-e6, all mutually fixed. Black correctly attacks White's base d4 with ...c5 (plus ...Nc6, ...Qb6 pressure), while White's chain points toward the kingside, so White plays for space and attack there with Qd2, Bd3, f4-f5 ideas and in the Winawer often castles long after ...Bxc3 gives Black the bishop pair. The chain rule governs both sides: strike the enemy base, support your own, and remember that every base capture changes the square colours that matter. Because the centre is locked, play is a two-wing race decided by who opens the right file first.",
+    "whitePlan": "Use kingside space: Qd2, Bd3 and f4-f5, often O-O-O in Winawer structures to join the rook to the attack; support d4 with c3 in the Advance or with pieces, and aim for the attack with f4-f5.",
+    "blackPlan": "Hit the base: ...c5, ...Nc6 and ...Qb6 pressure on d4; develop the c8 bishop outside the chain or trade it; in Winawer lines, use the bishop pair and the pressure on d4 and b2.",
+    "tags": [
+      "structure",
+      "closed",
+      "chain",
+      "french"
+    ],
+    "keywords": [
+      "french",
+      "winawer",
+      "advance",
+      "chain",
+      "base",
+      "c5",
+      "f4",
+      "wedge"
+    ],
+    "hooks": [
+      "closed_center",
+      "french_chain"
+    ],
+    "moves": "1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 Ne7 7.Qg4 O-O 8.Bd3 Nbc6 9.Qh5 Ng6 10.Nf3",
+    "fen": "r1bq1rk1/pp3ppp/2n1p1n1/2ppP2Q/3P4/P1PB1N2/2P2PPP/R1B1K2R b KQ - 8 10",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "stonewall",
+    "title": "Stonewall",
+    "aka": [
+      "stonewall attack",
+      "stonewall dutch"
+    ],
+    "eco": "",
+    "summary": "A pawn wall on one colour (c3+d4+e3+f4 for White) gives strong squares of that colour and holes on the other.",
+    "detail": "The Stonewall places four pawns on one colour: White's c3-d4-e3-f4 (or Black's c6-d5-e6-f5). The wall controls the square colour it stands on and cannot be cracked by pawns easily, but the opposite colour is weakened for good: against White's wall (dark-square wall) the light squares around e4 are the entry points, and Black's knight on e4 is a classic guest; against Black's wall (light-square wall) the dark square e5 is the famous hole. The wall's bishop, hemmed behind its own pawns, is bad by definition, while the opponent's bishop of the weakened colour becomes a monster. Break the wall open with a lever against its base, or accept a manoeuvring game and occupy the weakened colour with pieces.",
+    "whitePlan": "With the white Stonewall: use the dark-square bind (Ne5 supported by d4), fix Black's light-square weaknesses, and build up on the kingside; avoid leaving the c1 bishop permanently bad (Ba3 trades help).",
+    "blackPlan": "Against a white Stonewall: occupy e4 with a knight (it cannot be evicted by pawns), place pieces on the light squares White abandoned, and lever with ...e5 or ...c5 to open a second front.",
+    "tags": [
+      "structure",
+      "closed",
+      "walls",
+      "colour"
+    ],
+    "keywords": [
+      "stonewall",
+      "wall",
+      "dutch",
+      "attack",
+      "e5",
+      "e4",
+      "colour",
+      "color",
+      "complex"
+    ],
+    "hooks": [
+      "color_weakness"
+    ],
+    "moves": "1.d4 d5 2.e3 Nf6 3.Bd3 e6 4.f4 c5 5.c3 Nc6 6.Nf3 Bd6 7.O-O O-O",
+    "fen": "r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P1P2/2PBPN2/PP4PP/RNBQ1RK1 w - - 5 8",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "hedgehog",
+    "title": "Hedgehog",
+    "aka": [
+      "hedgehog system",
+      "third rank pawns"
+    ],
+    "eco": "",
+    "summary": "Black's a6+b6+c5+d6+e6 row of 'spikes' behind a fianchetto: compact, resilient, waiting for ...b5 or ...d5.",
+    "detail": "The Hedgehog, reached from Sicilian and English move orders, is Black's third-rank row of pawns a6, b6, c5, d6 and e6 with the bishop on b7 and usually Qb8 and Rc8: everything sits on the first three ranks, apparently passive, actually spring-loaded. The b7 bishop pressures e4, while White's space (typically pawns on b2, c4, d4 and e4) invites a punch. White's typical plans are the d4-d5 or e4-e5 central breaks and queenside expansion with b4; Black's are ...b5, ...d5 or ...e5 at the moment White's pieces commit. The philosophy: give up space, keep all squares defended, and hit back exactly when the opponent overextends.",
+    "whitePlan": "Keep the space, prepare the d5 or e5 central break, expand with b4, and avoid weakening moves that let ...b5 or ...d5 in with tempo.",
+    "blackPlan": "Stay compact, pressure e4 with the b7 bishop, prepare the ...b5, ...d5 or ...e5 break, and use the queen and rook on b8/c8 for the counter-punch.",
+    "tags": [
+      "structure",
+      "space",
+      "compact",
+      "sicilian",
+      "english"
+    ],
+    "keywords": [
+      "hedgehog",
+      "spikes",
+      "b6",
+      "a6",
+      "c5",
+      "d5",
+      "break",
+      "compact",
+      "space"
+    ],
+    "hooks": [],
+    "moves": "1.c4 c5 2.Nf3 Nf6 3.Nc3 e6 4.g3 b6 5.Bg2 Bb7 6.O-O Be7 7.d4 O-O 8.e4 d6 9.b3 Nc6 10.Bb2 Qb8 11.Qe2 a6 12.Rad1",
+    "fen": "rq3rk1/1b2bppp/ppnppn2/2p5/2PPP3/1PN2NP1/PB2QPBP/3R1RK1 b - - 1 12",
+    "example": ""
+  },
+  {
+    "kind": "structure",
+    "name": "closed_center",
+    "title": "Closed centre (Ruy Lopez type)",
+    "aka": [
+      "closed ruy structure",
+      "closed centre"
+    ],
+    "eco": "",
+    "summary": "White d4+e4 against Black d6+e5 with everything locked: manoeuvring play with wing breaks.",
+    "detail": "In the closed Ruy Lopez the centre pawns (White c3+d4+e4, Black c5+d6+e5) lock up early, so the game becomes a manoeuvring battle where neither side can be distracted: each regroups toward its chosen wing. White's classical regrouping is Nbd2-f1-g3, adding to the kingside pressure, with a4 against ...b5 and the d4-d5 break in reserve. Black regroups with the c6 knight via e7 to g6, expands with ...c5 and ...b5, and keeps ...d5 and ...f5 in reserve. The locked centre means both sides can commit fully to wing play; the player whose regrouping completes first starts the real game.",
+    "whitePlan": "Regroup with Nbd2-f1-g3 and Re1, play a4 against ...b5, and use the timely d4-d5 to open a second front.",
+    "blackPlan": "Reroute the c6 knight via e7 toward g6, expand with ...b5 and ...c5, and keep ...d5 or ...f5 in reserve; ...Bb7 supports the queenside expansion.",
+    "tags": [
+      "structure",
+      "closed",
+      "manoeuvring",
+      "ruy"
+    ],
+    "keywords": [
+      "closed",
+      "centre",
+      "ruy",
+      "lopez",
+      "manoeuvring",
+      "regroup",
+      "wing"
+    ],
+    "hooks": [
+      "closed_center",
+      "ruy_closed"
+    ],
+    "moves": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 d6 8.c3 O-O 9.h3 Na5 10.Bc2 c5 11.d4 Qc7 12.Nbd2",
+    "fen": "r1b2rk1/2q1bppp/p2p1n2/npp1p3/3PP3/2P2N1P/PPBN1PP1/R1BQR1K1 b - - 2 12",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "italian_giuoco_pianissimo",
+    "title": "Italian Game (Giuoco Pianissimo)",
+    "aka": [
+      "italian",
+      "giuoco piano",
+      "italian game"
+    ],
+    "eco": "C50",
+    "summary": "The slow Italian: Bc4 vs Bc5 with d3 for both sides, a manoeuvring battle around a stable centre.",
+    "detail": "After 1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d3 d6 both sides castle and the real game begins: the centre is stable, nobody can break quickly, and play revolves around slow regrouping. White's typical build is Nbd2, Re1, h3 and a4 or b4, keeping the option of d4 or f4 later; Black mirrors with ...Be6 or ...a6, ...Nbd7 and pressure against d3 or e4. Because the position is closed-ish, both sides maneuver for the pawn break that comes first, and deep manoeuvring games result. The Bc4-vs-Bc5 clash means both light bishops eye f7 and f2, so early tactics revolve around those squares.",
+    "whitePlan": "Manoeuvre: Nbd2, Re1, h3, then choose the wing with a4 or b4; prepare d4 or f4 only once the regrouping is complete.",
+    "blackPlan": "Match White's plan: ...Be6 or ...a6, ...Nbd7, ...Re8; neutralize the c4 bishop and answer the d4 or f4 break with ...exd4 or ...exf4 central counterplay.",
+    "tags": [
+      "opening",
+      "open",
+      "italian",
+      "classical"
+    ],
+    "keywords": [
+      "italian",
+      "giuoco",
+      "piano",
+      "pianissimo",
+      "bc4",
+      "slow",
+      "manoeuvre"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d3 d6 6.O-O O-O",
+    "fen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQ1RK1 w - - 2 7",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "ruy_lopez_closed",
+    "title": "Ruy Lopez (Closed)",
+    "aka": [
+      "spanish",
+      "ruy lopez",
+      "closed ruy"
+    ],
+    "eco": "C84",
+    "summary": "The Spanish torture: slow pressure on e5 and the c6 knight, with the famous manoeuvring plans.",
+    "detail": "After 1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 d6 8.c3 O-O 9.h3 the classical closed Ruy Lopez takes shape: White prepares d4 while keeping the light bishop aimed at f7, Black's queen's knight will hop to a5 to challenge b3. The signature manoeuvres are White's Nbd2-f1-g3 regrouping and Black's knight reroute via e7 to g6 or the Breyer ...Nb8-d7, each side preparing its wing. Play is slow, rich and positional; tactics flare around the d4/e5 tension and the a-file after a4. This opening rewards understanding of closed centres and prophylaxis more than memorization.",
+    "whitePlan": "Build up with Nbd2-f1-g3, Re1 and Bc2; play a4 against ...b5 and keep the d4-d5 or f4 breaks in reserve.",
+    "blackPlan": "Challenge the b3 bishop with ...Na5, expand with ...c5 and ...b5, reroute the c6 knight (via e7-g6 or Breyer ...Nb8-d7), and meet d4 with ...exd4 or ...Nxd4 keeping the balance.",
+    "tags": [
+      "opening",
+      "closed",
+      "classical",
+      "ruy"
+    ],
+    "keywords": [
+      "ruy",
+      "lopez",
+      "spanish",
+      "closed",
+      "chigorin",
+      "breyer",
+      "zorich",
+      "manoeuvre"
+    ],
+    "hooks": [
+      "opening",
+      "closed_center"
+    ],
+    "moves": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 d6 8.c3 O-O 9.h3 Na5 10.Bc2 c5 11.d4 Qc7 12.Nbd2",
+    "fen": "r1b2rk1/2q1bppp/p2p1n2/npp1p3/3PP3/2P2N1P/PPBN1PP1/R1BQR1K1 b - - 2 12",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "sicilian_najdorf",
+    "title": "Sicilian Defence (Najdorf)",
+    "aka": [
+      "najdorf",
+      "sicilian najdorf"
+    ],
+    "eco": "B90",
+    "summary": "Black's most ambitious Sicilian: ...a6 controls b5 and prepares ...e5 or ...e6, giving maximum flexibility.",
+    "detail": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be3 e5 7.Nb3 Be7 8.f3 O-O 9.Qd2 Nbd7 Black accepts less space for excellent piece play: the ...a6/...b5 pair underwrites queenside expansion while the knights head for active squares. White's most testing plans are the English Attack (Be3, f3, Qd2, O-O-O and a g4/h4 pawn storm) and slower Be2 systems. Black's play runs through ...b5 and ...Rb8 on the queenside, regrouping with ...Re8 and ...Bf8, and the ...d5 break when the centre opens. The d5 hole is the price of ...e5, so the knight battle around d4/d5 decides many games.",
+    "whitePlan": "English Attack: Be3, f3, Qd2, O-O-O, then the g4-g5 pawn storm; keep a knight ready for d5 and punish any premature ...b5 or ...d5.",
+    "blackPlan": "Queenside counterplay: expand with ...b5 and ...Rb8, regroup with ...Re8 and ...Bf8, and strike with ...d5 or ...b4 when White's storm commits.",
+    "tags": [
+      "opening",
+      "sicilian",
+      "sharp",
+      "najdorf"
+    ],
+    "keywords": [
+      "najdorf",
+      "sicilian",
+      "a6",
+      "english",
+      "attack",
+      "b5",
+      "counterattack"
+    ],
+    "hooks": [
+      "opening",
+      "open_sicilian_center"
+    ],
+    "moves": "1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be3 e5 7.Nb3 Be7 8.f3 O-O 9.Qd2 Nbd7",
+    "fen": "r1bq1rk1/1p1nbppp/p2p1n2/4p3/4P3/1NN1BP2/PPPQ2PP/R3KB1R w KQ - 3 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "sicilian_dragon",
+    "title": "Sicilian Defence (Dragon, Yugoslav Attack)",
+    "aka": [
+      "dragon",
+      "yugoslav attack",
+      "accelerated dragon"
+    ],
+    "eco": "B76",
+    "summary": "The g7 fianchetto versus White's opposite-side castling storm: the sharpest race in the Sicilian.",
+    "detail": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.Be3 Bg7 7.f3 O-O 8.Qd2 Nc6 9.Bc4 the Yugoslav Attack sets up the most famous race in chess: White castles long and attacks with the h4-h5 and g4-g5 pawn storm, often probing with Bh6 to trade the Dragon bishop, while Black counterattacks down the c-file with ...Rc8, ...Qa5 and the infamous ...Rxc3 exchange sacrifice, smashing the shelter around the white king. Black's g7 bishop is the Dragon's soul: it guards the king along the long diagonal and supports the queenside counterplay. The race is usually decided by tempo, so both sides must count every move.",
+    "whitePlan": "Castle long, storm with h4-h5 and g4-g5, and bring the c4 bishop and heavy pieces against Black's kingside; probe with Bh6 to trade the g7 bishop.",
+    "blackPlan": "Open the c-file: ...Rc8, ...Qa5 or ...Qb6, and if the attack demands it, the thematic ...Rxc3 sacrifice to smash the queenside shelter around the white king.",
+    "tags": [
+      "opening",
+      "sicilian",
+      "sharp",
+      "race",
+      "dragon"
+    ],
+    "keywords": [
+      "dragon",
+      "yugoslav",
+      "g6",
+      "fianchetto",
+      "h4",
+      "race",
+      "rxc3",
+      "opposite",
+      "castling"
+    ],
+    "hooks": [
+      "opening",
+      "open_sicilian_center"
+    ],
+    "moves": "1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.Be3 Bg7 7.f3 O-O 8.Qd2 Nc6 9.Bc4 Bd7 10.O-O-O Rc8",
+    "fen": "2rq1rk1/pp1bppbp/2np1np1/8/2BNP3/2N1BP2/PPPQ2PP/2KR3R w - - 7 11",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "french_winawer",
+    "title": "French Defence (Winawer)",
+    "aka": [
+      "winawer",
+      "french winawer"
+    ],
+    "eco": "C18",
+    "summary": "Black gives the bishop pair to wreck White's queenside: sharp chain play on both wings.",
+    "detail": "After 1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 Ne7 Black trades the dark-squared bishop for the c3 knight, giving White the bishop pair but leaving White with doubled c-pawns that are targets for the whole game. White's usual 7.Qg4 hits g7 immediately; after ...O-O the structure is set: White's chain points at the kingside, so White plays Bd3, develops the g1 knight and often castles long to attack with pawns and pieces, while Black pressures c3 and d4 with ...Qb6 and ...Nc6. The static weakness of c3 lasts the whole game.",
+    "whitePlan": "Use kingside space with Bd3, Nf3 and O-O-O, attacking with f4-f5 and the heavy pieces; defend c3 and d4 carefully, since they are permanent targets.",
+    "blackPlan": "Pressure the base chain: ...Qb6 and ...Nc6 hit d4 and c3; develop ...Bd7 and ...Rc8 for queenside play, and steer toward endings where White's doubled c-pawns are static targets.",
+    "tags": [
+      "opening",
+      "closed",
+      "chain",
+      "french",
+      "winawer"
+    ],
+    "keywords": [
+      "french",
+      "winawer",
+      "bb4",
+      "bxc3",
+      "doubled",
+      "c3",
+      "chain",
+      "wing"
+    ],
+    "hooks": [
+      "opening",
+      "closed_center",
+      "doubled_pawns_white_c"
+    ],
+    "moves": "1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 Bxc3+ 6.bxc3 Ne7 7.Qg4 O-O 8.Bd3 Nbc6 9.Qh5 Ng6 10.Nf3",
+    "fen": "r1bq1rk1/pp3ppp/2n1p1n1/2ppP2Q/3P4/P1PB1N2/2P2PPP/R1B1K2R b KQ - 8 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "caro_kann_classical",
+    "title": "Caro-Kann Defence (Classical)",
+    "aka": [
+      "caro kann",
+      "classical caro"
+    ],
+    "eco": "B18",
+    "summary": "Solid ...c6+...d5 challenge: Black keeps a healthy structure and plays for the light squares.",
+    "detail": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 the classical Caro-Kann develops the light bishop BEFORE ...e6, avoiding the bad-bishop problem of the French. The main line continues 5.Ng3 Bg6 6.h4 h6 7.Nf3 Nd7 8.h5 Bh7 9.Bd3 Bxd3 10.Qxd3 with a small but stable space plus for White and a solid, slightly passive Black setup. White's plans: develop the queenside pieces, often castle long, and play for a kingside attack; the h4-h5 wedge already cramps Black's kingside. Black's plans: complete with ...e6, ...Ngf6 and ...Qc7, castle as the position advises, and hit d4 with the freeing ...c5 or ...e5 break.",
+    "whitePlan": "Use the extra space: castle long after developing the c1 bishop, keep the h-pawn wedge, and aim for a kingside attack with the heavy pieces while keeping d4 solid.",
+    "blackPlan": "Complete development (...e6, ...Ngf6, ...Qc7, castle as appropriate), then free the position with ...c5 or ...e5 hitting d4.",
+    "tags": [
+      "opening",
+      "solid",
+      "caro",
+      "classical"
+    ],
+    "keywords": [
+      "caro",
+      "kann",
+      "bf5",
+      "solid",
+      "structure",
+      "light",
+      "squares"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.h4 h6 7.Nf3 Nd7 8.h5 Bh7 9.Bd3 Bxd3 10.Qxd3",
+    "fen": "r2qkbnr/pp1nppp1/2p4p/7P/3P4/3Q1NN1/PPP2PP1/R1B1K2R b KQkq - 0 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "qgd_exchange",
+    "title": "Queen's Gambit Declined (Exchange)",
+    "aka": [
+      "qgd exchange",
+      "exchange variation qgd"
+    ],
+    "eco": "D35",
+    "summary": "White fixes the centre and turns to the famous minority attack against Black's queenside majority.",
+    "detail": "After 1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 c6 6.e3 Be7 7.Bd3 Nbd7 8.Nf3 O-O 9.O-O the Carlsbad structure is on the board and both sides know their homework. White's main plan is the minority attack a4 and b4-b5 against c6; Black's defences are ...Ne4, kingside piece play, and the ...c5 break. The resulting middlegame is a model of minority-attack play with clear plans for both sides and the assessment depending on the timing of the breaks. The Bg5 pin on f6 can be broken with ...Ne4, when White must decide whether to trade or retreat.",
+    "whitePlan": "Minority attack: a4, b4-b5, Qc2 with rooks on the b- and c-files; against ...Ne4, trade on e7 and re-challenge the knight, keeping the minority attack in reserve.",
+    "blackPlan": "Meet the minority attack with ...Ne4, the ...c5 break at the right moment, and rook play on the c-file; if bxc6 comes, recapture ...bxc6, defend c6 with the rooks and seek kingside activity.",
+    "tags": [
+      "opening",
+      "closed",
+      "carlsbad",
+      "minority"
+    ],
+    "keywords": [
+      "qgd",
+      "exchange",
+      "carlsbad",
+      "minority",
+      "attack",
+      "cxd5"
+    ],
+    "hooks": [
+      "opening",
+      "carlsbad"
+    ],
+    "moves": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 c6 6.e3 Be7 7.Bd3 Nbd7 8.Nf3 O-O 9.O-O",
+    "fen": "r1bq1rk1/pp1nbppp/2p2n2/3p2B1/3P4/2NBPN2/PP3PPP/R2Q1RK1 b - - 6 9",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "nimzo_classical",
+    "title": "Nimzo-Indian Defence (Classical)",
+    "aka": [
+      "nimzo",
+      "nimzo indian",
+      "rubinstein"
+    ],
+    "eco": "E46",
+    "summary": "Bb4 pins Nc3: Black fights for e4 with pieces rather than committing pawns.",
+    "detail": "After 1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Bd3 d5 6.Nf3 c5 7.O-O dxc4 8.Bxc4 cxd4 9.exd4 b6 the classical Nimzo-Indian gives Black a solid game with the bishop pair against White's small space plus. Black's coming ...Bb7 pressures the centre along the long diagonal, and ...Nbd7 and ...Re8 complete a flexible set-up, with ...Bxc3 available to soften White's structure. White enjoys more central space, targets e6 with Re1 and Qe2, and keeps the d5 square and the d4-d5 break in reserve. Play is rich but balanced: Black's pieces are harmonious, White's pawns are mobile.",
+    "whitePlan": "Pressure e6 with Re1 and Qe2, keep the d5 square for the knight, and aim for the d4-d5 break at the right moment.",
+    "blackPlan": "Fianchetto ...Bb7, develop ...Nbd7 and ...Re8; ...Bxc3 softens White's structure, and the bishop pair is the long-term asset.",
+    "tags": [
+      "opening",
+      "closed",
+      "nimzo",
+      "hypermodern"
+    ],
+    "keywords": [
+      "nimzo",
+      "indian",
+      "bb4",
+      "pin",
+      "e4",
+      "bishop",
+      "pair"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.d4 Nf6 2.c4 e6 3.Nc3 Bb4 4.e3 O-O 5.Bd3 d5 6.Nf3 c5 7.O-O dxc4 8.Bxc4 cxd4 9.exd4 b6",
+    "fen": "rnbq1rk1/p4ppp/1p2pn2/8/1bBP4/2N2N2/PP3PPP/R1BQ1RK1 w - - 0 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "kid_classical",
+    "title": "King's Indian Defence (Classical)",
+    "aka": [
+      "kings indian",
+      "kid",
+      "classical kid"
+    ],
+    "eco": "E97",
+    "summary": "Black concedes the centre, then locks it with ...e5 and launches the famous kingside attack.",
+    "detail": "After 1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5 7.O-O Nc6 8.d5 Ne7 the centre locks and both sides play on opposite wings: White storms the queenside with b4 and c5 for space and material, while Black attacks the king with ...f5 (after exf5 ...gxf5 the g-file opens for the rooks and the g7 bishop), a knight reroute toward g6, and the ...f4 or ...g5-g4 breaks. Because the kings usually castle on the same side, the race is genuinely mutual: neither side can be distracted from its own wing. Whoever's attack lands first wins the game, which makes timing and pawn-count racing the decisive skill.",
+    "whitePlan": "Storm the queenside: b4 and c5 with rook support, opening files where Black has less space, while monitoring Black's kingside timing.",
+    "blackPlan": "Attack the king: ...f5 (met by exf5 ...gxf5, opening the g-file), redeploy the e7 knight to g6, use the g7 bishop on the long diagonal, and open lines with ...f4 or ...g5-g4 at the right moment.",
+    "tags": [
+      "opening",
+      "closed",
+      "kid",
+      "attack",
+      "race"
+    ],
+    "keywords": [
+      "kings",
+      "indian",
+      "kid",
+      "bg7",
+      "e5",
+      "f5",
+      "race",
+      "storm"
+    ],
+    "hooks": [
+      "opening",
+      "closed_center"
+    ],
+    "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5 7.O-O Nc6 8.d5 Ne7 9.Ne1 Nd7 10.Nd3 f5",
+    "fen": "r1bq1rk1/pppnn1bp/3p2p1/3Ppp2/2P1P3/2NN4/PP2BPPP/R1BQ1RK1 w - - 0 11",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "grunfeld_exchange",
+    "title": "Grünfeld Defence (Exchange)",
+    "aka": [
+      "grunfeld",
+      "grunfeld defence"
+    ],
+    "eco": "D85",
+    "summary": "Black invites a big centre and strangles it: raking pressure on d4 from g7, c5 and the knights.",
+    "detail": "After 1.d4 Nf6 2.c4 g6 3.Nc3 d5 4.cxd5 Nxd5 5.e4 Nxc3 6.bxc3 Bg7 7.Bc4 c5 8.Ne2 Nc6 9.Be3 O-O 10.O-O White owns a proud centre but must hold it forever: the g7 bishop bites on the long diagonal, ...Nc6 and ...c5 hammer d4, and ...Qa5-type moves hit the c3/a2 cluster. White's plans: keep the centre intact with Be3, f3 or the Ne2-g3 regrouping (supporting e4), castle early, and only then expand or prepare e5. Black's plans: keep raking the centre, trade pieces when it helps, and choose between ...cxd4 exchanges and the ...e5 break. The eternal Grünfeld question is whether the centre is a strength or a target; every White pawn move changes the answer.",
+    "whitePlan": "Hold the centre with Be3, f3 or Ne2-g3, castle to safety, and prepare the e5 push or queenside play only once the pieces coordinate.",
+    "blackPlan": "Rake the centre: ...Bg7 and ...Nc6 hit d4, ...Qa5 pressures c3, and the ...cxd4 exchanges or the ...e5 break follow at the right moment.",
+    "tags": [
+      "opening",
+      "hypermodern",
+      "centre",
+      "grunfeld"
+    ],
+    "keywords": [
+      "grunfeld",
+      "centre",
+      "d4",
+      "g7",
+      "raking",
+      "pressure",
+      "exchange"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.d4 Nf6 2.c4 g6 3.Nc3 d5 4.cxd5 Nxd5 5.e4 Nxc3 6.bxc3 Bg7 7.Bc4 c5 8.Ne2 Nc6 9.Be3 O-O 10.O-O",
+    "fen": "r1bq1rk1/pp2ppbp/2n3p1/2p5/2BPP3/2P1B3/P3NPPP/R2Q1RK1 b - - 5 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "slav_main",
+    "title": "Slav Defence (Main Line)",
+    "aka": [
+      "slav",
+      "slav defence"
+    ],
+    "eco": "D15",
+    "summary": "...c6 supports d5 so the light bishop develops before ...e6, avoiding the QGD's bad bishop.",
+    "detail": "After 1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O Nbd7 9.Qe2 O-O Black has solved the oldest QGD problem: the c8 bishop breathes on f5 before ...e6 shuts it in. White's 5.a4 stops ...b5 and keeps a long-term clamp on the queenside; the main line gives both sides clear plans. White's plans: prepare e3-e4 with Qe2 and Re1, use Ne5 jumps supported by d4, and keep the a-file pressure as a slow threat. Black's plans: keep the f5 bishop healthy, prepare the freeing ...e5 break, and meet e4 with active piece play rather than passive defence.",
+    "whitePlan": "Prepare e3-e4 with Qe2 and Re1, use Ne5 jumps supported by d4, and keep the a4 clamp as a long-term queenside threat.",
+    "blackPlan": "Keep the f5 bishop active, prepare the ...e5 freeing break, and answer e4 with dynamic piece play.",
+    "tags": [
+      "opening",
+      "solid",
+      "slav",
+      "qgd"
+    ],
+    "keywords": [
+      "slav",
+      "c6",
+      "bf5",
+      "solid",
+      "bishop",
+      "structure"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O Nbd7 9.Qe2 O-O",
+    "fen": "r2q1rk1/pp1n1ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P2QPPP/R1B2RK1 w - - 5 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "reti_english_attack",
+    "title": "Réti Opening",
+    "aka": [
+      "reti",
+      "reti opening",
+      "double fianchetto"
+    ],
+    "eco": "A05",
+    "summary": "Hypermodern restraint: control the centre from the wings and strike with a well-timed d4 or e4.",
+    "detail": "After 1.Nf3 d5 2.c4 e6 3.g3 Nf6 4.Bg2 Be7 5.O-O O-O 6.b3 c5 7.Bb2 Nc6 8.e3 b6 9.Nc3 Bb7 White refuses to occupy the centre with pawns, pressuring d5 with c4 and raking the long diagonals with both bishops. The plans are about timing: White completes the double fianchetto and then breaks with e4 or d4 exactly when Black's pieces sit awkwardly; Black holds the centre and meets the breaks with ...cxd4 or ...d4 counters of his own. Because both sides develop slowly, small timing differences decide who gets the initiative. The Réti is the ideal laboratory for hypermodern principles: restrain, provoke, strike.",
+    "whitePlan": "Complete the double fianchetto, keep pressuring d5 with c4, and break with e4 or d4 only when Black's pieces are committed.",
+    "blackPlan": "Hold the centre, develop flexibly, and answer the d4 or e4 break with ...cxd4 or central counters; the b7 bishop keeps e4 under watch.",
+    "tags": [
+      "opening",
+      "hypermodern",
+      "reti",
+      "fianchetto"
+    ],
+    "keywords": [
+      "reti",
+      "nf3",
+      "hypermodern",
+      "fianchetto",
+      "restrain",
+      "wings"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.Nf3 d5 2.c4 e6 3.g3 Nf6 4.Bg2 Be7 5.O-O O-O 6.b3 c5 7.Bb2 Nc6 8.e3 b6 9.Nc3 Bb7",
+    "fen": "r2q1rk1/pb2bppp/1pn1pn2/2pp4/2P5/1PN1PNP1/PB1P1PBP/R2Q1RK1 w - - 2 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "london_system",
+    "title": "London System",
+    "aka": [
+      "london",
+      "london system",
+      "pyramid"
+    ],
+    "eco": "D02",
+    "summary": "The dependable pyramid: Bf4+e3+c3 builds a solid wall and comes with ready-made attacking plans.",
+    "detail": "After 1.d4 d5 2.Nf3 Nf6 3.Bf4 c5 4.e3 Nc6 5.c3 e6 6.Nbd2 Bd6 7.Bg3 O-O 8.Bd3 b6 9.O-O Bb7 10.Ne5 White has a stable centre, the bishop pair outside the pawn chain, and a knight aiming at the kingside. The London's appeal is the plan set: Ne5, h4-h5 and f4 space-gaining with the g3 bishop supporting, or the b4 expansion when Black loosens the queenside. Black's counters are equally standard: the ...e5 break to open the centre (often after ...Nh5 trading the g3 bishop), or the ...c4 clamp when White's pieces are committed kingside. Practical players love the London because the plans survive many Black set-ups.",
+    "whitePlan": "Castle short, ride the knight to e5, and choose between kingside expansion (h4-h5 and f4 supported by the g3 bishop) and queenside play with b4.",
+    "blackPlan": "Open the centre with the ...e5 break (consider ...Nh5 to trade the g3 bishop first), or clamp with ...c4; avoid passive defence.",
+    "tags": [
+      "opening",
+      "system",
+      "london",
+      "solid"
+    ],
+    "keywords": [
+      "london",
+      "bf4",
+      "pyramid",
+      "system",
+      "ne5",
+      "solid",
+      "plans"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.d4 d5 2.Nf3 Nf6 3.Bf4 c5 4.e3 Nc6 5.c3 e6 6.Nbd2 Bd6 7.Bg3 O-O 8.Bd3 b6 9.O-O Bb7 10.Ne5",
+    "fen": "r2q1rk1/pb3ppp/1pnbpn2/2ppN3/3P4/2PBP1B1/PP1N1PPP/R2Q1RK1 b - - 3 10",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "scotch_main",
+    "title": "Scotch Game (Main Line)",
+    "aka": [
+      "scotch",
+      "scotch game"
+    ],
+    "eco": "C45",
+    "summary": "Immediate central opening: White gets the e5 wedge and space, Black the bishop pair and activity.",
+    "detail": "After 1.e4 e5 2.Nf3 Nc6 3.d4 exd4 4.Nxd4 Nf6 5.Nxc6 bxc6 6.e5 Qe7 7.Qe2 Nd5 8.c4 Ba6 the centre opens at move three and both sides get lasting trumps: White's e5 wedge cramps Black and gains space, while Black's bishop pair and the quick ...Ba6 pressure against c4 promise active piece play. White's plans: hold e5, develop with b3 guarding c4 and Nc3, and convert the space into a kingside build-up. Black's plans: pressure e5 with the queen, prepare the ...f6 or ...d6 breaks against the wedge, and keep both bishops raking. The Scotch rewards concrete play: the structures are open, and every trade changes the balance between White's space and Black's bishops.",
+    "whitePlan": "Hold the e5 wedge, develop with b3 (guarding c4) and Nc3, and use the extra space for a kingside build-up.",
+    "blackPlan": "Pressure e5 with the queen, break with ...f6 or ...d6 against the wedge, and keep the bishop pair active against c4 and d4.",
+    "tags": [
+      "opening",
+      "open",
+      "scotch",
+      "centre"
+    ],
+    "keywords": [
+      "scotch",
+      "e5",
+      "wedge",
+      "bishop",
+      "pair",
+      "open",
+      "centre"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.e4 e5 2.Nf3 Nc6 3.d4 exd4 4.Nxd4 Nf6 5.Nxc6 bxc6 6.e5 Qe7 7.Qe2 Nd5 8.c4 Ba6",
+    "fen": "r3kb1r/p1ppqppp/b1p5/3nP3/2P5/8/PP2QPPP/RNB1KB1R w KQkq - 1 9",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "vienna_gambit",
+    "title": "Vienna Game (Gambit)",
+    "aka": [
+      "vienna",
+      "vienna gambit",
+      "vienna game"
+    ],
+    "eco": "C29",
+    "summary": "f4 turns the Vienna into a gambit: a big centre and rapid development for the f-pawn.",
+    "detail": "After 1.e4 e5 2.Nc3 Nf6 3.f4 d5 4.fxe5 Nxe4 5.Nf3 Be7 6.d4 O-O 7.Bd3 White has traded the f-pawn for a mighty d4+e5 wedge and a lead in development; the immediate 7.Bd3 attacks the e4 knight, and Black's standard defence ...f5 keeps it but weakens the kingside light squares. White's plans: castle short, increase the pressure on e4, and use the wedge and the half-open f-file for a kingside initiative. Black's plans: hold the e4 pawn with ...f5, complete development fast, and strike at d4 with ...c5 before White consolidates. Gambit play at its purest: material versus centre and tempo.",
+    "whitePlan": "Castle short, attack the e4 knight with Bd3, and use the central wedge plus the half-open f-file for a kingside initiative.",
+    "blackPlan": "Defend e4 with ...f5, develop quickly, and hit d4 with ...c5 before White consolidates the wedge.",
+    "tags": [
+      "opening",
+      "gambit",
+      "vienna",
+      "attack"
+    ],
+    "keywords": [
+      "vienna",
+      "f4",
+      "gambit",
+      "wedge",
+      "e4",
+      "knight",
+      "development"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.e4 e5 2.Nc3 Nf6 3.f4 d5 4.fxe5 Nxe4 5.Nf3 Be7 6.d4 O-O 7.Bd3",
+    "fen": "rnbq1rk1/ppp1bppp/8/3pP3/3Pn3/2NB1N2/PPP3PP/R1BQK2R b KQ - 2 7",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "english_reversed_dragon",
+    "title": "English Opening (Reversed Dragon)",
+    "aka": [
+      "english",
+      "english opening",
+      "symmetrical english",
+      "reversed dragon"
+    ],
+    "eco": "A29",
+    "summary": "A reversed Sicilian: White plays the Dragon's black side with an extra tempo and the c-file.",
+    "detail": "After 1.c4 c5 2.Nf3 Nf6 3.Nc3 Nc6 4.g3 d5 5.cxd5 Nxd5 6.Bg2 Nb6 7.O-O e6 8.d3 Be7 9.a3 O-O 10.Qc2 f5 the position mirrors a Sicilian Dragon with the colours swapped, so White effectively plays the Dragon's attacking side a tempo up: the g2 bishop eyes the long diagonal, and the semi-open c-file is White's highway. White's plans: pressure down the c-file with Rc1, expand against c5 with b4, and release the g2 bishop at the right moment. Black's plans: contest the c-file with ...Rc8, seek central play with ...e5, and build up with ...f5 like a Yugoslav-Attack White. The symmetry makes small timing edges decisive, and both sides must remember the mirror: what is good for a Dragon player is good for White here.",
+    "whitePlan": "Use the semi-open c-file (Rc1), expand with b4 against c5, and let the g2 bishop loose on the long diagonal at the right moment.",
+    "blackPlan": "Contest the c-file with ...Rc8, look for ...e5 central play or the ...f5 kingside build-up, and keep b7 defended against the long diagonal.",
+    "tags": [
+      "opening",
+      "english",
+      "reversed",
+      "sicilian",
+      "fianchetto"
+    ],
+    "keywords": [
+      "english",
+      "c4",
+      "reversed",
+      "dragon",
+      "symmetrical",
+      "c-file",
+      "bg2"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.c4 c5 2.Nf3 Nf6 3.Nc3 Nc6 4.g3 d5 5.cxd5 Nxd5 6.Bg2 Nb6 7.O-O e6 8.d3 Be7 9.a3 O-O 10.Qc2 f5",
+    "fen": "r1bq1rk1/pp2b1pp/1nn1p3/2p2p2/8/P1NP1NP1/1PQ1PPBP/R1B2RK1 w - - 0 11",
+    "example": ""
+  },
+  {
+    "kind": "opening",
+    "name": "catalan_open",
+    "title": "Catalan Opening (Open)",
+    "aka": [
+      "catalan",
+      "open catalan",
+      "catalan opening"
+    ],
+    "eco": "E05",
+    "summary": "Queen's Gambit skeleton plus the g2 monster: White pressures the centre and b7 for the long haul.",
+    "detail": "After 1.d4 Nf6 2.c4 e6 3.g3 d5 4.Bg2 Be7 5.Nf3 O-O 6.O-O dxc4 7.Qc2 a6 8.Qxc4 b5 9.Qc2 Bb7 10.Nc3 Nbd7 White combines the QGD's solid skeleton with a fianchetto bishop that rakes the centre and b7. Black's ...dxc4, ...a6 and ...b5 win temporary queenside space but hand White the centre and the long diagonal. White's plans: maintain the g2 bishop's pressure on b7, undermine the queenside with a4, and prepare the e4 or d5 central breaks. Black's plans: free the position with ...e5 or ...c5 at the right moment, keep the b7 bishop and the c-file counterplay alive, and avoid drifting into passivity. The Catalan is a strategic squeeze: White's threats are slow but permanent.",
+    "whitePlan": "Maintain the g2 bishop's pressure on b7, undermine the queenside with a4, and prepare the e4 or d5 central breaks.",
+    "blackPlan": "Free the position with ...e5 or ...c5 at the right moment, keep the b7 bishop active and the c-file contested, and avoid passive defence.",
+    "tags": [
+      "opening",
+      "catalan",
+      "fianchetto",
+      "squeeze"
+    ],
+    "keywords": [
+      "catalan",
+      "g3",
+      "bg2",
+      "b7",
+      "pressure",
+      "diagonal",
+      "squeeze"
+    ],
+    "hooks": [
+      "opening"
+    ],
+    "moves": "1.d4 Nf6 2.c4 e6 3.g3 d5 4.Bg2 Be7 5.Nf3 O-O 6.O-O dxc4 7.Qc2 a6 8.Qxc4 b5 9.Qc2 Bb7 10.Nc3 Nbd7",
+    "fen": "r2q1rk1/1bpnbppp/p3pn2/1p6/3P4/2N2NP1/PPQ1PPBP/R1B2RK1 w - - 4 11",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "lucena",
+    "title": "The Lucena position",
+    "aka": [
+      "lucena",
+      "building a bridge",
+      "bridge"
+    ],
+    "eco": "",
+    "summary": "The Lucena position is the fundamental win in rook and pawn vs rook: shelter the king with a rook bridge and promote.",
+    "detail": "With a pawn on the 7th rank and the defending rook checking from the side, the attacking king cannot simply walk to the promotion square. The winning method is 'building a bridge': the attacking rook comes to the 4th rank, so that when the king steps out to escort the pawn, the rook can interpose and shield it from the horizontal checks. Once the king is sheltered behind the bridge, the pawn promotes, and the new queen wins the defender's rook or mates. Every rook-and-pawn vs rook with the pawn far advanced reduces to this technique or its failure, so it is the single most valuable ending to know by heart.",
+    "whitePlan": "Winning method: bring the rook to the 4th rank, step the king out, interpose against horizontal checks, then promote the pawn.",
+    "blackPlan": "Holding tries: check from the side and keep the checking distance; only the attacker's imprecision saves the defender.",
+    "tags": [
+      "endgame",
+      "rook",
+      "technique",
+      "must-know"
+    ],
+    "keywords": [
+      "lucena",
+      "rook",
+      "pawn",
+      "bridge",
+      "promote",
+      "shield",
+      "check"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "1K1k4/1P6/8/8/8/8/r7/2R5 w - - 0 1",
+    "example": "Engine line: 1.Rd1+ Ke7 2.Rd4 Rc2 3.Rd5 Rb2 4.Kc7 Ke6"
+  },
+  {
+    "kind": "endgame",
+    "name": "philidor",
+    "title": "The Philidor position",
+    "aka": [
+      "philidor",
+      "third rank defence",
+      "philidor defence"
+    ],
+    "eco": "",
+    "summary": "Philidor's third-rank defence is the fundamental draw in rook against rook and pawn.",
+    "detail": "The defender's king blockades the pawn directly in front of it, and the defending rook waits on the defender's THIRD rank, fencing the attacking king out of the promotion zone. While the attacker's king is still behind the pawn, the third-rank rook stops it from ever coming to support the advance. When the pawn finally pushes far enough that the fence loses its bite, the rook drops behind the enemy position and checks from the rear, and the attacker can never consolidate without allowing perpetual check or a rook-for-pawn trade. This is the defender's holy grail: know Philidor, and half of all practical R+P vs R positions are drawable.",
+    "whitePlan": "Winning method: bring the king forward to support the pawn and time the pawn advances so the rook never gets a permanent checking angle.",
+    "blackPlan": "Holding method: king blockades the pawn, rook fences on the third rank, then drops behind for perpetual rear checks.",
+    "tags": [
+      "endgame",
+      "rook",
+      "defence",
+      "must-know"
+    ],
+    "keywords": [
+      "philidor",
+      "third",
+      "rank",
+      "defence",
+      "draw",
+      "fence",
+      "rear",
+      "checks"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "4k3/8/r7/4P3/4K3/8/8/7R w - - 0 1",
+    "example": "Engine line: 1.Rh7 Rg6 2.Kf5 Ra6 3.Rg7 Rh6 4.Rg6 Rh7"
+  },
+  {
+    "kind": "endgame",
+    "name": "kpk",
+    "title": "King and pawn vs king",
+    "aka": [
+      "kpk",
+      "king and pawn",
+      "opposition",
+      "key squares"
+    ],
+    "eco": "",
+    "summary": "Lead with the king, gain the opposition, and reach a key square; rook pawns are the great exception.",
+    "detail": "The attacker must lead with the KING and keep the pawn behind it: if the attacking king occupies a key square in front of the pawn (with the pawn on the 5th, the sixth-rank squares in front of it), the win is guaranteed. The defender holds by standing directly in front of the pawn with the opposition, forcing the attacker to run out of tempi; pushing the pawn too early hands over the opposition and the draw. Zugzwang decides everything, so the attacker often wins by triangulating to lose a move. The rook pawns (a- and h-files) are the exception: if the defending king reaches the corner squares in front of the pawn, the game is drawn no matter what.",
+    "whitePlan": "Winning method: king first, pawn behind it, occupy the key squares, use triangulation to gain the opposition.",
+    "blackPlan": "Holding method: stay directly in front of the pawn, take the opposition, and with rook pawns just run to the corner.",
+    "tags": [
+      "endgame",
+      "pawn",
+      "king",
+      "must-know"
+    ],
+    "keywords": [
+      "king",
+      "pawn",
+      "opposition",
+      "key",
+      "squares",
+      "zugzwang",
+      "triangulation",
+      "rook",
+      "pawn"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "3k4/8/3K4/3P4/8/8/8/8 w - - 0 1",
+    "example": "Engine line: 1.Kc6 Ke7 2.d6+ Ke8 3.Kc7 Kf7 4.d7 Kg6"
+  },
+  {
+    "kind": "endgame",
+    "name": "rook_pawn_draw",
+    "title": "The rook-pawn draw",
+    "aka": [
+      "rook pawn draw",
+      "a pawn draw",
+      "h pawn draw",
+      "corner draw"
+    ],
+    "eco": "",
+    "summary": "With a rook's pawn, the defender draws whenever the king reaches the corner in front of the pawn.",
+    "detail": "The corner is a fortress: from g8 and h8 (against a white h-pawn) the defending king cannot be dislodged, because the attacking king has no room to protect the promotion square from the side. If the attacking king over-commits with the pawn on h7, the defender simply captures it; if the pawn promotes carelessly, the defender's king is close enough to win the new queen back or stalemate looms. Attackers should steer play toward the centre instead: only switch to a rook-pawn race if the defender's king is cut off from the corner. Defenders should count the race to g8/h8 FIRST, before anything else.",
+    "whitePlan": "Winning method: cut the defender's king off from the corner before advancing the pawn; otherwise switch play to the centre.",
+    "blackPlan": "Holding method: run the king to the corner (g8/h8 against an h-pawn), capture an over-extended pawn, and beware stalemate resources both ways.",
+    "tags": [
+      "endgame",
+      "pawn",
+      "draw",
+      "must-know"
+    ],
+    "keywords": [
+      "rook",
+      "pawn",
+      "draw",
+      "corner",
+      "fortress",
+      "h8",
+      "g8",
+      "cut",
+      "off"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "7k/8/6K1/7P/8/8/8/8 w - - 0 1",
+    "example": "Engine line: 1.Kh6 Kg8 2.Kg6 Kh8"
+  },
+  {
+    "kind": "endgame",
+    "name": "square_rule",
+    "title": "The square of the pawn",
+    "aka": [
+      "square rule",
+      "pawn race",
+      "catching a pawn"
+    ],
+    "eco": "",
+    "summary": "Draw a square on the pawn's diagonal toward promotion: a king inside the square catches the pawn.",
+    "detail": "To know instantly whether a bare king can catch a passed pawn, draw a square whose one side runs from the pawn to its promotion square: if the defending king can step inside that square (counting its next move), the pawn stops; if not, it queens. Two adjustments matter: a pawn still on its 2nd rank moves two squares, so draw the square from the square in front of it, and the rule assumes the defender moves next, so count actual tempi when it is the attacker's turn. In mutual pawn races the same counting decides the game, but two extra ideas change outcomes: the new queen should try to arrive WITH CHECK or on a line that cuts the enemy king off, and rooks belong BEHIND passed pawns where their power grows with every step. Never estimate a race by eye alone; count the moves.",
+    "whitePlan": "Count the square before pushing: promote with check or with a cut-off when racing, and keep defenders' pieces behind the enemy passer.",
+    "blackPlan": "Step into the square at once, and remember the 2nd-rank double-step adjustment before giving up on a chase.",
+    "tags": [
+      "endgame",
+      "pawn",
+      "counting",
+      "must-know"
+    ],
+    "keywords": [
+      "square",
+      "rule",
+      "pawn",
+      "race",
+      "catch",
+      "count",
+      "promote",
+      "check"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "rook_endgame_principles",
+    "title": "Rook endgame principles",
+    "aka": [
+      "rook endings",
+      "rook endgame rules"
+    ],
+    "eco": "",
+    "summary": "In rook endings activity beats material: active rook, king forward, rooks behind passers, cut-off kings.",
+    "detail": "Rook endgames are the most common and most forgiving-yet-cruel endings: activity is worth more than pawns, so a rook on the seventh or a cut-off king compensates real material deficits. The four commandments: put rooks BEHIND passed pawns (own and enemy), activate the KING as a fighting piece rather than a spectator, cut the enemy king off by file or rank, and fight for the seventh rank with the rook. As a rule, defenders keep rooks on the board (rook endings are drawish) and attackers trade into won pawn endings only after calculation. Every tempo spent passively is a structural concession, so improve the worst piece every move.",
+    "whitePlan": "Activate the rook first, even at material cost; rooks behind passers, king marching forward, enemy king cut off.",
+    "blackPlan": "As the defender: stay active at all costs, head for drawn pawn endings only after counting, and fight for the back rank.",
+    "tags": [
+      "endgame",
+      "rook",
+      "principles"
+    ],
+    "keywords": [
+      "rook",
+      "endgame",
+      "activity",
+      "seventh",
+      "behind",
+      "passer",
+      "cut",
+      "off",
+      "king"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "opposite_bishops",
+    "title": "Opposite-coloured bishops",
+    "aka": [
+      "opb",
+      "opposite bishops",
+      "ocb endgame"
+    ],
+    "eco": "",
+    "summary": "Opposite-coloured bishop endings are the most drawish: one bishop cannot fight the other's colour.",
+    "detail": "With bishops on opposite colours, each side can only ever attack half the board, so the defender's fortress tendency is enormous: with pawns on a single wing, most positions are drawn even one or two pawns down. The defender's rule: place pawns on the colour of HIS OWN bishop, where his bishop guards them and the enemy bishop can never attack them, and put the king in front. The attacker wins only with TWO weaknesses at once: pawns fixed on his bishop's colour plus a passed pawn or king invasion that forces the defence to choose. Many pawn-up middlegames are steered into OCB endings precisely as a drawing resource, so learn to evaluate the fortress before trading into one.",
+    "whitePlan": "Winning method: force enemy pawns onto your bishop's colour and create a second weakness (passed pawn or king invasion); one target is never enough.",
+    "blackPlan": "Holding method: pawns on your own bishop's colour, king blockades, and trade into the fortress whenever possible.",
+    "tags": [
+      "endgame",
+      "bishops",
+      "fortress",
+      "draw"
+    ],
+    "keywords": [
+      "opposite",
+      "bishops",
+      "colour",
+      "fortress",
+      "draw",
+      "two",
+      "weaknesses"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "bishop_vs_knight",
+    "title": "Bishop versus knight endings",
+    "aka": [
+      "bishop vs knight",
+      "good knight bad knight"
+    ],
+    "eco": "",
+    "summary": "Open positions with passed pawns on both wings favour the bishop; closed structures and blockades favour the knight.",
+    "detail": "The bishop's long-range strength shows in open positions, with pawns on both wings and passed pawn races, where it shepherds and stops pawns from a distance. The knight's short hops shine in closed or fixed structures, with pawns on one wing, where its ability to change colour squares makes it the superior blockader and attacker of fixed weaknesses. Fixed pawn chains are the knight's paradise because the bishop's diagonal is walled off, while fluid positions are the bishop's because targets multiply faster than the knight can hop. When you can choose the trade, steer toward the piece that matches the structure, and remember the bishop pair gains value in exactly the positions where single bishops shine.",
+    "whitePlan": "With the bishop: open the position, create passed pawns on both wings, and keep the enemy pawns moving so fixed targets never appear.",
+    "blackPlan": "With the knight: fix the pawn chains, keep everything on one wing, and look for outposts and blockading squares the bishop cannot challenge.",
+    "tags": [
+      "endgame",
+      "bishops",
+      "knights",
+      "principles"
+    ],
+    "keywords": [
+      "bishop",
+      "knight",
+      "open",
+      "closed",
+      "blockade",
+      "outpost",
+      "wings"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "pawn_endgame_principles",
+    "title": "Pawn endgame principles",
+    "aka": [
+      "king and pawn endings",
+      "pawn endings"
+    ],
+    "eco": "",
+    "summary": "In pawn endings the king is the main piece: march it, create an outside passer, and count tempi exactly.",
+    "detail": "King activity decides pure pawn endings: a king two squares closer to the battle regularly outweighs a pawn, so the first question is always whose king gets where first, counted in single tempi. The outside passed pawn (far from the kings) is the classic decoy: it pulls the enemy king away while the real majority storms the other wing. Opposition and zugzwang turn king confrontations into waiting contests, solved by triangulation or by a spare pawn move kept in reserve. When kings confront each other, think in corresponding squares (wherever he must answer, you must be ready) rather than move-by-move. Because every pawn ending can be calculated to the end in principle, the practical skill is disciplined counting, not intuition.",
+    "whitePlan": "Winning method: activate the king immediately, create an outside passer as a decoy, and keep a spare pawn move for the decisive zugzwang.",
+    "blackPlan": "Holding method: meet king advances with the opposition, put pawns on the squares the enemy king must cross, and force exact counting.",
+    "tags": [
+      "endgame",
+      "pawn",
+      "king",
+      "principles"
+    ],
+    "keywords": [
+      "pawn",
+      "ending",
+      "king",
+      "activity",
+      "outside",
+      "passer",
+      "opposition",
+      "zugzwang"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  },
+  {
+    "kind": "endgame",
+    "name": "fortress_and_draws",
+    "title": "Fortresses and drawing resources",
+    "aka": [
+      "fortress",
+      "stalemate",
+      "perpetual check",
+      "insufficient material"
+    ],
+    "eco": "",
+    "summary": "Know your drawing arsenal: fortresses, stalemates, perpetual checks, and insufficient material.",
+    "detail": "A fortress is a position where the defender's pieces and pawns wall off the extra material so permanently that no progress is possible, the classics being opposite-coloured bishop walls and simple corner fortresses like the rook-pawn draw. Stalemate saves games that look lost: sacrifice material to leave the enemy king with no legal move, especially when your own king is cornered. Perpetual check turns an attacking position into a draw by repetition when the attacker cannot improve; insufficient material (K+B vs K, K+N vs K) and the 50-move rule complete the legal toolkit. Practical players scan for these resources BEFORE resigning lost-looking positions, and attackers must check for them before sacrificing.",
+    "whitePlan": "As the attacker: before every sacrifice, check for stalemate and fortress resources; convert by opening a second front against fortresses.",
+    "blackPlan": "As the defender: scan for stalemate tricks, perpetual checks and fortress set-ups every move; many 'lost' positions are book draws.",
+    "tags": [
+      "endgame",
+      "draw",
+      "fortress",
+      "resources"
+    ],
+    "keywords": [
+      "fortress",
+      "stalemate",
+      "perpetual",
+      "check",
+      "insufficient",
+      "material",
+      "50",
+      "move",
+      "draw"
+    ],
+    "hooks": [
+      "endgame"
+    ],
+    "moves": "",
+    "fen": "",
+    "example": ""
+  }
+]

@@ -1,0 +1,26 @@
+# Normalise line endings so Windows checkouts do not churn the history.
+# Git warns "LF will be replaced by CRLF" on nearly every source file here;
+# this makes the behaviour explicit and consistent instead of accidental.
+* text=auto eol=lf
+
+# Windows-only scripts must keep CRLF so cmd.exe can run them.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary assets: never touch these, and never attempt a text diff.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.wasm binary
+*.keystore binary
+*.jks  binary
+
+# Generated engine payloads are large single-line JS files; exclude from diffs
+# and from language statistics so they do not drown out the real source.
+assets/engine/*.js linguist-generated=true -diff
+package-lock.json  linguist-generated=true -diff
+
+# The repertoire data files are one-line JSON; exclude from diffs for sanity.
+src/data/*.json -diff

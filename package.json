@@ -1,0 +1,39 @@
+{
+  "name": "chessforge",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "chess.js": "^1.4.0",
+    "expo": "~57.0.22",
+    "expo-audio": "~57.0.5",
+    "expo-file-system": "~57.0.7",
+    "expo-font": "~57.0.4",
+    "expo-linear-gradient": "~57.0.2",
+    "expo-sqlite": "~57.0.3",
+    "expo-status-bar": "~57.0.1",
+    "expo-system-ui": "^57.0.4",
+    "fflate": "^0.8.3",
+    "llama.rn": "^0.13.0-rc.7",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-svg": "~15.14.0",
+    "react-native-webview": "~13.16.0",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "build:assets": "node scripts/build-engine-assets.mjs",
+    "prebuild": "expo prebuild --platform android --clean"
+  },
+  "private": true
+}

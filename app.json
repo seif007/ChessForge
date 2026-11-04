@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "ChessForge",
+    "slug": "chessforge",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "chessforge",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#0a1310",
+    "primaryColor": "#2e8b6a",
+    "splash": {
+      "image": "./assets/splash-wordmark.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a1310"
+    },
+    "android": {
+      "package": "com.chessforge.chesstraining",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0a1310",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.INTERNET"
+      ],
+      "usesCleartextTraffic": false
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-font",
+      "expo-system-ui",
+      "./plugins/with-no-backup",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-status-bar",
+        {
+          "style": "light",
+          "backgroundColor": "#0a1310"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}

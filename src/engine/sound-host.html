@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body>
+<script>
+/* eslint-disable */
+/**
+ * ChessForge sound host — runs inside a hidden react-native-webview.
+ *
+ * This is the synthesis code from the web `lib/sounds.ts`, moved verbatim into a
+ * browser context (React Native has no AudioContext). The DSP is unchanged, so
+ * the sounds are bit-identical to the web app.
+ *
+ * Protocol: RN -> page  { cmd: 'sfx', kind: 'move'|'capture'|... }
+ */
+
+var ctx = null;
+var master = null;
+
+function ac() {
+  if (!ctx) {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    ctx = new AC();
+    master = ctx.createGain();
+    master.gain.value = 0.5;
+    master.connect(ctx.destination);
+  }
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(function () {});
+  }
+  return ctx;
+}
+
+/** Low sine thump + filtered noise click = wooden piece hit. */
+function thock(when, freq, vol, decay) {
+  if (!ctx || !master) return;
+  var osc = ctx.createOscillator();
+  var og = ctx.createGain();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(freq, when);
+  osc.frequency.exponentialRampToValueAtTime(Math.max(40, freq * 0.45), when + decay);
+  og.gain.setValueAtTime(vol, when);
+  og.gain.exponentialRampToValueAtTime(0.0001, when + decay);
+  osc.connect(og);
+  og.connect(master);
+  osc.start(when);
+  osc.stop(when + decay + 0.03);
+
+  var len = 0.028;
+  var buf = ctx.createBuffer(1, Math.max(1, Math.ceil(ctx.sampleRate * len)), ctx.sampleRate);
+  var data = buf.getChannelData(0);
+  for (var i = 0; i < data.length; i++) {
+    data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
+  }
+  var src = ctx.createBufferSource();
+  src.buffer = buf;
+  var bp = ctx.createBiquadFilter();
+  bp.type = 'bandpass';
+  bp.frequency.value = 1900;
+  bp.Q.value = 0.7;
+  var ng = ctx.createGain();
+  ng.gain.value = vol * 0.85;
+  src.connect(bp);
+  bp.connect(ng);
+  ng.connect(master);
+  src.start(when);
+}
+
+/** Short pure tone (for check ping / promote rise / chimes). */
+function tone(when, f0, f1, vol, dur, type) {
+  if (!ctx || !master) return;
+  var osc = ctx.createOscillator();
+  var g = ctx.createGain();
+  osc.type = type || 'sine';
+  osc.frequency.setValueAtTime(f0, when);
+  if (f1 !== f0) osc.frequency.exponentialRampToValueAtTime(f1, when + dur);
+  g.gain.setValueAtTime(0.0001, when);
+  g.gain.exponentialRampToValueAtTime(vol, when + 0.015);
+  g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+  osc.connect(g);
+  g.connect(master);
+  osc.start(when);
+  osc.stop(when + dur + 0.03);
+}
+
+function synth(kind, c) {
+  var t = c.currentTime + 0.01;
+  switch (kind) {
+    case 'move':
+      thock(t, 195, 0.5, 0.085);
+      break;
+    case 'capture':
+      thock(t, 145, 0.62, 0.11);
+      thock(t + 0.045, 105, 0.3, 0.09);
+      break;
+    case 'castle':
+      thock(t, 185, 0.45, 0.08);
+      thock(t + 0.085, 165, 0.4, 0.08);
+      break;
+    case 'check':
+      thock(t, 195, 0.5, 0.085);
+      tone(t + 0.07, 660, 660, 0.12, 0.14, 'triangle');
+      break;
+    case 'promote':
+      thock(t, 195, 0.5, 0.085);
+      tone(t + 0.05, 520, 880, 0.14, 0.22, 'triangle');
+      break;
+    case 'wrong':
+      tone(t, 150, 150, 0.16, 0.09, 'square');
+      tone(t + 0.12, 118, 118, 0.16, 0.12, 'square');
+      break;
+    case 'success':
+      tone(t, 659, 659, 0.14, 0.16, 'triangle');   /* E5 */
+      tone(t + 0.13, 880, 880, 0.15, 0.28, 'triangle'); /* A5 */
+      break;
+    /*
+     * GAME ENDINGS. Three shapes a player learns to read by ear: a bright rise
+     * for a win, a falling two-note for a loss, a flat pair for a draw. The
+     * checkmate is the loudest moment in a game, so it is a hit plus a short
+     * three-note figure rather than a single ping.
+     */
+    case 'checkmate':
+      thock(t, 165, 0.6, 0.11);
+      tone(t + 0.08, 523, 523, 0.16, 0.16, 'triangle');  /* C5 */
+      tone(t + 0.24, 698, 698, 0.16, 0.18, 'triangle');  /* F5 */
+      tone(t + 0.42, 880, 880, 0.18, 0.34, 'triangle');  /* A5 */
+      break;
+    case 'gamewin':
+      thock(t, 200, 0.42, 0.08);
+      tone(t + 0.06, 523, 523, 0.15, 0.16, 'triangle');  /* C5 */
+      tone(t + 0.21, 659, 659, 0.15, 0.16, 'triangle');  /* E5 */
+      tone(t + 0.36, 784, 784, 0.16, 0.18, 'triangle');  /* G5 */
+      tone(t + 0.52, 1047, 1047, 0.18, 0.42, 'triangle');/* C6 */
+      break;
+    case 'gamelose':
+      tone(t, 440, 440, 0.15, 0.20, 'sine');             /* A4 */
+      tone(t + 0.20, 349, 349, 0.15, 0.22, 'sine');      /* F4 */
+      tone(t + 0.44, 262, 262, 0.17, 0.44, 'sine');      /* C4 */
+      break;
+    case 'draw':
+      tone(t, 523, 523, 0.14, 0.20, 'triangle');
+      tone(t + 0.22, 523, 523, 0.14, 0.30, 'triangle');
+      break;
+    /*
+     * THE TOURNAMENT FANFARE — the arrival moment. A rising arpeggio, longer and
+     * louder than a win, so entering an event reads as an event.
+     */
+    case 'tournament':
+      tone(t, 392, 392, 0.13, 0.14, 'triangle');        /* G4 */
+      tone(t + 0.14, 523, 523, 0.14, 0.14, 'triangle'); /* C5 */
+      tone(t + 0.28, 659, 659, 0.15, 0.14, 'triangle'); /* E5 */
+      tone(t + 0.42, 784, 784, 0.16, 0.16, 'triangle'); /* G5 */
+      tone(t + 0.58, 1047, 1047, 0.18, 0.50, 'triangle');/* C6 */
+      tone(t + 0.58, 523, 523, 0.10, 0.50, 'sine');
+      break;
+    case 'fanfare':
+      /* A longer, brighter figure reserved for winning a whole tournament. */
+      tone(t, 523, 523, 0.15, 0.14, 'triangle');
+      tone(t + 0.14, 659, 659, 0.15, 0.14, 'triangle');
+      tone(t + 0.28, 784, 784, 0.16, 0.14, 'triangle');
+      tone(t + 0.42, 1047, 1047, 0.18, 0.20, 'triangle');
+      tone(t + 0.64, 784, 784, 0.15, 0.14, 'triangle');
+      tone(t + 0.78, 1047, 1047, 0.18, 0.20, 'triangle');
+      tone(t + 1.00, 1319, 1319, 0.19, 0.60, 'triangle');
+      tone(t + 1.00, 659, 659, 0.11, 0.60, 'sine');
+      break;
+  }
+}
+
+function play(kind) {
+  var c = ac();
+  if (!c) return;
+  if (c.state === 'suspended') {
+    c.resume().then(function () { synth(kind, c); }).catch(function () {});
+    return;
+  }
+  synth(kind, c);
+}
+
+function handle(raw) {
+  var msg;
+  try {
+    msg = JSON.parse(raw);
+  } catch (e) {
+    return;
+  }
+  if (msg && msg.cmd === 'sfx' && msg.kind) play(msg.kind);
+  if (msg && msg.cmd === 'unlock') {
+    // Prime the AudioContext inside a user gesture.
+    var c = ac();
+    if (c && c.state === 'suspended') c.resume().catch(function () {});
+  }
+}
+
+document.addEventListener('message', function (e) { handle(e.data); });
+window.addEventListener('message', function (e) { handle(e.data); });
+</script>
+</body>
+</html>

@@ -1,0 +1,3065 @@
+{
+  "generatedAt": "2026-09-11T23:13:37.408Z",
+  "source": "queens-gambit.json :: Chapter 5: The Queen's Gambit Accepted (promoted to its own opening)",
+  "intro": "WELCOME. This is a realistic-opponent repertoire for the Queen's Gambit complex (1.d4 d5 2.c4), built the same way as the companion Sicilian Defense Encyclopedia: for every position, the main theoretical moves, common tries you'll actually meet, sharp/gambit lines, quiet positional systems, traps, and typical mistakes. PLANNED TABLE OF CONTENTS — Chapter 1: Understanding the Queen's Gambit (foundations — structures, breaks, plans). Chapter 2: The Queen's Gambit Declined, Main Lines (Orthodox). Chapter 3: The Exchange Variation and the Minority Attack. Chapter 4: The Tartakower, Lasker, and Cambridge Springs Defenses. Chapter 5: The Queen's Gambit Accepted. Chapter 6: The Slav Defense. Chapter 7: The Semi-Slav (Meran, Botvinnik, Moscow). Chapter 8: The Catalan. Chapter 9: The Chigorin, Albin Countergambit, and Other Rare Black Tries. Chapter 10: Traps and Tactics Compendium. Chapters will be built and appended one at a time, exactly as with the Sicilian book, with every line verified move-by-move for legality and spot-checked against current theory before being added.",
+  "chapters": [
+    {
+      "title": "Chapter 1: Main Lines and the Isolated Pawn",
+      "order": 0,
+      "studies": [
+        {
+          "id": "qga1",
+          "chapter": "Chapter 1: Main Lines and the Isolated Pawn",
+          "title": "Study 1.1 — QGA Main Tabiya",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+              "commentAfter": "THE QUEEN'S GAMBIT ACCEPTED — as established in Chapter 1 (Study 1.1), Black cannot actually hold this pawn safely, so the point is simply to develop naturally and let White spend a tempo regaining it."
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3",
+              "commentAfter": "By far White's most popular try — this prevents Black from freeing the position with an immediate ...e5, unlike 3.e4 or 3.e3."
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4"
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+              "commentAfter": "Preparing to recapture on c4 with the bishop, keeping the structure completely solid."
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5",
+              "commentAfter": "regaining the pawn, exactly as expected."
+            },
+            {
+              "san": "c5",
+              "uci": "c7c5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQK2R w KQkq - 0 6",
+              "commentAfter": "THE MAIN TABIYA — Black immediately strikes back at White's center, refusing to just sit passively a tempo down."
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 b kq - 1 6"
+            },
+            {
+              "san": "a6",
+              "uci": "a7a6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 w kq - 0 7",
+              "commentAfter": "A hugely important prophylactic move, reached in thousands of games — Black prepares ...b5, which will gain queenside space and harass the bishop with tempo."
+            },
+            {
+              "san": "Qe2",
+              "uci": "d1e2",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP2QPPP/RNB2RK1 b kq - 1 7",
+              "commentAfter": "A very standard continuation, preparing Rd1 and keeping an eye on e4."
+            },
+            {
+              "san": "b5",
+              "uci": "b7b5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/2BP4/4PN2/PP2QPPP/RNB2RK1 w kq - 0 8"
+            },
+            {
+              "san": "Bb3",
+              "uci": "c4b3",
+              "variations": [
+                [
+                  {
+                    "san": "Bd3",
+                    "uci": "c4d3",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/3P4/3BPN2/PP2QPPP/RNB2RK1 b kq - 1 8"
+                  },
+                  {
+                    "san": "cxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1p6/3p4/3BPN2/PP2QPPP/RNB2RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "exd4",
+                    "uci": "e3d4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1p6/3P4/3B1N2/PP2QPPP/RNB2RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Bb7",
+                    "uci": "c8b7",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1p6/3P4/3B1N2/PP2QPPP/RNB2RK1 w kq - 1 10"
+                  },
+                  {
+                    "san": "a4",
+                    "uci": "a2a4",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1p6/P2P4/3B1N2/1P2QPPP/RNB2RK1 b kq - 0 10"
+                  },
+                  {
+                    "san": "bxa4",
+                    "uci": "b5a4",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/8/p2P4/3B1N2/1P2QPPP/RNB2RK1 w kq - 0 11"
+                  },
+                  {
+                    "san": "Rxa4",
+                    "uci": "a1a4",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/8/R2P4/3B1N2/1P2QPPP/1NB2RK1 b kq - 0 11"
+                  },
+                  {
+                    "san": "Be7",
+                    "uci": "f8e7",
+                    "variations": [],
+                    "fenAfter": "rn1qk2r/1b2bppp/p3pn2/8/R2P4/3B1N2/1P2QPPP/1NB2RK1 w kq - 1 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "e4",
+                    "uci": "e3e4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/2BPP3/5N2/PP2QPPP/RNB2RK1 b kq - 0 8"
+                  },
+                  {
+                    "san": "bxc4",
+                    "uci": "b5c4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/2p5/2pPP3/5N2/PP2QPPP/RNB2RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "d5",
+                    "uci": "d4d5",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/2pP4/2p1P3/5N2/PP2QPPP/RNB2RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Be7",
+                    "uci": "f8e7",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p3pn2/2pP4/2p1P3/5N2/PP2QPPP/RNB2RK1 w kq - 1 10"
+                  },
+                  {
+                    "san": "Re1",
+                    "uci": "f1e1",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p3pn2/2pP4/2p1P3/5N2/PP2QPPP/RNB1R1K1 b kq - 2 10"
+                  },
+                  {
+                    "san": "exd5",
+                    "uci": "e6d5",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p4n2/2pp4/2p1P3/5N2/PP2QPPP/RNB1R1K1 w kq - 0 11"
+                  },
+                  {
+                    "san": "exd5",
+                    "uci": "e4d5",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p4n2/2pP4/2p5/5N2/PP2QPPP/RNB1R1K1 b kq - 0 11"
+                  },
+                  {
+                    "san": "Nxd5",
+                    "uci": "f6d5",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p7/2pn4/2p5/5N2/PP2QPPP/RNB1R1K1 w kq - 0 12"
+                  }
+                ]
+              ],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNB2RK1 b kq - 1 8",
+              "commentAfter": "retreating to a safe square before Black can play ...b4 or ...c4 with tempo."
+            },
+            {
+              "san": "Bb7",
+              "uci": "c8b7",
+              "variations": [],
+              "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNB2RK1 w kq - 2 9"
+            },
+            {
+              "san": "Rd1",
+              "uci": "f1d1",
+              "variations": [],
+              "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNBR2K1 b kq - 3 9",
+              "commentAfter": "completing development and adding pressure to the d-file."
+            },
+            {
+              "san": "Nbd7",
+              "uci": "b8d7",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNBR2K1 w kq - 4 10",
+              "commentAfter": "and Black has reached a fully equal, very well-tested position — the resulting middlegame typically revolves around the tension on d4/c5 and whether it resolves into an IQP structure (Study 5.2) or something else."
+            },
+            {
+              "san": "e4",
+              "uci": "e3e4",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1pp5/3PP3/1B3N2/PP2QPPP/RNBR2K1 b kq - 0 10",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "cxd4",
+              "uci": "c5d4",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1p6/3pP3/1B3N2/PP2QPPP/RNBR2K1 w kq - 0 11",
+              "commentAfter": "Pawns clash on d4 — the structure changes. Level position; the fight continues."
+            },
+            {
+              "san": "Nxd4",
+              "uci": "f3d4",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1p6/3NP3/1B6/PP2QPPP/RNBR2K1 b kq - 0 11",
+              "commentAfter": "Your knight takes the pawn on d4. The d-file opens for the rook. Your plan: improve, then open the position on your terms."
+            },
+            {
+              "san": "Qb8",
+              "uci": "d8b8",
+              "variations": [],
+              "fenAfter": "rq2kb1r/1b1n1ppp/p3pn2/1p6/3NP3/1B6/PP2QPPP/RNBR2K1 w kq - 1 12",
+              "commentAfter": "Black repositions the queen to the active b8 square. Ask what Black wants before committing — then take the square away."
+            },
+            {
+              "san": "a4",
+              "uci": "a2a4",
+              "variations": [],
+              "fenAfter": "rq2kb1r/1b1n1ppp/p3pn2/1p6/P2NP3/1B6/1P2QPPP/RNBR2K1 b kq - 0 12",
+              "commentAfter": "You gain space on the flank. Ask what Black wants, then take the square away."
+            },
+            {
+              "san": "Bd6",
+              "uci": "f8d6",
+              "variations": [],
+              "fenAfter": "rq2k2r/1b1n1ppp/p2bpn2/1p6/P2NP3/1B6/1P2QPPP/RNBR2K1 w kq - 1 13",
+              "commentAfter": "A natural developing move — Black's bishop heads for d6. Trade when it eases your position, not just because you can."
+            },
+            {
+              "san": "h3",
+              "uci": "h2h3",
+              "variations": [],
+              "fenAfter": "rq2k2r/1b1n1ppp/p2bpn2/1p6/P2NP3/1B5P/1P2QPP1/RNBR2K1 b kq - 0 13",
+              "commentAfter": "A flank push — claiming room on the rim. Black is a shade better."
+            },
+            {
+              "san": "Nc5",
+              "uci": "d7c5",
+              "variations": [],
+              "fenAfter": "rq2k2r/1b3ppp/p2bpn2/1pn5/P2NP3/1B5P/1P2QPP1/RNBR2K1 w kq - 1 14",
+              "commentAfter": "The knight hops to c5, eyeing fresh targets. It now hits the bishop on b3. Meet threats with activity — passivity invites attacks."
+            },
+            {
+              "san": "axb5",
+              "uci": "a4b5",
+              "variations": [],
+              "fenAfter": "rq2k2r/1b3ppp/p2bpn2/1Pn5/3NP3/1B5P/1P2QPP1/RNBR2K1 b kq - 0 14",
+              "commentAfter": "Pawns clash on b5 — the structure changes. A small edge for Black."
+            },
+            {
+              "san": "O-O",
+              "uci": "e8g8",
+              "variations": [],
+              "fenAfter": "rq3rk1/1b3ppp/p2bpn2/1Pn5/3NP3/1B5P/1P2QPP1/RNBR2K1 w - - 1 15",
+              "commentAfter": "Black castles short — the king tucks away and the rooks connect. Black will try to open lines; keep your king safe first."
+            },
+            {
+              "san": "Nc3",
+              "uci": "b1c3",
+              "variations": [
+                [
+                  {
+                    "san": "Bc2",
+                    "uci": "b3c2",
+                    "variations": [],
+                    "fenAfter": "rq3rk1/1b3ppp/p2bpn2/1Pn5/3NP3/7P/1PB1QPP1/RNBR2K1 b - - 2 15"
+                  },
+                  {
+                    "san": "axb5",
+                    "uci": "a6b5",
+                    "variations": [],
+                    "fenAfter": "rq3rk1/1b3ppp/3bpn2/1pn5/3NP3/7P/1PB1QPP1/RNBR2K1 w - - 0 16"
+                  },
+                  {
+                    "san": "Rxa8",
+                    "uci": "a1a8",
+                    "variations": [],
+                    "fenAfter": "Rq3rk1/1b3ppp/3bpn2/1pn5/3NP3/7P/1PB1QPP1/1NBR2K1 b - - 0 16"
+                  },
+                  {
+                    "san": "Bxa8",
+                    "uci": "b7a8",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/3bpn2/1pn5/3NP3/7P/1PB1QPP1/1NBR2K1 w - - 0 17"
+                  },
+                  {
+                    "san": "Nxb5",
+                    "uci": "d4b5",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/3bpn2/1Nn5/4P3/7P/1PB1QPP1/1NBR2K1 b - - 0 17"
+                  },
+                  {
+                    "san": "Bh2+",
+                    "uci": "d6h2",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/4pn2/1Nn5/4P3/7P/1PB1QPPb/1NBR2K1 w - - 1 18"
+                  },
+                  {
+                    "san": "Kh1",
+                    "uci": "g1h1",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/4pn2/1Nn5/4P3/7P/1PB1QPPb/1NBR3K b - - 2 18"
+                  },
+                  {
+                    "san": "Ncxe4",
+                    "uci": "c5e4",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/4pn2/1N6/4n3/7P/1PB1QPPb/1NBR3K w - - 0 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "Be3",
+                    "uci": "c1e3",
+                    "variations": [],
+                    "fenAfter": "rq3rk1/1b3ppp/p2bpn2/1Pn5/3NP3/1B2B2P/1P2QPP1/RN1R2K1 b - - 2 15"
+                  },
+                  {
+                    "san": "axb5",
+                    "uci": "a6b5",
+                    "variations": [],
+                    "fenAfter": "rq3rk1/1b3ppp/3bpn2/1pn5/3NP3/1B2B2P/1P2QPP1/RN1R2K1 w - - 0 16"
+                  },
+                  {
+                    "san": "Rxa8",
+                    "uci": "a1a8",
+                    "variations": [],
+                    "fenAfter": "Rq3rk1/1b3ppp/3bpn2/1pn5/3NP3/1B2B2P/1P2QPP1/1N1R2K1 b - - 0 16"
+                  },
+                  {
+                    "san": "Bxa8",
+                    "uci": "b7a8",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/3bpn2/1pn5/3NP3/1B2B2P/1P2QPP1/1N1R2K1 w - - 0 17"
+                  },
+                  {
+                    "san": "Qxb5",
+                    "uci": "e2b5",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/3bpn2/1Qn5/3NP3/1B2B2P/1P3PP1/1N1R2K1 b - - 0 17"
+                  },
+                  {
+                    "san": "Ncxe4",
+                    "uci": "c5e4",
+                    "variations": [],
+                    "fenAfter": "bq3rk1/5ppp/3bpn2/1Q6/3Nn3/1B2B2P/1P3PP1/1N1R2K1 w - - 0 18"
+                  },
+                  {
+                    "san": "Qxb8",
+                    "uci": "b5b8",
+                    "variations": [],
+                    "fenAfter": "bQ3rk1/5ppp/3bpn2/8/3Nn3/1B2B2P/1P3PP1/1N1R2K1 b - - 0 18"
+                  },
+                  {
+                    "san": "Rxb8",
+                    "uci": "f8b8",
+                    "variations": [],
+                    "fenAfter": "br4k1/5ppp/3bpn2/8/3Nn3/1B2B2P/1P3PP1/1N1R2K1 w - - 0 19"
+                  }
+                ]
+              ],
+              "fenAfter": "rq3rk1/1b3ppp/p2bpn2/1Pn5/3NP3/1BN4P/1P2QPP1/R1BR2K1 b - - 2 15",
+              "commentAfter": "A natural developing move — your knight heads for c3. Balanced — the game goes on."
+            },
+            {
+              "san": "axb5",
+              "uci": "a6b5",
+              "variations": [],
+              "fenAfter": "rq3rk1/1b3ppp/3bpn2/1pn5/3NP3/1BN4P/1P2QPP1/R1BR2K1 w - - 0 16",
+              "commentAfter": "Black takes the pawn on b5. Open lines and weak squares are what decide the middlegame."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        },
+        {
+          "id": "qga2",
+          "chapter": "Chapter 1: Main Lines and the Isolated Pawn",
+          "title": "Study 1.2 — The Isolated Queen's Pawn Plan",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3"
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4"
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4"
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5"
+            },
+            {
+              "san": "c5",
+              "uci": "c7c5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQK2R w KQkq - 0 6"
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 b kq - 1 6"
+            },
+            {
+              "san": "a6",
+              "uci": "a7a6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 w kq - 0 7"
+            },
+            {
+              "san": "Qe2",
+              "uci": "d1e2",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP2QPPP/RNB2RK1 b kq - 1 7"
+            },
+            {
+              "san": "b5",
+              "uci": "b7b5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/2BP4/4PN2/PP2QPPP/RNB2RK1 w kq - 0 8"
+            },
+            {
+              "san": "Bd3",
+              "uci": "c4d3",
+              "variations": [
+                [
+                  {
+                    "san": "Bb3",
+                    "uci": "c4b3",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNB2RK1 b kq - 1 8"
+                  },
+                  {
+                    "san": "Bb7",
+                    "uci": "c8b7",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNB2RK1 w kq - 2 9"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/1pp5/3P4/1BN1PN2/PP2QPPP/R1B2RK1 b kq - 3 9"
+                  },
+                  {
+                    "san": "Nbd7",
+                    "uci": "b8d7",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1pp5/3P4/1BN1PN2/PP2QPPP/R1B2RK1 w kq - 4 10"
+                  },
+                  {
+                    "san": "Rd1",
+                    "uci": "f1d1",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/1pp5/3P4/1BN1PN2/PP2QPPP/R1BR2K1 b kq - 5 10"
+                  },
+                  {
+                    "san": "Qc7",
+                    "uci": "d8c7",
+                    "variations": [],
+                    "fenAfter": "r3kb1r/1bqn1ppp/p3pn2/1pp5/3P4/1BN1PN2/PP2QPPP/R1BR2K1 w kq - 6 11"
+                  },
+                  {
+                    "san": "e4",
+                    "uci": "e3e4",
+                    "variations": [],
+                    "fenAfter": "r3kb1r/1bqn1ppp/p3pn2/1pp5/3PP3/1BN2N2/PP2QPPP/R1BR2K1 b kq - 0 11"
+                  },
+                  {
+                    "san": "cxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "r3kb1r/1bqn1ppp/p3pn2/1p6/3pP3/1BN2N2/PP2QPPP/R1BR2K1 w kq - 0 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "b4",
+                    "uci": "b2b4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/1PBP4/4PN2/P3QPPP/RNB2RK1 b kq - 0 8"
+                  },
+                  {
+                    "san": "bxc4",
+                    "uci": "b5c4",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/2p5/1PpP4/4PN2/P3QPPP/RNB2RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "bxc5",
+                    "uci": "b4c5",
+                    "variations": [],
+                    "fenAfter": "rnbqkb1r/5ppp/p3pn2/2P5/2pP4/4PN2/P3QPPP/RNB2RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Be7",
+                    "uci": "f8e7",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p3pn2/2P5/2pP4/4PN2/P3QPPP/RNB2RK1 w kq - 1 10"
+                  },
+                  {
+                    "san": "e4",
+                    "uci": "e3e4",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/4bppp/p3pn2/2P5/2pPP3/5N2/P3QPPP/RNB2RK1 b kq - 0 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "rnbq1rk1/4bppp/p3pn2/2P5/2pPP3/5N2/P3QPPP/RNB2RK1 w - - 1 11"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "rnbq1rk1/4bppp/p3pn2/2P5/2pPP3/2N2N2/P3QPPP/R1B2RK1 b - - 2 11"
+                  },
+                  {
+                    "san": "a5",
+                    "uci": "a6a5",
+                    "variations": [],
+                    "fenAfter": "rnbq1rk1/4bppp/4pn2/p1P5/2pPP3/2N2N2/P3QPPP/R1B2RK1 w - - 0 12"
+                  }
+                ]
+              ],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1pp5/3P4/3BPN2/PP2QPPP/RNB2RK1 b kq - 1 8",
+              "commentAfter": "An important alternative to 8.Bb3, tucking the bishop away on a slightly different square."
+            },
+            {
+              "san": "cxd4",
+              "uci": "c5d4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1p6/3p4/3BPN2/PP2QPPP/RNB2RK1 w kq - 0 9",
+              "commentAfter": "THE MOST POPULAR PRACTICAL CHOICE — rather than maintaining the tension, Black resolves the center immediately, handing White an isolated queen's pawn (Chapter 1, Study 1.3c) in exchange for easy, active piece development."
+            },
+            {
+              "san": "exd4",
+              "uci": "e3d4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/5ppp/p3pn2/1p6/3P4/3B1N2/PP2QPPP/RNB2RK1 b kq - 0 9"
+            },
+            {
+              "san": "Be7",
+              "uci": "f8e7",
+              "variations": [],
+              "fenAfter": "rnbqk2r/4bppp/p3pn2/1p6/3P4/3B1N2/PP2QPPP/RNB2RK1 w kq - 1 10"
+            },
+            {
+              "san": "a4",
+              "uci": "a2a4",
+              "variations": [],
+              "fenAfter": "rnbqk2r/4bppp/p3pn2/1p6/P2P4/3B1N2/1P2QPPP/RNB2RK1 b kq - 0 10",
+              "commentAfter": "A very standard try, striking at Black's queenside pawn chain before it fully consolidates."
+            },
+            {
+              "san": "bxa4",
+              "uci": "b5a4",
+              "variations": [],
+              "fenAfter": "rnbqk2r/4bppp/p3pn2/8/p2P4/3B1N2/1P2QPPP/RNB2RK1 w kq - 0 11"
+            },
+            {
+              "san": "Rxa4",
+              "uci": "a1a4",
+              "variations": [],
+              "fenAfter": "rnbqk2r/4bppp/p3pn2/8/R2P4/3B1N2/1P2QPPP/1NB2RK1 b kq - 0 11"
+            },
+            {
+              "san": "O-O",
+              "uci": "e8g8",
+              "variations": [],
+              "fenAfter": "rnbq1rk1/4bppp/p3pn2/8/R2P4/3B1N2/1P2QPPP/1NB2RK1 w - - 1 12"
+            },
+            {
+              "san": "Nc3",
+              "uci": "b1c3",
+              "variations": [],
+              "fenAfter": "rnbq1rk1/4bppp/p3pn2/8/R2P4/2NB1N2/1P2QPPP/2B2RK1 b - - 2 12"
+            },
+            {
+              "san": "Bb7",
+              "uci": "c8b7",
+              "variations": [],
+              "fenAfter": "rn1q1rk1/1b2bppp/p3pn2/8/R2P4/2NB1N2/1P2QPPP/2B2RK1 w - - 3 13",
+              "commentAfter": "and a completely typical IQP middlegame follows — White's plan usually involves active piece play (sometimes even Ne5/Ng5-adjacent kingside ideas), while Black looks to blockade d5, trade pieces, and target the pawn directly in any resulting endgame, exactly as described in Chapter 1."
+            },
+            {
+              "san": "Rd1",
+              "uci": "f1d1",
+              "variations": [],
+              "fenAfter": "rn1q1rk1/1b2bppp/p3pn2/8/R2P4/2NB1N2/1P2QPPP/2BR2K1 b - - 4 13",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "a5",
+              "uci": "a6a5",
+              "variations": [],
+              "fenAfter": "rn1q1rk1/1b2bppp/4pn2/p7/R2P4/2NB1N2/1P2QPPP/2BR2K1 w - - 0 14",
+              "commentAfter": "A flank push — Black claims room on the rim. Level position; the fight continues."
+            },
+            {
+              "san": "Bc4",
+              "uci": "d3c4",
+              "variations": [],
+              "fenAfter": "rn1q1rk1/1b2bppp/4pn2/p7/R1BP4/2N2N2/1P2QPPP/2BR2K1 b - - 1 14",
+              "commentAfter": "You improve the bishop — it dominates from c4. Balanced — the game goes on."
+            },
+            {
+              "san": "Na6",
+              "uci": "b8a6",
+              "variations": [],
+              "fenAfter": "r2q1rk1/1b2bppp/n3pn2/p7/R1BP4/2N2N2/1P2QPPP/2BR2K1 w - - 2 15",
+              "commentAfter": "Black develops the knight — a6 is a healthy square. Open lines and weak squares are what decide the middlegame."
+            },
+            {
+              "san": "Ra1",
+              "uci": "a4a1",
+              "variations": [
+                [
+                  {
+                    "san": "Ne5",
+                    "uci": "f3e5",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/n3pn2/p3N3/R1BP4/2N5/1P2QPPP/2BR2K1 b - - 3 15"
+                  },
+                  {
+                    "san": "Nb4",
+                    "uci": "a6b4",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/4pn2/p3N3/RnBP4/2N5/1P2QPPP/2BR2K1 w - - 4 16"
+                  },
+                  {
+                    "san": "Ra3",
+                    "uci": "a4a3",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/4pn2/p3N3/1nBP4/R1N5/1P2QPPP/2BR2K1 b - - 5 16"
+                  },
+                  {
+                    "san": "Rc8",
+                    "uci": "a8c8",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b2bppp/4pn2/p3N3/1nBP4/R1N5/1P2QPPP/2BR2K1 w - - 6 17"
+                  },
+                  {
+                    "san": "h3",
+                    "uci": "h2h3",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b2bppp/4pn2/p3N3/1nBP4/R1N4P/1P2QPP1/2BR2K1 b - - 0 17"
+                  },
+                  {
+                    "san": "Qb6",
+                    "uci": "d8b6",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/1b2bppp/1q2pn2/p3N3/1nBP4/R1N4P/1P2QPP1/2BR2K1 w - - 1 18"
+                  },
+                  {
+                    "san": "Na4",
+                    "uci": "c3a4",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/1b2bppp/1q2pn2/p3N3/NnBP4/R6P/1P2QPP1/2BR2K1 b - - 2 18"
+                  },
+                  {
+                    "san": "Qc7",
+                    "uci": "b6c7",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/1bq1bppp/4pn2/p3N3/NnBP4/R6P/1P2QPP1/2BR2K1 w - - 3 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "h4",
+                    "uci": "h2h4",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/n3pn2/p7/R1BP3P/2N2N2/1P2QPP1/2BR2K1 b - - 0 15"
+                  },
+                  {
+                    "san": "Nb4",
+                    "uci": "a6b4",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/4pn2/p7/RnBP3P/2N2N2/1P2QPP1/2BR2K1 w - - 1 16"
+                  },
+                  {
+                    "san": "Ne5",
+                    "uci": "f3e5",
+                    "variations": [],
+                    "fenAfter": "r2q1rk1/1b2bppp/4pn2/p3N3/RnBP3P/2N5/1P2QPP1/2BR2K1 b - - 2 16"
+                  },
+                  {
+                    "san": "Rc8",
+                    "uci": "a8c8",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b2bppp/4pn2/p3N3/RnBP3P/2N5/1P2QPP1/2BR2K1 w - - 3 17"
+                  },
+                  {
+                    "san": "Nxf7",
+                    "uci": "e5f7",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b2bNpp/4pn2/p7/RnBP3P/2N5/1P2QPP1/2BR2K1 b - - 0 17"
+                  },
+                  {
+                    "san": "Rxf7",
+                    "uci": "f8f7",
+                    "variations": [],
+                    "fenAfter": "2rq2k1/1b2brpp/4pn2/p7/RnBP3P/2N5/1P2QPP1/2BR2K1 w - - 0 18"
+                  },
+                  {
+                    "san": "Bxe6",
+                    "uci": "c4e6",
+                    "variations": [],
+                    "fenAfter": "2rq2k1/1b2brpp/4Bn2/p7/Rn1P3P/2N5/1P2QPP1/2BR2K1 b - - 0 18"
+                  },
+                  {
+                    "san": "Ba6",
+                    "uci": "b7a6",
+                    "variations": [],
+                    "fenAfter": "2rq2k1/4brpp/b3Bn2/p7/Rn1P3P/2N5/1P2QPP1/2BR2K1 w - - 1 19"
+                  }
+                ]
+              ],
+              "fenAfter": "r2q1rk1/1b2bppp/n3pn2/p7/2BP4/2N2N2/1P2QPPP/R1BR2K1 b - - 3 15",
+              "commentAfter": "You press the half-open a-file. Trade pieces when you are ahead; keep the tension when not."
+            },
+            {
+              "san": "Qc7",
+              "uci": "d8c7",
+              "variations": [],
+              "fenAfter": "r4rk1/1bq1bppp/n3pn2/p7/2BP4/2N2N2/1P2QPPP/R1BR2K1 w - - 4 16",
+              "commentAfter": "Black brings the queen closer to your camp. It now points straight at the bishop on c4. Black will try to open lines; keep your king safe first."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        },
+        {
+          "id": "qga3",
+          "chapter": "Chapter 1: Main Lines and the Isolated Pawn",
+          "title": "Study 1.3 — .Qb6: An Active Alternative",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3"
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4"
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4"
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5"
+            },
+            {
+              "san": "c5",
+              "uci": "c7c5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQK2R w KQkq - 0 6"
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 b kq - 1 6"
+            },
+            {
+              "san": "Qb6",
+              "uci": "d8b6",
+              "variations": [],
+              "fenAfter": "rnb1kb1r/pp3ppp/1q2pn2/2p5/2BP4/4PN2/PP3PPP/RNBQ1RK1 w kq - 2 7",
+              "commentAfter": "AN IMPORTANT ALTERNATIVE to 6...a6 — the queen develops actively, hitting b2 and d4 simultaneously and sidestepping the calmer main lines entirely."
+            },
+            {
+              "san": "b3",
+              "uci": "b2b3",
+              "variations": [],
+              "fenAfter": "rnb1kb1r/pp3ppp/1q2pn2/2p5/2BP4/1P2PN2/P4PPP/RNBQ1RK1 b kq - 0 7",
+              "commentAfter": "The safe, solid main response, simply defending both b2 and d4 while keeping the position flexible."
+            },
+            {
+              "san": "Nc6",
+              "uci": "b8c6",
+              "variations": [],
+              "fenAfter": "r1b1kb1r/pp3ppp/1qn1pn2/2p5/2BP4/1P2PN2/P4PPP/RNBQ1RK1 w kq - 1 8"
+            },
+            {
+              "san": "Bb2",
+              "uci": "c1b2",
+              "variations": [
+                [
+                  {
+                    "san": "dxc5",
+                    "uci": "d4c5",
+                    "variations": [],
+                    "fenAfter": "r1b1kb1r/pp3ppp/1qn1pn2/2P5/2B5/1P2PN2/P4PPP/RNBQ1RK1 b kq - 0 8"
+                  },
+                  {
+                    "san": "Bxc5",
+                    "uci": "f8c5",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/pp3ppp/1qn1pn2/2b5/2B5/1P2PN2/P4PPP/RNBQ1RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/pp3ppp/1qn1pn2/2b5/2B5/1PN1PN2/P4PPP/R1BQ1RK1 b kq - 1 9"
+                  },
+                  {
+                    "san": "Be7",
+                    "uci": "c5e7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/pp2bppp/1qn1pn2/8/2B5/1PN1PN2/P4PPP/R1BQ1RK1 w kq - 2 10"
+                  },
+                  {
+                    "san": "Bb2",
+                    "uci": "c1b2",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/pp2bppp/1qn1pn2/8/2B5/1PN1PN2/PB3PPP/R2Q1RK1 b kq - 3 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/8/2B5/1PN1PN2/PB3PPP/R2Q1RK1 w - - 4 11"
+                  },
+                  {
+                    "san": "Qc2",
+                    "uci": "d1c2",
+                    "variations": [],
+                    "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/8/2B5/1PN1PN2/PBQ2PPP/R4RK1 b - - 5 11"
+                  },
+                  {
+                    "san": "Bd7",
+                    "uci": "c8d7",
+                    "variations": [],
+                    "fenAfter": "r4rk1/pp1bbppp/1qn1pn2/8/2B5/1PN1PN2/PBQ2PPP/R4RK1 w - - 6 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "Ba3",
+                    "uci": "c1a3",
+                    "variations": [],
+                    "fenAfter": "r1b1kb1r/pp3ppp/1qn1pn2/2p5/2BP4/BP2PN2/P4PPP/RN1Q1RK1 b kq - 2 8"
+                  },
+                  {
+                    "san": "cxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "r1b1kb1r/pp3ppp/1qn1pn2/8/2Bp4/BP2PN2/P4PPP/RN1Q1RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "Bxf8",
+                    "uci": "a3f8",
+                    "variations": [],
+                    "fenAfter": "r1b1kB1r/pp3ppp/1qn1pn2/8/2Bp4/1P2PN2/P4PPP/RN1Q1RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Kxf8",
+                    "uci": "e8f8",
+                    "variations": [],
+                    "fenAfter": "r1b2k1r/pp3ppp/1qn1pn2/8/2Bp4/1P2PN2/P4PPP/RN1Q1RK1 w - - 0 10"
+                  },
+                  {
+                    "san": "exd4",
+                    "uci": "e3d4",
+                    "variations": [],
+                    "fenAfter": "r1b2k1r/pp3ppp/1qn1pn2/8/2BP4/1P3N2/P4PPP/RN1Q1RK1 b - - 0 10"
+                  },
+                  {
+                    "san": "g6",
+                    "uci": "g7g6",
+                    "variations": [],
+                    "fenAfter": "r1b2k1r/pp3p1p/1qn1pnp1/8/2BP4/1P3N2/P4PPP/RN1Q1RK1 w - - 0 11"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "r1b2k1r/pp3p1p/1qn1pnp1/8/2BP4/1PN2N2/P4PPP/R2Q1RK1 b - - 1 11"
+                  },
+                  {
+                    "san": "Kg7",
+                    "uci": "f8g7",
+                    "variations": [],
+                    "fenAfter": "r1b4r/pp3pkp/1qn1pnp1/8/2BP4/1PN2N2/P4PPP/R2Q1RK1 w - - 2 12"
+                  }
+                ]
+              ],
+              "fenAfter": "r1b1kb1r/pp3ppp/1qn1pn2/2p5/2BP4/1P2PN2/PB3PPP/RN1Q1RK1 b kq - 2 8"
+            },
+            {
+              "san": "Be7",
+              "uci": "f8e7",
+              "variations": [],
+              "fenAfter": "r1b1k2r/pp2bppp/1qn1pn2/2p5/2BP4/1P2PN2/PB3PPP/RN1Q1RK1 w kq - 3 9"
+            },
+            {
+              "san": "Nc3",
+              "uci": "b1c3",
+              "variations": [],
+              "fenAfter": "r1b1k2r/pp2bppp/1qn1pn2/2p5/2BP4/1PN1PN2/PB3PPP/R2Q1RK1 b kq - 4 9"
+            },
+            {
+              "san": "O-O",
+              "uci": "e8g8",
+              "variations": [],
+              "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/2p5/2BP4/1PN1PN2/PB3PPP/R2Q1RK1 w - - 5 10",
+              "commentAfter": "and a roughly balanced, well-tested middlegame follows, similar in spirit to Study 5.1 but with Black's queen already committed to an active square a little earlier than usual."
+            },
+            {
+              "san": "Rc1",
+              "uci": "a1c1",
+              "variations": [],
+              "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/2p5/2BP4/1PN1PN2/PB3PPP/2RQ1RK1 b - - 6 10",
+              "commentAfter": "completing development and adding pressure down the c-file."
+            },
+            {
+              "san": "cxd4",
+              "uci": "c5d4",
+              "variations": [],
+              "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/8/2Bp4/1PN1PN2/PB3PPP/2RQ1RK1 w - - 0 11"
+            },
+            {
+              "san": "exd4",
+              "uci": "e3d4",
+              "variations": [],
+              "fenAfter": "r1b2rk1/pp2bppp/1qn1pn2/8/2BP4/1PN2N2/PB3PPP/2RQ1RK1 b - - 0 11",
+              "commentAfter": "and the game settles into a structure very similar to Study 5.2's isolated queen's pawn theme, just reached via the more direct 6...Qb6 move order."
+            },
+            {
+              "san": "Rd8",
+              "uci": "f8d8",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1qn1pn2/8/2BP4/1PN2N2/PB3PPP/2RQ1RK1 w - - 1 12"
+            },
+            {
+              "san": "Qe2",
+              "uci": "d1e2",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1qn1pn2/8/2BP4/1PN2N2/PB2QPPP/2R2RK1 b - - 2 12",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "Na5",
+              "uci": "c6a5",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1q2pn2/n7/2BP4/1PN2N2/PB2QPPP/2R2RK1 w - - 3 13",
+              "commentAfter": "A little maneuver — Black's knight is looking for a better post. The bishop on c4 is now in its sights. A small edge for you."
+            },
+            {
+              "san": "Bd3",
+              "uci": "c4d3",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1q2pn2/n7/3P4/1PNB1N2/PB2QPPP/2R2RK1 b - - 4 13",
+              "commentAfter": "The bishop hops to d3, eyeing fresh targets. Look for your worst-placed piece and improve it."
+            },
+            {
+              "san": "Nc6",
+              "uci": "a5c6",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1qn1pn2/8/3P4/1PNB1N2/PB2QPPP/2R2RK1 w - - 5 14",
+              "commentAfter": "Black keeps the tension; the knight waits for the right moment. Meet threats with activity — passivity invites attacks."
+            },
+            {
+              "san": "Rfd1",
+              "uci": "f1d1",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1qn1pn2/8/3P4/1PNB1N2/PB2QPPP/2RR2K1 b - - 6 14",
+              "commentAfter": "Your rook piles onto the d-file, targeting the pawn there. Open lines and weak squares are what decide the middlegame."
+            },
+            {
+              "san": "Nb4",
+              "uci": "c6b4",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/1q2pn2/8/1n1P4/1PNB1N2/PB2QPPP/2RR2K1 w - - 7 15",
+              "commentAfter": "Black repositions the knight, keeping all the options open. The bishop on d3 is now in its sights. You are a shade better."
+            },
+            {
+              "san": "Bb1",
+              "uci": "d3b1",
+              "variations": [
+                [
+                  {
+                    "san": "Bc4",
+                    "uci": "d3c4",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/8/1nBP4/1PN2N2/PB2QPPP/2RR2K1 b - - 8 15"
+                  },
+                  {
+                    "san": "Nbd5",
+                    "uci": "b4d5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/3n4/2BP4/1PN2N2/PB2QPPP/2RR2K1 w - - 9 16"
+                  },
+                  {
+                    "san": "Nxd5",
+                    "uci": "c3d5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/3N4/2BP4/1P3N2/PB2QPPP/2RR2K1 b - - 0 16"
+                  },
+                  {
+                    "san": "Nxd5",
+                    "uci": "f6d5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2p3/3n4/2BP4/1P3N2/PB2QPPP/2RR2K1 w - - 0 17"
+                  },
+                  {
+                    "san": "h4",
+                    "uci": "h2h4",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2p3/3n4/2BP3P/1P3N2/PB2QPP1/2RR2K1 b - - 0 17"
+                  },
+                  {
+                    "san": "Qd6",
+                    "uci": "b6d6",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/3qp3/3n4/2BP3P/1P3N2/PB2QPP1/2RR2K1 w - - 1 18"
+                  },
+                  {
+                    "san": "Ne5",
+                    "uci": "f3e5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/3qp3/3nN3/2BP3P/1P6/PB2QPP1/2RR2K1 b - - 2 18"
+                  },
+                  {
+                    "san": "Bd7",
+                    "uci": "c8d7",
+                    "variations": [],
+                    "fenAfter": "r2r2k1/pp1bbppp/3qp3/3nN3/2BP3P/1P6/PB2QPP1/2RR2K1 w - - 3 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "d5",
+                    "uci": "d4d5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/3P4/1n6/1PNB1N2/PB2QPPP/2RR2K1 b - - 0 15"
+                  },
+                  {
+                    "san": "Nxd3",
+                    "uci": "b4d3",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/3P4/8/1PNn1N2/PB2QPPP/2RR2K1 w - - 0 16"
+                  },
+                  {
+                    "san": "Rxd3",
+                    "uci": "d1d3",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/1q2pn2/3P4/8/1PNR1N2/PB2QPPP/2R3K1 b - - 0 16"
+                  },
+                  {
+                    "san": "Qa6",
+                    "uci": "b6a6",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/q3pn2/3P4/8/1PNR1N2/PB2QPPP/2R3K1 w - - 1 17"
+                  },
+                  {
+                    "san": "Rcd1",
+                    "uci": "c1d1",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/q3pn2/3P4/8/1PNR1N2/PB2QPPP/3R2K1 b - - 2 17"
+                  },
+                  {
+                    "san": "Nxd5",
+                    "uci": "f6d5",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/q3p3/3n4/8/1PNR1N2/PB2QPPP/3R2K1 w - - 0 18"
+                  },
+                  {
+                    "san": "Qe4",
+                    "uci": "e2e4",
+                    "variations": [],
+                    "fenAfter": "r1br2k1/pp2bppp/q3p3/3n4/4Q3/1PNR1N2/PB3PPP/3R2K1 b - - 1 18"
+                  },
+                  {
+                    "san": "Bf8",
+                    "uci": "e7f8",
+                    "variations": [],
+                    "fenAfter": "r1br1bk1/pp3ppp/q3p3/3n4/4Q3/1PNR1N2/PB3PPP/3R2K1 w - - 2 19"
+                  }
+                ]
+              ],
+              "fenAfter": "r1br2k1/pp2bppp/1q2pn2/8/1n1P4/1PN2N2/PB2QPPP/1BRR2K1 b - - 8 15",
+              "commentAfter": "You keep the tension; the bishop waits for the right moment. Trade pieces when you are ahead; keep the tension when not."
+            },
+            {
+              "san": "Qa6",
+              "uci": "b6a6",
+              "variations": [],
+              "fenAfter": "r1br2k1/pp2bppp/q3pn2/8/1n1P4/1PN2N2/PB2QPPP/1BRR2K1 w - - 9 16",
+              "commentAfter": "Black brings the queen closer to your camp. The queen on e2 is now in its sights. Trade when it eases your position, not just because you can."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        }
+      ]
+    },
+    {
+      "title": "Chapter 2: The Central Variation",
+      "order": 1,
+      "studies": [
+        {
+          "id": "qga6",
+          "chapter": "Chapter 2: The Central Variation",
+          "title": "Study 2.1 — e4: The Central Variation",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "e4",
+              "uci": "e2e4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3",
+              "commentAfter": "THE CENTRAL VARIATION — a sharper, more direct alternative to 3.Nf3, immediately grabbing a full classical center rather than developing first. The drawback is that Black gets an immediate central strike in return."
+            },
+            {
+              "san": "e5",
+              "uci": "e7e5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp2ppp/8/4p3/2pPP3/8/PP3PPP/RNBQKBNR w KQkq - 0 4",
+              "commentAfter": "the critical, most principled response, refusing to let White's center stand unchallenged."
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [
+                [
+                  {
+                    "san": "dxe5",
+                    "uci": "d4e5",
+                    "variations": [],
+                    "fenAfter": "rnbqkbnr/ppp2ppp/8/4P3/2p1P3/8/PP3PPP/RNBQKBNR b KQkq - 0 4",
+                    "commentAfter": "grabbing the pawn immediately"
+                  },
+                  {
+                    "san": "Qxd1+",
+                    "uci": "d8d1",
+                    "variations": [],
+                    "fenAfter": "rnb1kbnr/ppp2ppp/8/4P3/2p1P3/8/PP3PPP/RNBqKBNR w KQkq - 0 5"
+                  },
+                  {
+                    "san": "Kxd1",
+                    "uci": "e1d1",
+                    "variations": [],
+                    "fenAfter": "rnb1kbnr/ppp2ppp/8/4P3/2p1P3/8/PP3PPP/RNBK1BNR b kq - 0 5",
+                    "commentAfter": "leads to an early queen trade where Black's activity and structure offer full compensation for the temporary loss of castling rights."
+                  },
+                  {
+                    "san": "Nc6",
+                    "uci": "b8c6",
+                    "variations": [],
+                    "fenAfter": "r1b1kbnr/ppp2ppp/2n5/4P3/2p1P3/8/PP3PPP/RNBK1BNR w kq - 1 6",
+                    "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+                  },
+                  {
+                    "san": "Nf3",
+                    "uci": "g1f3",
+                    "variations": [],
+                    "fenAfter": "r1b1kbnr/ppp2ppp/2n5/4P3/2p1P3/5N2/PP3PPP/RNBK1B1R b kq - 2 6",
+                    "commentAfter": "A little maneuver — your knight is looking for a better post. Level position; the fight continues."
+                  },
+                  {
+                    "san": "Bg4",
+                    "uci": "c8g4",
+                    "variations": [],
+                    "fenAfter": "r3kbnr/ppp2ppp/2n5/4P3/2p1P1b1/5N2/PP3PPP/RNBK1B1R w kq - 3 7",
+                    "commentAfter": "Black's bishop comes into the game; one step closer to full mobilization. It now points straight at the knight on f3. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "Be3",
+                    "uci": "c1e3",
+                    "variations": [],
+                    "fenAfter": "r3kbnr/ppp2ppp/2n5/4P3/2p1P1b1/4BN2/PP3PPP/RN1K1B1R b kq - 4 7",
+                    "commentAfter": "Your bishop comes into the game; one step closer to full mobilization. Meet threats with activity — passivity invites attacks."
+                  },
+                  {
+                    "san": "f5",
+                    "uci": "f7f5",
+                    "variations": [],
+                    "fenAfter": "r3kbnr/ppp3pp/2n5/4Pp2/2p1P1b1/4BN2/PP3PPP/RN1K1B1R w kq f6 0 8",
+                    "commentAfter": "A useful pawn move from Black, keeping the structure flexible. The position is balanced; keep improving."
+                  },
+                  {
+                    "san": "exf6",
+                    "uci": "e5f6",
+                    "variations": [],
+                    "fenAfter": "r3kbnr/ppp3pp/2n2P2/8/2p1P1b1/4BN2/PP3PPP/RN1K1B1R b kq - 0 8",
+                    "commentAfter": "A useful pawn move, keeping your structure flexible. The position is balanced; keep improving."
+                  },
+                  {
+                    "san": "Nxf6",
+                    "uci": "g8f6",
+                    "variations": [],
+                    "fenAfter": "r3kb1r/ppp3pp/2n2n2/8/2p1P1b1/4BN2/PP3PPP/RN1K1B1R w kq - 0 9",
+                    "commentAfter": "Black's knight collects the pawn on f6. Fight for the center — space and options follow."
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "r3kb1r/ppp3pp/2n2n2/8/2p1P1b1/2N1BN2/PP3PPP/R2K1B1R b kq - 1 9",
+                    "commentAfter": "A little maneuver — your knight is looking for a better post. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "O-O-O+",
+                    "uci": "e8c8",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/ppp3pp/2n2n2/8/2p1P1b1/2N1BN2/PP3PPP/R2K1B1R w - - 2 10",
+                    "commentAfter": "Black castles long — the rook joins the game immediately. Development and king safety come before everything else."
+                  },
+                  {
+                    "san": "Kc1",
+                    "uci": "d1c1",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/ppp3pp/2n2n2/8/2p1P1b1/2N1BN2/PP3PPP/R1K2B1R b - - 3 10",
+                    "commentAfter": "A small king move — safety first. The position is balanced; keep improving."
+                  },
+                  {
+                    "san": "Be6",
+                    "uci": "g4e6",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/ppp3pp/2n1bn2/8/2p1P3/2N1BN2/PP3PPP/R1K2B1R w - - 4 11",
+                    "commentAfter": "Black's bishop comes into the game; one step closer to full mobilization. The position is balanced; keep improving."
+                  },
+                  {
+                    "san": "Be2",
+                    "uci": "f1e2",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/ppp3pp/2n1bn2/8/2p1P3/2N1BN2/PP2BPPP/R1K4R b - - 5 11",
+                    "commentAfter": "Your bishop comes into the game; one step closer to full mobilization. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "a6",
+                    "uci": "a7a6",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/1pp3pp/p1n1bn2/8/2p1P3/2N1BN2/PP2BPPP/R1K4R w - - 0 12",
+                    "commentAfter": "A flank push — Black claims room on the rim. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "h3",
+                    "uci": "h2h3",
+                    "variations": [],
+                    "fenAfter": "2kr1b1r/1pp3pp/p1n1bn2/8/2p1P3/2N1BN1P/PP2BPP1/R1K4R b - - 0 12",
+                    "commentAfter": "A flank push — claiming room on the rim. Development and king safety come before everything else."
+                  },
+                  {
+                    "san": "Bd6",
+                    "uci": "f8d6",
+                    "variations": [],
+                    "fenAfter": "2kr3r/1pp3pp/p1nbbn2/8/2p1P3/2N1BN1P/PP2BPP1/R1K4R w - - 1 13",
+                    "commentAfter": "Black's bishop comes into the game; one step closer to full mobilization. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "Rd1",
+                    "uci": "h1d1",
+                    "variations": [],
+                    "fenAfter": "2kr3r/1pp3pp/p1nbbn2/8/2p1P3/2N1BN1P/PP2BPP1/R1KR4 b - - 2 13",
+                    "commentAfter": "You swing the rook to a more active file. The bishop on d6 is now in its sights. Open lines and weak squares are what decide the middlegame."
+                  },
+                  {
+                    "san": "Rhe8",
+                    "uci": "h8e8",
+                    "variations": [],
+                    "fenAfter": "2krr3/1pp3pp/p1nbbn2/8/2p1P3/2N1BN1P/PP2BPP1/R1KR4 w - - 3 14",
+                    "commentAfter": "Black swings the rook to a more active file. Balanced — the game goes on."
+                  },
+                  {
+                    "san": "Nd4",
+                    "uci": "f3d4",
+                    "variations": [],
+                    "fenAfter": "2krr3/1pp3pp/p1nbbn2/8/2pNP3/2N1B2P/PP2BPP1/R1KR4 b - - 4 14",
+                    "commentAfter": "A little maneuver — your knight is looking for a better post. It now eyes the bishop on e6. Development and king safety come before everything else."
+                  },
+                  {
+                    "san": "Nxd4",
+                    "uci": "c6d4",
+                    "variations": [],
+                    "fenAfter": "2krr3/1pp3pp/p2bbn2/8/2pnP3/2N1B2P/PP2BPP1/R1KR4 w - - 0 15",
+                    "commentAfter": "A trade on d4; fewer pieces, clearer plans. A small edge for you."
+                  },
+                  {
+                    "san": "Rxd4",
+                    "uci": "d1d4",
+                    "variations": [],
+                    "fenAfter": "2krr3/1pp3pp/p2bbn2/8/2pRP3/2N1B2P/PP2BPP1/R1K5 b - - 0 15",
+                    "commentAfter": "A trade on d4; fewer pieces, clearer plans. The position is balanced; keep improving."
+                  },
+                  {
+                    "san": "b5",
+                    "uci": "b7b5",
+                    "variations": [],
+                    "fenAfter": "2krr3/2p3pp/p2bbn2/1p6/2pRP3/2N1B2P/PP2BPP1/R1K5 w - - 0 16",
+                    "commentAfter": "A flank push — Black claims room on the rim. The position is balanced; keep improving."
+                  }
+                ]
+              ],
+              "fenAfter": "rnbqkbnr/ppp2ppp/8/4p3/2pPP3/5N2/PP3PPP/RNBQKB1R b KQkq - 1 4",
+              "commentAfter": "the most natural continuation, developing while eyeing e5."
+            },
+            {
+              "san": "exd4",
+              "uci": "e5d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp2ppp/8/8/2ppP3/5N2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp2ppp/8/8/2BpP3/5N2/PP3PPP/RNBQK2R b KQkq - 0 5",
+              "commentAfter": "regaining the gambit pawn while keeping development flowing."
+            },
+            {
+              "san": "Nc6",
+              "uci": "b8c6",
+              "variations": [],
+              "fenAfter": "r1bqkbnr/ppp2ppp/2n5/8/2BpP3/5N2/PP3PPP/RNBQK2R w KQkq - 1 6",
+              "commentAfter": "and a sharp, roughly balanced position follows, with both sides having chances depending on how accurately the resulting central complications are handled."
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "r1bqkbnr/ppp2ppp/2n5/8/2BpP3/5N2/PP3PPP/RNBQ1RK1 b kq - 2 6",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "Bc5",
+              "uci": "f8c5",
+              "variations": [],
+              "fenAfter": "r1bqk1nr/ppp2ppp/2n5/2b5/2BpP3/5N2/PP3PPP/RNBQ1RK1 w kq - 3 7",
+              "commentAfter": "Black develops the bishop — c5 is a healthy square. A small edge for you."
+            },
+            {
+              "san": "Ng5",
+              "uci": "f3g5",
+              "variations": [],
+              "fenAfter": "r1bqk1nr/ppp2ppp/2n5/2b3N1/2BpP3/8/PP3PPP/RNBQ1RK1 b kq - 4 7",
+              "commentAfter": "A little maneuver — your knight is looking for a better post. Fight for the center — space and options follow."
+            },
+            {
+              "san": "Nh6",
+              "uci": "g8h6",
+              "variations": [],
+              "fenAfter": "r1bqk2r/ppp2ppp/2n4n/2b3N1/2BpP3/8/PP3PPP/RNBQ1RK1 w kq - 5 8",
+              "commentAfter": "A natural developing move — Black's knight heads for h6. Meet the center with counterplay, not passive moves."
+            },
+            {
+              "san": "Nxf7",
+              "uci": "g5f7",
+              "variations": [
+                [
+                  {
+                    "san": "Bxf7+",
+                    "uci": "c4f7",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/ppp2Bpp/2n4n/2b3N1/3pP3/8/PP3PPP/RNBQ1RK1 b kq - 0 8"
+                  },
+                  {
+                    "san": "Nxf7",
+                    "uci": "h6f7",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/ppp2npp/2n5/2b3N1/3pP3/8/PP3PPP/RNBQ1RK1 w kq - 0 9"
+                  },
+                  {
+                    "san": "Nxf7",
+                    "uci": "g5f7",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/ppp2Npp/2n5/2b5/3pP3/8/PP3PPP/RNBQ1RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Kxf7",
+                    "uci": "e8f7",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/ppp2kpp/2n5/2b5/3pP3/8/PP3PPP/RNBQ1RK1 w - - 0 10"
+                  },
+                  {
+                    "san": "Qh5+",
+                    "uci": "d1h5",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/ppp2kpp/2n5/2b4Q/3pP3/8/PP3PPP/RNB2RK1 b - - 1 10"
+                  },
+                  {
+                    "san": "g6",
+                    "uci": "g7g6",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/ppp2k1p/2n3p1/2b4Q/3pP3/8/PP3PPP/RNB2RK1 w - - 0 11"
+                  },
+                  {
+                    "san": "Qxc5",
+                    "uci": "h5c5",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/ppp2k1p/2n3p1/2Q5/3pP3/8/PP3PPP/RNB2RK1 b - - 0 11"
+                  },
+                  {
+                    "san": "Qe7",
+                    "uci": "d8e7",
+                    "variations": [],
+                    "fenAfter": "r1b4r/ppp1qk1p/2n3p1/2Q5/3pP3/8/PP3PPP/RNB2RK1 w - - 1 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "Qh5",
+                    "uci": "d1h5",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/ppp2ppp/2n4n/2b3NQ/2BpP3/8/PP3PPP/RNB2RK1 b kq - 6 8"
+                  },
+                  {
+                    "san": "Qe7",
+                    "uci": "d8e7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp1qppp/2n4n/2b3NQ/2BpP3/8/PP3PPP/RNB2RK1 w kq - 7 9"
+                  },
+                  {
+                    "san": "Nxf7",
+                    "uci": "g5f7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp1qNpp/2n4n/2b4Q/2BpP3/8/PP3PPP/RNB2RK1 b kq - 0 9"
+                  },
+                  {
+                    "san": "Nxf7",
+                    "uci": "h6f7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp1qnpp/2n5/2b4Q/2BpP3/8/PP3PPP/RNB2RK1 w kq - 0 10"
+                  },
+                  {
+                    "san": "Bxf7+",
+                    "uci": "c4f7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp1qBpp/2n5/2b4Q/3pP3/8/PP3PPP/RNB2RK1 b kq - 0 10"
+                  },
+                  {
+                    "san": "Qxf7",
+                    "uci": "e7f7",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp2qpp/2n5/2b4Q/3pP3/8/PP3PPP/RNB2RK1 w kq - 0 11"
+                  },
+                  {
+                    "san": "Qxc5",
+                    "uci": "h5c5",
+                    "variations": [],
+                    "fenAfter": "r1b1k2r/ppp2qpp/2n5/2Q5/3pP3/8/PP3PPP/RNB2RK1 b kq - 0 11"
+                  },
+                  {
+                    "san": "Bd7",
+                    "uci": "c8d7",
+                    "variations": [],
+                    "fenAfter": "r3k2r/pppb1qpp/2n5/2Q5/3pP3/8/PP3PPP/RNB2RK1 w kq - 1 12"
+                  }
+                ]
+              ],
+              "fenAfter": "r1bqk2r/ppp2Npp/2n4n/2b5/2BpP3/8/PP3PPP/RNBQ1RK1 b kq - 0 8",
+              "commentAfter": "Your knight collects the pawn on f7. Get all your pieces into the game before striking out."
+            },
+            {
+              "san": "Nxf7",
+              "uci": "h6f7",
+              "variations": [],
+              "fenAfter": "r1bqk2r/ppp2npp/2n5/2b5/2BpP3/8/PP3PPP/RNBQ1RK1 w kq - 0 9",
+              "commentAfter": "A trade on f7; fewer pieces, clearer plans. Both sides race to complete their setups."
+            },
+            {
+              "san": "Bxf7+",
+              "uci": "c4f7",
+              "variations": [],
+              "fenAfter": "r1bqk2r/ppp2Bpp/2n5/2b5/3pP3/8/PP3PPP/RNBQ1RK1 b kq - 0 9",
+              "commentAfter": "You exchange bishops on f7 — the position simplifies. Open lines and weak squares are what decide the middlegame."
+            },
+            {
+              "san": "Kxf7",
+              "uci": "e8f7",
+              "variations": [],
+              "fenAfter": "r1bq3r/ppp2kpp/2n5/2b5/3pP3/8/PP3PPP/RNBQ1RK1 w - - 0 10",
+              "commentAfter": "Black wins the bishop on f7 — real material gained. Ask what Black wants before committing — then take the square away."
+            },
+            {
+              "san": "Qh5+",
+              "uci": "d1h5",
+              "variations": [],
+              "fenAfter": "r1bq3r/ppp2kpp/2n5/2b4Q/3pP3/8/PP3PPP/RNB2RK1 b - - 1 10",
+              "commentAfter": "You check the king — the reply is forced. Ask what Black wants, then take the square away."
+            },
+            {
+              "san": "Kg8",
+              "uci": "f7g8",
+              "variations": [],
+              "fenAfter": "r1bq2kr/ppp3pp/2n5/2b4Q/3pP3/8/PP3PPP/RNB2RK1 w - - 2 11",
+              "commentAfter": "Black steps the king out of danger. Black will try to open lines; keep your king safe first."
+            },
+            {
+              "san": "Qxc5",
+              "uci": "h5c5",
+              "variations": [],
+              "fenAfter": "r1bq2kr/ppp3pp/2n5/2Q5/3pP3/8/PP3PPP/RNB2RK1 b - - 0 11",
+              "commentAfter": "Your queen takes the bishop on c5. Trade pieces when you are ahead; keep the tension when not."
+            },
+            {
+              "san": "h6",
+              "uci": "h7h6",
+              "variations": [],
+              "fenAfter": "r1bq2kr/ppp3p1/2n4p/2Q5/3pP3/8/PP3PPP/RNB2RK1 w - - 0 12",
+              "commentAfter": "A flank push — Black claims room on the rim. Meet threats with activity — passivity invites attacks."
+            },
+            {
+              "san": "Nd2",
+              "uci": "b1d2",
+              "variations": [],
+              "fenAfter": "r1bq2kr/ppp3p1/2n4p/2Q5/3pP3/8/PP1N1PPP/R1B2RK1 b - - 1 12",
+              "commentAfter": "A natural developing move — your knight heads for d2. Your plan: improve, then open the position on your terms."
+            },
+            {
+              "san": "Kh7",
+              "uci": "g8h7",
+              "variations": [],
+              "fenAfter": "r1bq3r/ppp3pk/2n4p/2Q5/3pP3/8/PP1N1PPP/R1B2RK1 w - - 2 13",
+              "commentAfter": "A small king move — safety first. Trade when it eases your position, not just because you can."
+            },
+            {
+              "san": "b3",
+              "uci": "b2b3",
+              "variations": [],
+              "fenAfter": "r1bq3r/ppp3pk/2n4p/2Q5/3pP3/1P6/P2N1PPP/R1B2RK1 b - - 0 13",
+              "commentAfter": "You solidify the pawns and take squares away from the enemy pieces. Improve your piece coordination before committing pawns."
+            },
+            {
+              "san": "a5",
+              "uci": "a7a5",
+              "variations": [],
+              "fenAfter": "r1bq3r/1pp3pk/2n4p/p1Q5/3pP3/1P6/P2N1PPP/R1B2RK1 w - - 0 14",
+              "commentAfter": "Black gains space on the flank. Open lines and weak squares are what decide the middlegame."
+            },
+            {
+              "san": "f4",
+              "uci": "f2f4",
+              "variations": [],
+              "fenAfter": "r1bq3r/1pp3pk/2n4p/p1Q5/3pPP2/1P6/P2N2PP/R1B2RK1 b - - 0 14",
+              "commentAfter": "A useful pawn move, keeping your structure flexible. Look for your worst-placed piece and improve it."
+            },
+            {
+              "san": "Nb4",
+              "uci": "c6b4",
+              "variations": [],
+              "fenAfter": "r1bq3r/1pp3pk/7p/p1Q5/1n1pPP2/1P6/P2N2PP/R1B2RK1 w - - 1 15",
+              "commentAfter": "Black repositions the knight, keeping all the options open. You are a shade better."
+            },
+            {
+              "san": "h3",
+              "uci": "h2h3",
+              "variations": [
+                [
+                  {
+                    "san": "Bb2",
+                    "uci": "c1b2",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/1pp3pk/7p/p1Q5/1n1pPP2/1P6/PB1N2PP/R4RK1 b - - 2 15"
+                  },
+                  {
+                    "san": "b6",
+                    "uci": "b7b6",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/2p3pk/1p5p/p1Q5/1n1pPP2/1P6/PB1N2PP/R4RK1 w - - 0 16"
+                  },
+                  {
+                    "san": "Qh5",
+                    "uci": "c5h5",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/2p3pk/1p5p/p6Q/1n1pPP2/1P6/PB1N2PP/R4RK1 b - - 1 16"
+                  },
+                  {
+                    "san": "Qe8",
+                    "uci": "d8e8",
+                    "variations": [],
+                    "fenAfter": "r1b1q2r/2p3pk/1p5p/p6Q/1n1pPP2/1P6/PB1N2PP/R4RK1 w - - 2 17"
+                  },
+                  {
+                    "san": "Qxe8",
+                    "uci": "h5e8",
+                    "variations": [],
+                    "fenAfter": "r1b1Q2r/2p3pk/1p5p/p7/1n1pPP2/1P6/PB1N2PP/R4RK1 b - - 0 17"
+                  },
+                  {
+                    "san": "Rxe8",
+                    "uci": "h8e8",
+                    "variations": [],
+                    "fenAfter": "r1b1r3/2p3pk/1p5p/p7/1n1pPP2/1P6/PB1N2PP/R4RK1 w - - 0 18"
+                  },
+                  {
+                    "san": "a3",
+                    "uci": "a2a3",
+                    "variations": [],
+                    "fenAfter": "r1b1r3/2p3pk/1p5p/p7/1n1pPP2/PP6/1B1N2PP/R4RK1 b - - 0 18"
+                  },
+                  {
+                    "san": "Nc2",
+                    "uci": "b4c2",
+                    "variations": [],
+                    "fenAfter": "r1b1r3/2p3pk/1p5p/p7/3pPP2/PP6/1BnN2PP/R4RK1 w - - 1 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "Nf3",
+                    "uci": "d2f3",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/1pp3pk/7p/p1Q5/1n1pPP2/1P3N2/P5PP/R1B2RK1 b - - 2 15"
+                  },
+                  {
+                    "san": "b6",
+                    "uci": "b7b6",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/2p3pk/1p5p/p1Q5/1n1pPP2/1P3N2/P5PP/R1B2RK1 w - - 0 16"
+                  },
+                  {
+                    "san": "Qxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "r1bq3r/2p3pk/1p5p/p7/1n1QPP2/1P3N2/P5PP/R1B2RK1 b - - 0 16"
+                  },
+                  {
+                    "san": "Qxd4+",
+                    "uci": "d8d4",
+                    "variations": [],
+                    "fenAfter": "r1b4r/2p3pk/1p5p/p7/1n1qPP2/1P3N2/P5PP/R1B2RK1 w - - 0 17"
+                  },
+                  {
+                    "san": "Nxd4",
+                    "uci": "f3d4",
+                    "variations": [],
+                    "fenAfter": "r1b4r/2p3pk/1p5p/p7/1n1NPP2/1P6/P5PP/R1B2RK1 b - - 0 17"
+                  },
+                  {
+                    "san": "Re8",
+                    "uci": "h8e8",
+                    "variations": [],
+                    "fenAfter": "r1b1r3/2p3pk/1p5p/p7/1n1NPP2/1P6/P5PP/R1B2RK1 w - - 1 18"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e4e5",
+                    "variations": [],
+                    "fenAfter": "r1b1r3/2p3pk/1p5p/p3P3/1n1N1P2/1P6/P5PP/R1B2RK1 b - - 0 18"
+                  },
+                  {
+                    "san": "Ba6",
+                    "uci": "c8a6",
+                    "variations": [],
+                    "fenAfter": "r3r3/2p3pk/bp5p/p3P3/1n1N1P2/1P6/P5PP/R1B2RK1 w - - 1 19"
+                  }
+                ]
+              ],
+              "fenAfter": "r1bq3r/1pp3pk/7p/p1Q5/1n1pPP2/1P5P/P2N2P1/R1B2RK1 b - - 0 15",
+              "commentAfter": "A flank push — claiming room on the rim. Level position; the fight continues."
+            },
+            {
+              "san": "b6",
+              "uci": "b7b6",
+              "variations": [],
+              "fenAfter": "r1bq3r/2p3pk/1p5p/p1Q5/1n1pPP2/1P5P/P2N2P1/R1B2RK1 w - - 0 16",
+              "commentAfter": "Black solidifies the pawns and takes squares away from your pieces. Trade when it eases your position, not just because you can."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 6
+        },
+        {
+          "id": "qga5",
+          "chapter": "Chapter 2: The Central Variation",
+          "title": "Study 2.2 — The Furman Variation: 6.Qe2",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3"
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4"
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4"
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5"
+            },
+            {
+              "san": "c5",
+              "uci": "c7c5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP3PPP/RNBQK2R w KQkq - 0 6"
+            },
+            {
+              "san": "Qe2",
+              "uci": "d1e2",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/pp3ppp/4pn2/2p5/2BP4/4PN2/PP2QPPP/RNB1K2R b KQkq - 1 6",
+              "commentAfter": "THE FURMAN VARIATION — an important alternative to 6.O-O, with a specific idea: rather than allowing Black to trade queens after a later ...cxd4/...Qxd4-type exchange, White keeps the queens on and aims for a symmetrical-looking structure with real attacking chances via a later e4-e5 push."
+            },
+            {
+              "san": "a6",
+              "uci": "a7a6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2p5/2BP4/4PN2/PP2QPPP/RNB1K2R w KQkq - 0 7"
+            },
+            {
+              "san": "dxc5",
+              "uci": "d4c5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1p3ppp/p3pn2/2P5/2B5/4PN2/PP2QPPP/RNB1K2R b KQkq - 0 7",
+              "commentAfter": "the point — resolving the center immediately while the queen is well-placed on e2 to support the coming central expansion."
+            },
+            {
+              "san": "Bxc5",
+              "uci": "f8c5",
+              "variations": [],
+              "fenAfter": "rnbqk2r/1p3ppp/p3pn2/2b5/2B5/4PN2/PP2QPPP/RNB1K2R w KQkq - 0 8"
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [
+                [
+                  {
+                    "san": "e4",
+                    "uci": "e3e4",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/1p3ppp/p3pn2/2b5/2B1P3/5N2/PP2QPPP/RNB1K2R b KQkq - 0 8"
+                  },
+                  {
+                    "san": "b5",
+                    "uci": "b7b5",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/5ppp/p3pn2/1pb5/2B1P3/5N2/PP2QPPP/RNB1K2R w KQkq - 0 9"
+                  },
+                  {
+                    "san": "Bd3",
+                    "uci": "c4d3",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/5ppp/p3pn2/1pb5/4P3/3B1N2/PP2QPPP/RNB1K2R b KQkq - 1 9"
+                  },
+                  {
+                    "san": "Nc6",
+                    "uci": "b8c6",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/5ppp/p1n1pn2/1pb5/4P3/3B1N2/PP2QPPP/RNB1K2R w KQkq - 2 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e1g1",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/5ppp/p1n1pn2/1pb5/4P3/3B1N2/PP2QPPP/RNB2RK1 b kq - 3 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/5ppp/p1n1pn2/1pb5/4P3/3B1N2/PP2QPPP/RNB2RK1 w - - 4 11"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e4e5",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/5ppp/p1n1pn2/1pb1P3/8/3B1N2/PP2QPPP/RNB2RK1 b - - 0 11"
+                  },
+                  {
+                    "san": "Nb4",
+                    "uci": "c6b4",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/5ppp/p3pn2/1pb1P3/1n6/3B1N2/PP2QPPP/RNB2RK1 w - - 1 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "Bd3",
+                    "uci": "c4d3",
+                    "variations": [],
+                    "fenAfter": "rnbqk2r/1p3ppp/p3pn2/2b5/8/3BPN2/PP2QPPP/RNB1K2R b KQkq - 1 8"
+                  },
+                  {
+                    "san": "Nc6",
+                    "uci": "b8c6",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/1p3ppp/p1n1pn2/2b5/8/3BPN2/PP2QPPP/RNB1K2R w KQkq - 2 9"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e1g1",
+                    "variations": [],
+                    "fenAfter": "r1bqk2r/1p3ppp/p1n1pn2/2b5/8/3BPN2/PP2QPPP/RNB2RK1 b kq - 3 9"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/1p3ppp/p1n1pn2/2b5/8/3BPN2/PP2QPPP/RNB2RK1 w - - 4 10"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/1p3ppp/p1n1pn2/2b5/8/2NBPN2/PP2QPPP/R1B2RK1 b - - 5 10"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e6e5",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/1p3ppp/p1n2n2/2b1p3/8/2NBPN2/PP2QPPP/R1B2RK1 w - - 0 11"
+                  },
+                  {
+                    "san": "Ne4",
+                    "uci": "c3e4",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/1p3ppp/p1n2n2/2b1p3/4N3/3BPN2/PP2QPPP/R1B2RK1 b - - 1 11"
+                  },
+                  {
+                    "san": "Bb6",
+                    "uci": "c5b6",
+                    "variations": [],
+                    "fenAfter": "r1bq1rk1/1p3ppp/pbn2n2/4p3/4N3/3BPN2/PP2QPPP/R1B2RK1 w - - 2 12"
+                  }
+                ]
+              ],
+              "fenAfter": "rnbqk2r/1p3ppp/p3pn2/2b5/2B5/4PN2/PP2QPPP/RNB2RK1 b kq - 1 8"
+            },
+            {
+              "san": "Nc6",
+              "uci": "b8c6",
+              "variations": [],
+              "fenAfter": "r1bqk2r/1p3ppp/p1n1pn2/2b5/2B5/4PN2/PP2QPPP/RNB2RK1 w kq - 2 9"
+            },
+            {
+              "san": "e4",
+              "uci": "e3e4",
+              "variations": [],
+              "fenAfter": "r1bqk2r/1p3ppp/p1n1pn2/2b5/2B1P3/5N2/PP2QPPP/RNB2RK1 b kq - 0 9",
+              "commentAfter": "striking in the center with real force now that development is complete."
+            },
+            {
+              "san": "b5",
+              "uci": "b7b5",
+              "variations": [],
+              "fenAfter": "r1bqk2r/5ppp/p1n1pn2/1pb5/2B1P3/5N2/PP2QPPP/RNB2RK1 w kq - 0 10"
+            },
+            {
+              "san": "Bb3",
+              "uci": "c4b3",
+              "variations": [],
+              "fenAfter": "r1bqk2r/5ppp/p1n1pn2/1pb5/4P3/1B3N2/PP2QPPP/RNB2RK1 b kq - 1 10"
+            },
+            {
+              "san": "Nd4",
+              "uci": "c6d4",
+              "variations": [],
+              "fenAfter": "r1bqk2r/5ppp/p3pn2/1pb5/3nP3/1B3N2/PP2QPPP/RNB2RK1 w kq - 2 11",
+              "commentAfter": "A very precise, well-known equalizing resource — offering a trade of knights to defuse White's central ambitions before they can fully materialize."
+            },
+            {
+              "san": "Nxd4",
+              "uci": "f3d4",
+              "variations": [],
+              "fenAfter": "r1bqk2r/5ppp/p3pn2/1pb5/3NP3/1B6/PP2QPPP/RNB2RK1 b kq - 0 11"
+            },
+            {
+              "san": "Qxd4",
+              "uci": "d8d4",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pb5/3qP3/1B6/PP2QPPP/RNB2RK1 w kq - 0 12"
+            },
+            {
+              "san": "Be3",
+              "uci": "c1e3",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pb5/3qP3/1B2B3/PP2QPPP/RN3RK1 b kq - 1 12"
+            },
+            {
+              "san": "Qe5",
+              "uci": "d4e5",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pb1q3/4P3/1B2B3/PP2QPPP/RN3RK1 w kq - 2 13",
+              "commentAfter": "and Black has successfully held back White's e4-e5 ambitions while completing development with fully equal chances — this exact sequence was demonstrated in a famous Radjabov-Kasparov game and remains the main practical answer to White's sharpest try in this whole variation."
+            },
+            {
+              "san": "Bxc5",
+              "uci": "e3c5",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pB1q3/4P3/1B6/PP2QPPP/RN3RK1 b kq - 0 13",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "Qxc5",
+              "uci": "e5c5",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pq5/4P3/1B6/PP2QPPP/RN3RK1 w kq - 0 14",
+              "commentAfter": "Black's queen takes the bishop on c5. The c-file opens for the rook. Trade when it eases your position, not just because you can."
+            },
+            {
+              "san": "Nc3",
+              "uci": "b1c3",
+              "variations": [],
+              "fenAfter": "r1b1k2r/5ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/R4RK1 b kq - 1 14",
+              "commentAfter": "A natural developing move — your knight heads for c3. Level position; the fight continues."
+            },
+            {
+              "san": "Bb7",
+              "uci": "c8b7",
+              "variations": [],
+              "fenAfter": "r3k2r/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/R4RK1 w kq - 2 15",
+              "commentAfter": "Black's bishop takes the long diagonal; it eyes your position at once. Black will try to open lines; keep your king safe first."
+            },
+            {
+              "san": "Rac1",
+              "uci": "a1c1",
+              "variations": [
+                [
+                  {
+                    "san": "Rad1",
+                    "uci": "a1d1",
+                    "variations": [],
+                    "fenAfter": "r3k2r/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/3R1RK1 b kq - 3 15"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/3R1RK1 w - - 4 16"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e4e5",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p3pn2/1pq1P3/8/1BN5/PP2QPPP/3R1RK1 b - - 0 16"
+                  },
+                  {
+                    "san": "Qc6",
+                    "uci": "c5c6",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p1q1pn2/1p2P3/8/1BN5/PP2QPPP/3R1RK1 w - - 1 17"
+                  },
+                  {
+                    "san": "f4",
+                    "uci": "f2f4",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p1q1pn2/1p2P3/5P2/1BN5/PP2Q1PP/3R1RK1 b - - 0 17"
+                  },
+                  {
+                    "san": "Ne4",
+                    "uci": "f6e4",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p1q1p3/1p2P3/4nP2/1BN5/PP2Q1PP/3R1RK1 w - - 1 18"
+                  },
+                  {
+                    "san": "Qxe4",
+                    "uci": "e2e4",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p1q1p3/1p2P3/4QP2/1BN5/PP4PP/3R1RK1 b - - 0 18"
+                  },
+                  {
+                    "san": "Qxe4",
+                    "uci": "c6e4",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p3p3/1p2P3/4qP2/1BN5/PP4PP/3R1RK1 w - - 0 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "Kh1",
+                    "uci": "g1h1",
+                    "variations": [],
+                    "fenAfter": "r3k2r/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/R4R1K b kq - 3 15"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/R4R1K w - - 4 16"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e4e5",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b3ppp/p3pn2/1pq1P3/8/1BN5/PP2QPPP/R4R1K b - - 0 16"
+                  },
+                  {
+                    "san": "Nd7",
+                    "uci": "f6d7",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b1n1ppp/p3p3/1pq1P3/8/1BN5/PP2QPPP/R4R1K w - - 1 17"
+                  },
+                  {
+                    "san": "f4",
+                    "uci": "f2f4",
+                    "variations": [],
+                    "fenAfter": "r4rk1/1b1n1ppp/p3p3/1pq1P3/5P2/1BN5/PP2Q1PP/R4R1K b - - 0 17"
+                  },
+                  {
+                    "san": "Rad8",
+                    "uci": "a8d8",
+                    "variations": [],
+                    "fenAfter": "3r1rk1/1b1n1ppp/p3p3/1pq1P3/5P2/1BN5/PP2Q1PP/R4R1K w - - 1 18"
+                  },
+                  {
+                    "san": "Ne4",
+                    "uci": "c3e4",
+                    "variations": [],
+                    "fenAfter": "3r1rk1/1b1n1ppp/p3p3/1pq1P3/4NP2/1B6/PP2Q1PP/R4R1K b - - 2 18"
+                  },
+                  {
+                    "san": "Bxe4",
+                    "uci": "b7e4",
+                    "variations": [],
+                    "fenAfter": "3r1rk1/3n1ppp/p3p3/1pq1P3/4bP2/1B6/PP2Q1PP/R4R1K w - - 0 19"
+                  }
+                ]
+              ],
+              "fenAfter": "r3k2r/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/2R2RK1 b kq - 3 15",
+              "commentAfter": "You seize the open c-file — rooks belong there. Your plan: improve, then open the position on your terms."
+            },
+            {
+              "san": "Rc8",
+              "uci": "a8c8",
+              "variations": [],
+              "fenAfter": "2r1k2r/1b3ppp/p3pn2/1pq5/4P3/1BN5/PP2QPPP/2R2RK1 w k - 4 16",
+              "commentAfter": "Black's rook occupies the open c-file; pressure builds down its length. Open lines and weak squares are what decide the middlegame."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        }
+      ]
+    },
+    {
+      "title": "Chapter 3: Sidelines and Traps",
+      "order": 2,
+      "studies": [
+        {
+          "id": "qga4",
+          "chapter": "Chapter 3: Sidelines and Traps",
+          "title": "Study 3.1 — .a6: The Alekhine Variation",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3"
+            },
+            {
+              "san": "a6",
+              "uci": "a7a6",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/1pp1pppp/p7/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4",
+              "commentAfter": "THE ALEKHINE VARIATION — a common, well-respected sideline, preparing ...b5 immediately to actually hold onto the extra pawn this time, rather than simply returning it as in the main lines."
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/1pp1pppp/p7/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+              "commentAfter": "A calm, flexible continuation."
+            },
+            {
+              "san": "b5",
+              "uci": "b7b5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/2p1pppp/p7/1p6/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5"
+            },
+            {
+              "san": "a4",
+              "uci": "a2a4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/2p1pppp/p7/1p6/P1pP4/4PN2/1P3PPP/RNBQKB1R b KQkq - 0 5",
+              "commentAfter": "striking at the overextended queenside pawns immediately, exactly as in the general anti-QGA principle established in Chapter 1, Study 1.1."
+            },
+            {
+              "san": "Bb7",
+              "uci": "c8b7",
+              "variations": [],
+              "fenAfter": "rn1qkbnr/1bp1pppp/p7/1p6/P1pP4/4PN2/1P3PPP/RNBQKB1R w KQkq - 1 6"
+            },
+            {
+              "san": "b3",
+              "uci": "b2b3",
+              "variations": [],
+              "fenAfter": "rn1qkbnr/1bp1pppp/p7/1p6/P1pP4/1P2PN2/5PPP/RNBQKB1R b KQkq - 0 6",
+              "commentAfter": "A key follow-up, preparing to meet ...c6 or a further pawn advance with continued pressure."
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/1p6/P1pP4/1P2PN2/5PPP/RNBQKB1R w KQkq - 0 7"
+            },
+            {
+              "san": "bxc4",
+              "uci": "b3c4",
+              "variations": [],
+              "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/1p6/P1PP4/4PN2/5PPP/RNBQKB1R b KQkq - 0 7",
+              "commentAfter": "regaining the pawn, since Black's queenside structure can no longer hold onto it safely."
+            },
+            {
+              "san": "bxc4",
+              "uci": "b5c4",
+              "variations": [],
+              "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/8/P1pP4/4PN2/5PPP/RNBQKB1R w KQkq - 0 8"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [
+                [
+                  {
+                    "san": "Ba3",
+                    "uci": "c1a3",
+                    "variations": [],
+                    "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/8/P1pP4/B3PN2/5PPP/RN1QKB1R b KQkq - 1 8"
+                  },
+                  {
+                    "san": "c5",
+                    "uci": "c7c5",
+                    "variations": [],
+                    "fenAfter": "rn1qkbnr/1b3ppp/p3p3/2p5/P1pP4/B3PN2/5PPP/RN1QKB1R w KQkq - 0 9"
+                  },
+                  {
+                    "san": "Bxc4",
+                    "uci": "f1c4",
+                    "variations": [],
+                    "fenAfter": "rn1qkbnr/1b3ppp/p3p3/2p5/P1BP4/B3PN2/5PPP/RN1QK2R b KQkq - 0 9"
+                  },
+                  {
+                    "san": "Nf6",
+                    "uci": "g8f6",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/2p5/P1BP4/B3PN2/5PPP/RN1QK2R w KQkq - 1 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e1g1",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/2p5/P1BP4/B3PN2/5PPP/RN1Q1RK1 b kq - 2 10"
+                  },
+                  {
+                    "san": "cxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "rn1qkb1r/1b3ppp/p3pn2/8/P1Bp4/B3PN2/5PPP/RN1Q1RK1 w kq - 0 11"
+                  },
+                  {
+                    "san": "Bxf8",
+                    "uci": "a3f8",
+                    "variations": [],
+                    "fenAfter": "rn1qkB1r/1b3ppp/p3pn2/8/P1Bp4/4PN2/5PPP/RN1Q1RK1 b kq - 0 11"
+                  },
+                  {
+                    "san": "Rxf8",
+                    "uci": "h8f8",
+                    "variations": [],
+                    "fenAfter": "rn1qkr2/1b3ppp/p3pn2/8/P1Bp4/4PN2/5PPP/RN1Q1RK1 w q - 0 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "a5",
+                    "uci": "a4a5",
+                    "variations": [],
+                    "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/P7/2pP4/4PN2/5PPP/RNBQKB1R b KQkq - 0 8"
+                  },
+                  {
+                    "san": "Nd7",
+                    "uci": "b8d7",
+                    "variations": [],
+                    "fenAfter": "r2qkbnr/1bpn1ppp/p3p3/P7/2pP4/4PN2/5PPP/RNBQKB1R w KQkq - 1 9"
+                  },
+                  {
+                    "san": "Bxc4",
+                    "uci": "f1c4",
+                    "variations": [],
+                    "fenAfter": "r2qkbnr/1bpn1ppp/p3p3/P7/2BP4/4PN2/5PPP/RNBQK2R b KQkq - 0 9"
+                  },
+                  {
+                    "san": "Ngf6",
+                    "uci": "g8f6",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1bpn1ppp/p3pn2/P7/2BP4/4PN2/5PPP/RNBQK2R w KQkq - 1 10"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e1g1",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1bpn1ppp/p3pn2/P7/2BP4/4PN2/5PPP/RNBQ1RK1 b kq - 2 10"
+                  },
+                  {
+                    "san": "c5",
+                    "uci": "c7c5",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/P1p5/2BP4/4PN2/5PPP/RNBQ1RK1 w kq - 0 11"
+                  },
+                  {
+                    "san": "Nbd2",
+                    "uci": "b1d2",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/P1p5/2BP4/4PN2/3N1PPP/R1BQ1RK1 b kq - 1 11"
+                  },
+                  {
+                    "san": "cxd4",
+                    "uci": "c5d4",
+                    "variations": [],
+                    "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/P7/2Bp4/4PN2/3N1PPP/R1BQ1RK1 w kq - 0 12"
+                  }
+                ]
+              ],
+              "fenAfter": "rn1qkbnr/1bp2ppp/p3p3/8/P1BP4/4PN2/5PPP/RNBQK2R b KQkq - 0 8"
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rn1qkb1r/1bp2ppp/p3pn2/8/P1BP4/4PN2/5PPP/RNBQK2R w KQkq - 1 9",
+              "commentAfter": "and a roughly balanced, well-tested position follows — Black has active piece play and the bishop pair's potential to compensate for a slightly weaker queenside pawn structure."
+            },
+            {
+              "san": "Nbd2",
+              "uci": "b1d2",
+              "variations": [],
+              "fenAfter": "rn1qkb1r/1bp2ppp/p3pn2/8/P1BP4/4PN2/3N1PPP/R1BQK2R b KQkq - 2 9",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "Nbd7",
+              "uci": "b8d7",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1bpn1ppp/p3pn2/8/P1BP4/4PN2/3N1PPP/R1BQK2R w KQkq - 3 10",
+              "commentAfter": "A natural developing move — Black's knight heads for d7. Meet threats with activity — passivity invites attacks."
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1bpn1ppp/p3pn2/8/P1BP4/4PN2/3N1PPP/R1BQ1RK1 b kq - 4 10",
+              "commentAfter": "You castle short — your king tucks away and the rooks connect. Open lines and weak squares are what decide the middlegame."
+            },
+            {
+              "san": "c5",
+              "uci": "c7c5",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/2p5/P1BP4/4PN2/3N1PPP/R1BQ1RK1 w kq - 0 11",
+              "commentAfter": "Black plants a central pawn on c5 — solid and flexible. Ask what Black wants before committing — then take the square away."
+            },
+            {
+              "san": "Rb1",
+              "uci": "a1b1",
+              "variations": [],
+              "fenAfter": "r2qkb1r/1b1n1ppp/p3pn2/2p5/P1BP4/4PN2/3N1PPP/1RBQ1RK1 b kq - 1 11",
+              "commentAfter": "You seize the open b-file — rooks belong there. It now hits the bishop on b7. Ask what Black wants, then take the square away."
+            },
+            {
+              "san": "Rb8",
+              "uci": "a8b8",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/p3pn2/2p5/P1BP4/4PN2/3N1PPP/1RBQ1RK1 w k - 2 12",
+              "commentAfter": "Black seizes the open b-file — rooks belong there. Trade when it eases your position, not just because you can."
+            },
+            {
+              "san": "Qe2",
+              "uci": "d1e2",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/p3pn2/2p5/P1BP4/4PN2/3NQPPP/1RB2RK1 b k - 3 12",
+              "commentAfter": "The queen finds a strong post on e2. Your plan: improve, then open the position on your terms."
+            },
+            {
+              "san": "cxd4",
+              "uci": "c5d4",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/p3pn2/8/P1Bp4/4PN2/3NQPPP/1RB2RK1 w k - 0 13",
+              "commentAfter": "Black takes the pawn on d4. Black will try to open lines; keep your king safe first."
+            },
+            {
+              "san": "Nxd4",
+              "uci": "f3d4",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/p3pn2/8/P1BN4/4P3/3NQPPP/1RB2RK1 b k - 0 13",
+              "commentAfter": "Your knight collects the pawn on d4. A pleasant plus for you."
+            },
+            {
+              "san": "a5",
+              "uci": "a6a5",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/4pn2/p7/P1BN4/4P3/3NQPPP/1RB2RK1 w k - 0 14",
+              "commentAfter": "A flank push — Black claims room on the rim. Ask what Black wants before committing — then take the square away."
+            },
+            {
+              "san": "Bb5",
+              "uci": "c4b5",
+              "variations": [],
+              "fenAfter": "1r1qkb1r/1b1n1ppp/4pn2/pB6/P2N4/4P3/3NQPPP/1RB2RK1 b k - 1 14",
+              "commentAfter": "You reposition the bishop, keeping all the options open. It now eyes the knight on d7. Trade pieces when you are ahead; keep the tension when not."
+            },
+            {
+              "san": "Bb4",
+              "uci": "f8b4",
+              "variations": [],
+              "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pB6/Pb1N4/4P3/3NQPPP/1RB2RK1 w k - 2 15",
+              "commentAfter": "A natural developing move — Black's bishop heads for b4. The knight on d2 is now in its sights. You are comfortably on top (+1.1)."
+            },
+            {
+              "san": "Nc4",
+              "uci": "d2c4",
+              "variations": [
+                [
+                  {
+                    "san": "Rd1",
+                    "uci": "f1d1",
+                    "variations": [],
+                    "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pB6/Pb1N4/4P3/3NQPPP/1RBR2K1 b k - 3 15"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "1r1q1rk1/1b1n1ppp/4pn2/pB6/Pb1N4/4P3/3NQPPP/1RBR2K1 w - - 4 16"
+                  },
+                  {
+                    "san": "Bb2",
+                    "uci": "c1b2",
+                    "variations": [],
+                    "fenAfter": "1r1q1rk1/1b1n1ppp/4pn2/pB6/Pb1N4/4P3/1B1NQPPP/1R1R2K1 b - - 5 16"
+                  },
+                  {
+                    "san": "Rc8",
+                    "uci": "b8c8",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b1n1ppp/4pn2/pB6/Pb1N4/4P3/1B1NQPPP/1R1R2K1 w - - 6 17"
+                  },
+                  {
+                    "san": "Nc4",
+                    "uci": "d2c4",
+                    "variations": [],
+                    "fenAfter": "2rq1rk1/1b1n1ppp/4pn2/pB6/PbNN4/4P3/1B2QPPP/1R1R2K1 b - - 7 17"
+                  },
+                  {
+                    "san": "Qc7",
+                    "uci": "d8c7",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/1bqn1ppp/4pn2/pB6/PbNN4/4P3/1B2QPPP/1R1R2K1 w - - 8 18"
+                  },
+                  {
+                    "san": "Nb3",
+                    "uci": "d4b3",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/1bqn1ppp/4pn2/pB6/PbN5/1N2P3/1B2QPPP/1R1R2K1 b - - 9 18"
+                  },
+                  {
+                    "san": "Bd5",
+                    "uci": "b7d5",
+                    "variations": [],
+                    "fenAfter": "2r2rk1/2qn1ppp/4pn2/pB1b4/PbN5/1N2P3/1B2QPPP/1R1R2K1 w - - 10 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "Nc2",
+                    "uci": "d4c2",
+                    "variations": [],
+                    "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pB6/Pb6/4P3/2NNQPPP/1RB2RK1 b k - 3 15"
+                  },
+                  {
+                    "san": "Bc5",
+                    "uci": "b4c5",
+                    "variations": [],
+                    "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pBb5/P7/4P3/2NNQPPP/1RB2RK1 w k - 4 16"
+                  },
+                  {
+                    "san": "Rd1",
+                    "uci": "f1d1",
+                    "variations": [],
+                    "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pBb5/P7/4P3/2NNQPPP/1RBR2K1 b k - 5 16"
+                  },
+                  {
+                    "san": "O-O",
+                    "uci": "e8g8",
+                    "variations": [],
+                    "fenAfter": "1r1q1rk1/1b1n1ppp/4pn2/pBb5/P7/4P3/2NNQPPP/1RBR2K1 w - - 6 17"
+                  },
+                  {
+                    "san": "Nb3",
+                    "uci": "d2b3",
+                    "variations": [],
+                    "fenAfter": "1r1q1rk1/1b1n1ppp/4pn2/pBb5/P7/1N2P3/2N1QPPP/1RBR2K1 b - - 7 17"
+                  },
+                  {
+                    "san": "Qc7",
+                    "uci": "d8c7",
+                    "variations": [],
+                    "fenAfter": "1r3rk1/1bqn1ppp/4pn2/pBb5/P7/1N2P3/2N1QPPP/1RBR2K1 w - - 8 18"
+                  },
+                  {
+                    "san": "Bd2",
+                    "uci": "c1d2",
+                    "variations": [],
+                    "fenAfter": "1r3rk1/1bqn1ppp/4pn2/pBb5/P7/1N2P3/2NBQPPP/1R1R2K1 b - - 9 18"
+                  },
+                  {
+                    "san": "Bb6",
+                    "uci": "c5b6",
+                    "variations": [],
+                    "fenAfter": "1r3rk1/1bqn1ppp/1b2pn2/pB6/P7/1N2P3/2NBQPPP/1R1R2K1 w - - 10 19"
+                  }
+                ]
+              ],
+              "fenAfter": "1r1qk2r/1b1n1ppp/4pn2/pB6/PbNN4/4P3/4QPPP/1RB2RK1 b k - 3 15",
+              "commentAfter": "Your knight regroups to the strong c4 square. Look for your worst-placed piece and improve it."
+            },
+            {
+              "san": "O-O",
+              "uci": "e8g8",
+              "variations": [],
+              "fenAfter": "1r1q1rk1/1b1n1ppp/4pn2/pB6/PbNN4/4P3/4QPPP/1RB2RK1 w - - 4 16",
+              "commentAfter": "Black castles short — the king tucks away and the rooks connect. Meet threats with activity — passivity invites attacks."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        },
+        {
+          "id": "qga7",
+          "chapter": "Chapter 3: Sidelines and Traps",
+          "title": "Study 3.2 — Common Mistake: Trying to Hold the Extra Pawn Too Long",
+          "type": "Queen's Gambit Accepted",
+          "tree": [
+            {
+              "san": "d4",
+              "uci": "d2d4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1"
+            },
+            {
+              "san": "d5",
+              "uci": "d7d5",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2"
+            },
+            {
+              "san": "c4",
+              "uci": "c2c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq - 0 2"
+            },
+            {
+              "san": "dxc4",
+              "uci": "d5c4",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3"
+            },
+            {
+              "san": "Nf3",
+              "uci": "g1f3",
+              "variations": [],
+              "fenAfter": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3"
+            },
+            {
+              "san": "Nf6",
+              "uci": "g8f6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4"
+            },
+            {
+              "san": "e3",
+              "uci": "e2e3",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4"
+            },
+            {
+              "san": "a6",
+              "uci": "a7a6",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1pp1pppp/p4n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R w KQkq - 0 5",
+              "commentAfter": "A natural-looking prophylactic idea, but played this early (before ...e6/...c5), it commits to holding the pawn without adequate central support first — a common online approach that runs into trouble."
+            },
+            {
+              "san": "a4",
+              "uci": "a2a4",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/1pp1pppp/p4n2/8/P1pP4/4PN2/1P3PPP/RNBQKB1R b KQkq - 0 5",
+              "commentAfter": "A very standard, very strong response, immediately undermining Black's queenside plan before it can fully develop."
+            },
+            {
+              "san": "b5",
+              "uci": "b7b5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/2p1pppp/p4n2/1p6/P1pP4/4PN2/1P3PPP/RNBQKB1R w KQkq - 0 6",
+              "commentAfter": "continuing the plan regardless — but this simply overextends."
+            },
+            {
+              "san": "axb5",
+              "uci": "a4b5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/2p1pppp/p4n2/1P6/2pP4/4PN2/1P3PPP/RNBQKB1R b KQkq - 0 6",
+              "commentAfter": "opening the a-file with tempo."
+            },
+            {
+              "san": "axb5",
+              "uci": "a6b5",
+              "variations": [],
+              "fenAfter": "rnbqkb1r/2p1pppp/5n2/1p6/2pP4/4PN2/1P3PPP/RNBQKB1R w KQkq - 0 7"
+            },
+            {
+              "san": "Rxa8",
+              "uci": "a1a8",
+              "variations": [],
+              "fenAfter": "Rnbqkb1r/2p1pppp/5n2/1p6/2pP4/4PN2/1P3PPP/1NBQKB1R b Kk - 0 7",
+              "commentAfter": "winning the exchange outright, since Black's last few moves did nothing to prevent it."
+            },
+            {
+              "san": "Bb7",
+              "uci": "c8b7",
+              "variations": [],
+              "fenAfter": "Rn1qkb1r/1bp1pppp/5n2/1p6/2pP4/4PN2/1P3PPP/1NBQKB1R w Kk - 1 8"
+            },
+            {
+              "san": "Ra1",
+              "uci": "a8a1",
+              "variations": [
+                [
+                  {
+                    "san": "Ra7",
+                    "uci": "a8a7",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/Rbp1pppp/5n2/1p6/2pP4/4PN2/1P3PPP/1NBQKB1R b Kk - 2 8"
+                  },
+                  {
+                    "san": "Bxf3",
+                    "uci": "b7f3",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/R1p1pppp/5n2/1p6/2pP4/4Pb2/1P3PPP/1NBQKB1R w Kk - 0 9"
+                  },
+                  {
+                    "san": "gxf3",
+                    "uci": "g2f3",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/R1p1pppp/5n2/1p6/2pP4/4PP2/1P3P1P/1NBQKB1R b Kk - 0 9"
+                  },
+                  {
+                    "san": "Nc6",
+                    "uci": "b8c6",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/R1p1pppp/2n2n2/1p6/2pP4/4PP2/1P3P1P/1NBQKB1R w Kk - 1 10"
+                  },
+                  {
+                    "san": "Ra6",
+                    "uci": "a7a6",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p1pppp/R1n2n2/1p6/2pP4/4PP2/1P3P1P/1NBQKB1R b Kk - 2 10"
+                  },
+                  {
+                    "san": "Nb4",
+                    "uci": "c6b4",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p1pppp/R4n2/1p6/1npP4/4PP2/1P3P1P/1NBQKB1R w Kk - 3 11"
+                  },
+                  {
+                    "san": "Ra1",
+                    "uci": "a6a1",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p1pppp/5n2/1p6/1npP4/4PP2/1P3P1P/RNBQKB1R b Kk - 4 11"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e7e5",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p2ppp/5n2/1p2p3/1npP4/4PP2/1P3P1P/RNBQKB1R w Kk - 0 12"
+                  }
+                ],
+                [
+                  {
+                    "san": "Ra5",
+                    "uci": "a8a5",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/1bp1pppp/5n2/Rp6/2pP4/4PN2/1P3PPP/1NBQKB1R b Kk - 2 8"
+                  },
+                  {
+                    "san": "Bxf3",
+                    "uci": "b7f3",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/2p1pppp/5n2/Rp6/2pP4/4Pb2/1P3PPP/1NBQKB1R w Kk - 0 9"
+                  },
+                  {
+                    "san": "gxf3",
+                    "uci": "g2f3",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/2p1pppp/5n2/Rp6/2pP4/4PP2/1P3P1P/1NBQKB1R b Kk - 0 9"
+                  },
+                  {
+                    "san": "e5",
+                    "uci": "e7e5",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/2p2ppp/5n2/Rp2p3/2pP4/4PP2/1P3P1P/1NBQKB1R w Kk - 0 10"
+                  },
+                  {
+                    "san": "Rxb5",
+                    "uci": "a5b5",
+                    "variations": [],
+                    "fenAfter": "1n1qkb1r/2p2ppp/5n2/1R2p3/2pP4/4PP2/1P3P1P/1NBQKB1R b Kk - 0 10"
+                  },
+                  {
+                    "san": "Nc6",
+                    "uci": "b8c6",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p2ppp/2n2n2/1R2p3/2pP4/4PP2/1P3P1P/1NBQKB1R w Kk - 1 11"
+                  },
+                  {
+                    "san": "Nc3",
+                    "uci": "b1c3",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2p2ppp/2n2n2/1R2p3/2pP4/2N1PP2/1P3P1P/2BQKB1R b Kk - 2 11"
+                  },
+                  {
+                    "san": "Nd7",
+                    "uci": "f6d7",
+                    "variations": [],
+                    "fenAfter": "3qkb1r/2pn1ppp/2n5/1R2p3/2pP4/2N1PP2/1P3P1P/2BQKB1R w Kk - 3 12"
+                  }
+                ]
+              ],
+              "fenAfter": "1n1qkb1r/1bp1pppp/5n2/1p6/2pP4/4PN2/1P3PPP/RNBQKB1R b Kk - 2 8",
+              "commentAfter": "retreating with a clean material advantage."
+            },
+            {
+              "san": "e6",
+              "uci": "e7e6",
+              "variations": [],
+              "fenAfter": "1n1qkb1r/1bp2ppp/4pn2/1p6/2pP4/4PN2/1P3PPP/RNBQKB1R w Kk - 0 9"
+            },
+            {
+              "san": "Bxc4",
+              "uci": "f1c4",
+              "variations": [],
+              "fenAfter": "1n1qkb1r/1bp2ppp/4pn2/1p6/2BP4/4PN2/1P3PPP/RNBQK2R b Kk - 0 9",
+              "commentAfter": "and White has regained the gambit pawn AND won the exchange, all because Black tried to hold onto material without adequate preparation — this exact \"grab and hold without central support\" mistake is one of the most common ways club and online players misplay the Queen's Gambit Accepted."
+            },
+            {
+              "san": "bxc4",
+              "uci": "b5c4",
+              "variations": [],
+              "fenAfter": "1n1qkb1r/1bp2ppp/4pn2/8/2pP4/4PN2/1P3PPP/RNBQK2R w Kk - 0 10",
+              "commentAfter": "Book line ends here — engine-verified top play completes the line to 15 moves for each side."
+            },
+            {
+              "san": "Nbd2",
+              "uci": "b1d2",
+              "variations": [],
+              "fenAfter": "1n1qkb1r/1bp2ppp/4pn2/8/2pP4/4PN2/1P1N1PPP/R1BQK2R b Kk - 1 10",
+              "commentAfter": "A natural developing move — your knight heads for d2. A serious pull for you."
+            },
+            {
+              "san": "Be7",
+              "uci": "f8e7",
+              "variations": [],
+              "fenAfter": "1n1qk2r/1bp1bppp/4pn2/8/2pP4/4PN2/1P1N1PPP/R1BQK2R w Kk - 2 11",
+              "commentAfter": "Black brings the bishop into the game; one step closer to full mobilization. You are clearly better (+2.6)."
+            },
+            {
+              "san": "O-O",
+              "uci": "e1g1",
+              "variations": [],
+              "fenAfter": "1n1qk2r/1bp1bppp/4pn2/8/2pP4/4PN2/1P1N1PPP/R1BQ1RK1 b k - 3 11",
+              "commentAfter": "You castle short — your king tucks away and the rooks connect. You are clearly better (+2.5)."
+            },
+            {
+              "san": "O-O",
+              "uci": "e8g8",
+              "variations": [],
+              "fenAfter": "1n1q1rk1/1bp1bppp/4pn2/8/2pP4/4PN2/1P1N1PPP/R1BQ1RK1 w - - 4 12",
+              "commentAfter": "Black castles short — the king tucks away and the rooks connect. You are clearly better (+2.6)."
+            },
+            {
+              "san": "Nxc4",
+              "uci": "d2c4",
+              "variations": [],
+              "fenAfter": "1n1q1rk1/1bp1bppp/4pn2/8/2NP4/4PN2/1P3PPP/R1BQ1RK1 b - - 0 12",
+              "commentAfter": "Your knight collects the pawn on c4. A serious pull for you."
+            },
+            {
+              "san": "Qd5",
+              "uci": "d8d5",
+              "variations": [],
+              "fenAfter": "1n3rk1/1bp1bppp/4pn2/3q4/2NP4/4PN2/1P3PPP/R1BQ1RK1 w - - 1 13",
+              "commentAfter": "Black brings the queen closer to your camp. It now points straight at the knight on c4. You are clearly better (+2.6)."
+            },
+            {
+              "san": "Na5",
+              "uci": "c4a5",
+              "variations": [],
+              "fenAfter": "1n3rk1/1bp1bppp/4pn2/N2q4/3P4/4PN2/1P3PPP/R1BQ1RK1 b - - 2 13",
+              "commentAfter": "You keep the tension; the knight waits for the right moment. The bishop on b7 is now in its sights. You are clearly better (+2.3)."
+            },
+            {
+              "san": "Ba6",
+              "uci": "b7a6",
+              "variations": [],
+              "fenAfter": "1n3rk1/2p1bppp/b3pn2/N2q4/3P4/4PN2/1P3PPP/R1BQ1RK1 w - - 3 14",
+              "commentAfter": "Black keeps the tension; the bishop waits for the right moment. The rook on f1 is now in its sights. A serious pull for you."
+            },
+            {
+              "san": "Re1",
+              "uci": "f1e1",
+              "variations": [],
+              "fenAfter": "1n3rk1/2p1bppp/b3pn2/N2q4/3P4/4PN2/1P3PPP/R1BQR1K1 b - - 4 14",
+              "commentAfter": "Your rook comes over, hunting for open lines. A serious pull for you."
+            },
+            {
+              "san": "Ne4",
+              "uci": "f6e4",
+              "variations": [],
+              "fenAfter": "1n3rk1/2p1bppp/b3p3/N2q4/3Pn3/4PN2/1P3PPP/R1BQR1K1 w - - 5 15",
+              "commentAfter": "Black improves the knight — it dominates from e4. A serious pull for you."
+            },
+            {
+              "san": "Qb3",
+              "uci": "d1b3",
+              "variations": [
+                [
+                  {
+                    "san": "Bd2",
+                    "uci": "c1d2",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/2p1bppp/b3p3/N2q4/3Pn3/4PN2/1P1B1PPP/R2QR1K1 b - - 6 15"
+                  },
+                  {
+                    "san": "Nd7",
+                    "uci": "b8d7",
+                    "variations": [],
+                    "fenAfter": "5rk1/2pnbppp/b3p3/N2q4/3Pn3/4PN2/1P1B1PPP/R2QR1K1 w - - 7 16"
+                  },
+                  {
+                    "san": "Qc2",
+                    "uci": "d1c2",
+                    "variations": [],
+                    "fenAfter": "5rk1/2pnbppp/b3p3/N2q4/3Pn3/4PN2/1PQB1PPP/R3R1K1 b - - 8 16"
+                  },
+                  {
+                    "san": "c5",
+                    "uci": "c7c5",
+                    "variations": [],
+                    "fenAfter": "5rk1/3nbppp/b3p3/N1pq4/3Pn3/4PN2/1PQB1PPP/R3R1K1 w - - 0 17"
+                  },
+                  {
+                    "san": "Bc3",
+                    "uci": "d2c3",
+                    "variations": [],
+                    "fenAfter": "5rk1/3nbppp/b3p3/N1pq4/3Pn3/2B1PN2/1PQ2PPP/R3R1K1 b - - 1 17"
+                  },
+                  {
+                    "san": "Rc8",
+                    "uci": "f8c8",
+                    "variations": [],
+                    "fenAfter": "2r3k1/3nbppp/b3p3/N1pq4/3Pn3/2B1PN2/1PQ2PPP/R3R1K1 w - - 2 18"
+                  },
+                  {
+                    "san": "Red1",
+                    "uci": "e1d1",
+                    "variations": [],
+                    "fenAfter": "2r3k1/3nbppp/b3p3/N1pq4/3Pn3/2B1PN2/1PQ2PPP/R2R2K1 b - - 3 18"
+                  },
+                  {
+                    "san": "c4",
+                    "uci": "c5c4",
+                    "variations": [],
+                    "fenAfter": "2r3k1/3nbppp/b3p3/N2q4/2pPn3/2B1PN2/1PQ2PPP/R2R2K1 w - - 0 19"
+                  }
+                ],
+                [
+                  {
+                    "san": "Nb3",
+                    "uci": "a5b3",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/2p1bppp/b3p3/3q4/3Pn3/1N2PN2/1P3PPP/R1BQR1K1 b - - 6 15"
+                  },
+                  {
+                    "san": "Bb7",
+                    "uci": "a6b7",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/4p3/3q4/3Pn3/1N2PN2/1P3PPP/R1BQR1K1 w - - 7 16"
+                  },
+                  {
+                    "san": "Ra5",
+                    "uci": "a1a5",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/4p3/R2q4/3Pn3/1N2PN2/1P3PPP/2BQR1K1 b - - 8 16"
+                  },
+                  {
+                    "san": "Qc6",
+                    "uci": "d5c6",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/2q1p3/R7/3Pn3/1N2PN2/1P3PPP/2BQR1K1 w - - 9 17"
+                  },
+                  {
+                    "san": "Ne5",
+                    "uci": "f3e5",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/2q1p3/R3N3/3Pn3/1N2P3/1P3PPP/2BQR1K1 b - - 10 17"
+                  },
+                  {
+                    "san": "Qb6",
+                    "uci": "c6b6",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/1q2p3/R3N3/3Pn3/1N2P3/1P3PPP/2BQR1K1 w - - 11 18"
+                  },
+                  {
+                    "san": "Ra1",
+                    "uci": "a5a1",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp1bppp/1q2p3/4N3/3Pn3/1N2P3/1P3PPP/R1BQR1K1 b - - 12 18"
+                  },
+                  {
+                    "san": "Bh4",
+                    "uci": "e7h4",
+                    "variations": [],
+                    "fenAfter": "1n3rk1/1bp2ppp/1q2p3/4N3/3Pn2b/1N2P3/1P3PPP/R1BQR1K1 w - - 13 19"
+                  }
+                ]
+              ],
+              "fenAfter": "1n3rk1/2p1bppp/b3p3/N2q4/3Pn3/1Q2PN2/1P3PPP/R1B1R1K1 b - - 6 15",
+              "commentAfter": "You bring the queen closer to the action. It now eyes the queen on d5. You are clearly better (+2.4)."
+            },
+            {
+              "san": "Qh5",
+              "uci": "d5h5",
+              "variations": [],
+              "fenAfter": "1n3rk1/2p1bppp/b3p3/N6q/3Pn3/1Q2PN2/1P3PPP/R1B1R1K1 w - - 7 16",
+              "commentAfter": "Black repositions the queen to the active h5 square. It now points straight at the knight on a5. Meet threats with activity — passivity invites attacks."
+            }
+          ],
+          "mainPlies": 30,
+          "lineCount": 5
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "chapters": 3,
+    "studies": 7,
+    "lines": 36
+  }
+}
