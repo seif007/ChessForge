@@ -27,6 +27,16 @@ import type { ScanRecord } from '@/lib/gameScan';
 export const GAMES_REFRESH_JOB = 'stats-games';
 export const SCAN_JOB = 'stats-scan';
 
+/**
+ * The slice of the Refresh bar's travel spent downloading the games.
+ *
+ * The read reports 100% when it finishes, but saving the cache and refreshing
+ * the openings come after — so a bar that reached the end and then dropped back
+ * to "Saving your games..." looked like it had restarted. Ninety leaves room for
+ * those steps to finish the bar in one direction.
+ */
+const GAMES_DOWNLOAD_SHARE = 90;
+
 /** Keep only the ratings Lichess actually supplied. */
 export function ratingsRecord(ratings: LichessRatings): Record<string, number> {
   const out: Record<string, number> = {};
@@ -85,11 +95,21 @@ export function startGamesRefresh(
         all = await fetchAllGames(name, {
           force: opts.force === true,
           signal,
+          expected: profile.gameCount,
           disabledHint: profile.disabled,
           onProgress: (p: FetchProgress) => {
             if (/could not be read/.test(p.phase)) shortRead = p.phase;
             progress({
-              pct: p.fraction != null ? Math.round(p.fraction * 100) : 0,
+              /*
+               * THE DOWNLOAD OWNS MOST OF THE BAR, NOT ALL OF IT.
+               *
+               * The read reports 100% when it finishes, but saving the cache and
+               * refreshing the openings come after — and a bar that reaches the
+               * end and then drops back to "Saving your games..." looks like it
+               * restarted. Ninety leaves room for those steps to finish the bar
+               * in one direction.
+               */
+              pct: p.fraction != null ? Math.round(p.fraction * GAMES_DOWNLOAD_SHARE) : 0,
               label: p.phase,
               detail: `${p.gamesSoFar} game${p.gamesSoFar === 1 ? '' : 's'} read`,
               indeterminate: p.fraction == null,
@@ -188,9 +208,11 @@ let list = games ?? null;
            */
           progress({ pct: 0, label: 'Looking up the account...', indeterminate: true });
           let disabled = false;
+          let expected: number | null = null;
           try {
             const profile = await fetchProfile(name, signal);
             disabled = profile.disabled;
+            expected = profile.gameCount;
           } catch (e) {
             throw new Error(lichessAccountError(name, e));
           }
@@ -202,6 +224,7 @@ let list = games ?? null;
             list = await fetchAllGames(name, {
               maxGames: SCAN_GAMES,
               signal,
+              expected,
               disabledHint: disabled,
               onProgress: (p: FetchProgress) =>
                 progress({
@@ -219,7 +242,7 @@ let list = games ?? null;
       }
 
       const stored = await loadScanState(name);
-      progress({ pct: 0, label: 'Reading your games…', indeterminate: true });
+      progress({ pct: 0, label: 'Reading your games...', indeterminate: true });
 
       const outcome = await importGames(name, list, {
         records: stored.records,

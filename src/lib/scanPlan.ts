@@ -203,7 +203,15 @@ export async function importGames(
       shouldStop,
       onProgress: (made) => {
         opts.onProgress?.({
-          phase: `Analysing your games. Puzzles so far: ${made}`,
+          /*
+           * NAME THE PASS, BRIEFLY. The bar has no fraction here on purpose — a
+           * mining pass searches an unknown number of positions — so the text is
+           * the only thing that moves, and Stats renders it on ONE line. The old
+           * "Analysing your games. Puzzles so far: N" read as part of the analysis
+           * count; naming the pass is what says the scan has not stalled. Kept
+           * short so the count itself is not the part that gets clipped.
+           */
+          phase: `Mining your games. Puzzles so far: ${made}`,
           fraction: null,
           gamesSoFar: kept.length,
           puzzles: made,
@@ -222,7 +230,7 @@ export async function importGames(
     });
     previous.puzzles = merged;
     opts.onProgress?.({
-      phase: `Analysing your games. Puzzles so far: ${merged.length}`,
+      phase: `Mining your games. Puzzles so far: ${merged.length}`,
       fraction: null,
       gamesSoFar: kept.length,
       puzzles: merged.length,

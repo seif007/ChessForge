@@ -26,6 +26,14 @@ See [PRIVACY.md](PRIVACY.md) for what is stored and how to delete it.
 
 ---
 
+## Demo
+
+A 71-second promo (16:9, with sound):
+
+https://github.com/user-attachments/assets/fc4b149c-0fbb-4e99-a36b-99d021f5eb08
+
+---
+
 ## What it does
 
 | Area | Description |

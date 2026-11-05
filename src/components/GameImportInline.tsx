@@ -251,7 +251,7 @@ export function GameImportInline({
         <Text style={s.body} numberOfLines={2}>
           {puzzles != null ? `${phase} · ${puzzles} positions so far` : phase}
         </Text>
-        {fraction != null ? <Bar pct={fraction} /> : <Bar pct={0.05} />}
+        <Bar pct={fraction ?? 0} indeterminate={fraction == null} />
         <Btn label="Stop" variant="ghost" onPress={stop} />
       </View>
     );

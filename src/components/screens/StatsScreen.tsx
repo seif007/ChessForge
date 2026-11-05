@@ -159,7 +159,12 @@ export function StatsScreen() {
    * launch will try again. Every other caller is an explicit action, and keeps
    * the visible spinner and the error text.
    */
-  const loadGames = useCallback(async (name: string, force: boolean, quiet = false) => {
+  const loadGames = useCallback(async (
+    name: string,
+    force: boolean,
+    quiet = false,
+    expected: number | null = null,
+  ) => {
     if (!quiet) { setError(null); setLoading(true); }
     // Every load starts from a clean slate for the shortfall note: a gap found last week is not
     // evidence about this fetch, and leaving it up would blame a read that actually succeeded.
@@ -169,6 +174,7 @@ export function StatsScreen() {
     try {
       const all = await fetchAllGames(name, {
         force,
+        expected,
         onProgress: (p) => {
           // Keep the shortfall even if the screen is unmounted: the cache is
           // still written, and the note must be available on return.
@@ -388,7 +394,7 @@ export function StatsScreen() {
     setPuzzlesMade(scan.puzzles.length);
     if (Object.keys(scan.records).length > 0 && !scan.complete) setInterrupted(true);
 
-    await loadGames(resolved, sameAccount);
+    await loadGames(resolved, sameAccount, false, profile?.gameCount ?? null);
   }, [account, loadGames]);
 
   /**
@@ -629,7 +635,7 @@ export function StatsScreen() {
         {progress ? (
           <View style={{ gap: 6 }}>
             <Text style={s.body} numberOfLines={1}>{progress.phase}</Text>
-            {progress.fraction != null ? <Bar pct={progress.fraction} /> : <Bar pct={0.05} />}
+            <Bar pct={progress.fraction ?? 0} indeterminate={progress.fraction == null} />
           </View>
         ) : null}
 
@@ -1012,7 +1018,7 @@ function ConnectCard({
       {progress ? (
         <View style={{ gap: 6 }}>
           <Text style={s.body} numberOfLines={1}>{progress.phase}</Text>
-          <Bar pct={progress.fraction ?? 0.06} />
+          <Bar pct={progress.fraction ?? 0} indeterminate={progress.fraction == null} />
         </View>
       ) : null}
 

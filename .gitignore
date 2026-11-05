@@ -145,3 +145,10 @@ scripts/ensure.ps1
 # Local gate / build logs
 .gates.log
 .apk-build.log
+
+# Scratch directories for the marketing build (`scripts/build-marketing.py`) and the
+# on-device screen captures: cropped frames, raw phone shots, intermediate encodes and
+# QA stills. The published artwork lives in docs/marketing, not here.
+.tmp-*/
+docs/.tmp-demo/
+__pycache__/

@@ -101,6 +101,14 @@ export interface LichessProfile {
    * caller say what is actually true: the account is closed.
    */
   disabled: boolean;
+  /**
+   * How many rated games the account has, from the profile's `count`.
+   *
+   * Used as the progress denominator for the games download: the bar used to be
+   * measured against the read CAP (4000), so an account with 400 games filled a
+   * tenth of it and then jumped to full. `null` when Lichess did not say.
+   */
+  gameCount: number | null;
 }
 
 export interface LichessRatings {
@@ -263,6 +271,125 @@ async function fetchText(
     }
 
     return await res.text();
+  } finally {
+    t.dispose();
+  }
+}
+
+/** A response body that can be read as it arrives, when the runtime has one. */
+interface StreamingBody {
+  getReader(): { read(): Promise<{ done: boolean; value?: Uint8Array }>; cancel?(r?: unknown): void };
+}
+
+/**
+ * Download an NDJSON document and hand over each complete line AS IT ARRIVES.
+ *
+ * THE FREEZE THIS FIXES. `fetchText` above resolves only once the WHOLE body is
+ * buffered, so the entire game archive was read into memory reporting nothing:
+ * the refresh bar moved to its first phase and then sat still until the download
+ * ended and it jumped straight to the end. Lichess already streams NDJSON, and
+ * the `fetch` in this runtime (expo/fetch) exposes `Response.body` as a real
+ * stream, so the same bytes can be parsed line by line while they arrive.
+ *
+ * The request/status/retry handling below mirrors `fetchText` deliberately:
+ * same one-request discipline, same 404/429/5xx meanings. A runtime without a
+ * streaming body falls back to reading the whole response and splitting it —
+ * the download still works, only the progress is coarser.
+ */
+async function readNdjsonLines(
+  url: string,
+  signal: AbortSignal | undefined,
+  accept: string,
+  timeoutMs: number,
+  onLine: (line: string) => void,
+): Promise<void> {
+  const t = withTimeout(signal, timeoutMs);
+  try {
+    let res: Response | null = null;
+    for (let attempt = 1; res == null; attempt++) {
+      try {
+        const r = await fetch(url, {
+          headers: { 'User-Agent': USER_AGENT, Accept: accept },
+          signal: t.signal,
+        });
+        if (r.status === 404) {
+          throw new LichessError('That Lichess username does not exist.', 'not-found');
+        }
+        if (r.status === 429) {
+          // Lichess asks for a full minute of quiet after a 429. Waiting inside a
+          // mobile import would look like a freeze, so stop and tell the user.
+          const retry = r.headers.get('Retry-After');
+          const wait = retry ? ` Try again in ${retry} seconds.` : ' Wait a minute and try again.';
+          throw new LichessError(`Lichess is rate-limiting requests.${wait}`, 'rate-limit');
+        }
+        if (!r.ok) {
+          if (attempt < 3 && r.status >= 500) {
+            await new Promise((resolve) => setTimeout(resolve, 400 * attempt));
+            continue;
+          }
+          throw new LichessError(`Lichess returned an error (${r.status}).`, 'network');
+        }
+        res = r;
+      } catch (err) {
+        if (err instanceof LichessError) throw err;
+        if (signal?.aborted) throw new LichessError('Fetch cancelled.', 'aborted');
+        if (attempt < 3) {
+          await new Promise((resolve) => setTimeout(resolve, 400 * attempt));
+          continue;
+        }
+        throw new LichessError(
+          'Could not reach Lichess. Check your connection and try again.',
+          'network',
+        );
+      }
+    }
+
+    const body = (res as unknown as { body?: StreamingBody | null }).body;
+    if (
+      body != null
+      && typeof body.getReader === 'function'
+      // `TextDecoder` comes from the Expo runtime; without it streaming would
+      // throw, which the catch below would report as a dropped connection. Fall
+      // back to the buffered read instead, which needs no decoder.
+      && typeof TextDecoder === 'function'
+    ) {
+      const reader = body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      try {
+        for (;;) {
+          if (signal?.aborted) throw new LichessError('Fetch cancelled.', 'aborted');
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value ?? new Uint8Array(0), { stream: true });
+          let nl = buffer.indexOf('\n');
+          while (nl >= 0) {
+            const line = buffer.slice(0, nl);
+            buffer = buffer.slice(nl + 1);
+            if (line.trim().length > 0) onLine(line);
+            nl = buffer.indexOf('\n');
+          }
+        }
+        buffer += decoder.decode();
+        if (buffer.trim().length > 0) onLine(buffer);
+        return;
+      } catch (err) {
+        if (err instanceof LichessError) throw err;
+        if (signal?.aborted) throw new LichessError('Fetch cancelled.', 'aborted');
+        throw new LichessError(
+          'The connection to Lichess dropped while reading your games.',
+          'network',
+        );
+      }
+    }
+
+    // No streaming body: read it whole, then run the same line loop. Coarser
+    // progress, identical result.
+    const text = await res.text();
+    for (const line of text.split(/\r?\n/)) {
+      if (signal?.aborted) throw new LichessError('Fetch cancelled.', 'aborted');
+      if (line.trim().length > 0) onLine(line);
+    }
   } finally {
     t.dispose();
   }
@@ -544,6 +671,16 @@ export async function fetchProfile(
      * what lets the caller say "closed", not "does not exist".
      */
     disabled: raw.disabled === true,
+    /*
+     * RATED, because the games request below asks for `rated=true` only — the
+     * denominator has to count the same games the numerator does, or the bar
+     * stops short of the end on an account with casual games.
+     */
+    gameCount: (() => {
+      const c = raw.count as Record<string, unknown> | undefined;
+      const n = Number(c?.rated ?? c?.all);
+      return Number.isFinite(n) && n > 0 ? n : null;
+    })(),
   };
 }
 
@@ -641,7 +778,7 @@ function toGame(raw: Record<string, any>, user: string): LichessGame | null {
  * Fetch the user's public Lichess games, newest first.
  *
  * One request. Lichess streams NDJSON; we read the body, parse line by line,
- * and stop at `maxGames`. Progress is reported every 20 kept games.
+ * and stop at `maxGames`. Progress is reported as lines arrive.
  */
 export async function fetchAllGames(
   username: string,
@@ -661,6 +798,12 @@ export async function fetchAllGames(
     /** Default true. Set false to include casual games. */
     rated?: boolean;
     /**
+     * How many games the account is known to have (from `LichessProfile.gameCount`).
+     * The progress denominator. When absent the read cap is used instead, which
+     * makes the bar stop short for every account smaller than the cap.
+     */
+    expected?: number | null;
+    /**
      * The account is known to be closed (from its profile). A 404 on the games
      * endpoint then means "closed", not "no such handle", and saying so is the
      * difference between a useful message and a wrong one.
@@ -679,6 +822,7 @@ export async function fetchAllGames(
     maxGames = MAX_GAMES,
     perfType,
     rated = true,
+    expected = null,
     disabledHint = false,
   } = opts;
 
@@ -705,11 +849,62 @@ export async function fetchAllGames(
   }
 
   const url = `${API}/games/user/${encodeURIComponent(user)}?${params.join('&')}`;
-  report('Reading your Lichess games…', null, 0);
 
-  let text: string;
+  /*
+   * THE DENOMINATOR IS THE ACCOUNT'S OWN COUNT, NOT THE READ CAP.
+   *
+   * The fraction used to be `read / maxGames` with maxGames = 4000, so an
+   * account with 400 games could never pass 10% and then jumped to full — the
+   * bar looked broken twice over. When the profile has told us how many rated
+   * games exist, that is the honest total; the cap only wins when the account is
+   * bigger than we will ever read.
+   */
+  const denominator = expected != null && expected > 0 ? Math.min(expected, maxGames) : maxGames;
+
+  /*
+   * Indeterminate until the first lines land: the request is open but no game
+   * has been read yet, so there is no fraction to report and the bar should
+   * show as running rather than as a hard 0%.
+   */
+  report('Reading your Lichess games...', null, 0);
+
+  const out: LichessGame[] = [];
+  let unreadable = 0;
+  let lastReported = 0;
+
+  const note = (games: number) => {
+    report(
+      `Reading your Lichess games... (${games.toLocaleString()} read)`,
+      denominator > 0 ? Math.min(0.99, games / denominator) : null,
+      games,
+    );
+  };
+
   try {
-    text = await fetchText(url, signal, 'application/x-ndjson', GAMES_TIMEOUT_MS);
+    await readNdjsonLines(url, signal, 'application/x-ndjson', GAMES_TIMEOUT_MS, (line) => {
+      if (out.length >= maxGames) return;
+      let raw: Record<string, any>;
+      try {
+        raw = JSON.parse(line) as Record<string, any>;
+      } catch {
+        unreadable++;
+        return;
+      }
+      const game = toGame(raw, user);
+      if (!game) return;
+      out.push(game);
+      /*
+       * EVERY FEW LINES, NOT EVERY TWENTY GAMES.
+       *
+       * Twenty was tuned for a buffered read, where the reports all landed at
+       * once anyway. Now that the body streams in, a report every five games is
+       * free and keeps the bar (and the "N read" text) moving on a slow link.
+       */
+      if (out.length - lastReported >= 5 || out.length === denominator) {
+        lastReported = out.length;
+        note(out.length);
+      }
+    });
   } catch (err) {
     if (err instanceof LichessError && err.kind === 'not-found') {
       throw disabledHint
@@ -717,31 +912,6 @@ export async function fetchAllGames(
         : new LichessError('That Lichess username does not exist.', 'not-found');
     }
     throw err;
-  }
-
-  const lines = text.split(/\r?\n/).filter((line) => line.trim().length > 0);
-  const out: LichessGame[] = [];
-  let unreadable = 0;
-
-  for (const line of lines) {
-    if (signal?.aborted) throw new LichessError('Fetch cancelled.', 'aborted');
-    let raw: Record<string, any>;
-    try {
-      raw = JSON.parse(line) as Record<string, any>;
-    } catch {
-      unreadable++;
-      continue;
-    }
-    const game = toGame(raw, user);
-    if (game) out.push(game);
-    if (out.length > 0 && out.length % 20 === 0) {
-      report(
-        `Reading your Lichess games… (${out.length.toLocaleString()} read)`,
-        maxGames > 0 ? Math.min(0.99, out.length / maxGames) : null,
-        out.length,
-      );
-    }
-    if (out.length >= maxGames) break;
   }
 
   if (unreadable > 0 && out.length === 0) {

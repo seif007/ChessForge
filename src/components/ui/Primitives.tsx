@@ -7,13 +7,15 @@
  * …) so the screens read close to the web version without a styling engine.
  */
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   View,
   Text,
   Pressable,
   StyleSheet,
   ActivityIndicator,
+  Animated,
+  Easing,
   type StyleProp,
   type ViewStyle,
   type TextStyle,
@@ -128,6 +130,7 @@ export function Bar({
   color,
   height = 6,
   trackColor,
+  indeterminate = false,
   style,
 }: {
   /** 0..1 */
@@ -135,9 +138,37 @@ export function Bar({
   color?: string;
   height?: number;
   trackColor?: string;
+  /**
+   * True when the work CANNOT say how far along it is — an engine booting, a
+   * body being read before the first line arrives, a mining pass over an
+   * unknown amount of work. The fill is replaced by a band sliding across the
+   * track, so a phase with no percentage reads as running instead of as a bar
+   * that has stopped five percent in.
+   */
+  indeterminate?: boolean;
   style?: StyleProp<ViewStyle>;
 }) {
   const c = color ?? colors.primary;
+  const slide = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (!indeterminate) return;
+    const loop = Animated.loop(
+      Animated.timing(slide, {
+        toValue: 1,
+        duration: 1200,
+        easing: Easing.inOut(Easing.ease),
+        // `left` is a layout prop, so the JS driver is required here.
+        useNativeDriver: false,
+      }),
+    );
+    loop.start();
+    return () => {
+      loop.stop();
+      slide.setValue(0);
+    };
+  }, [indeterminate, slide]);
+
   return (
     <View
       style={[
@@ -150,14 +181,28 @@ export function Bar({
         style,
       ]}
     >
-      <View
-        style={{
-          height: '100%',
-          width: `${Math.max(0, Math.min(100, pct * 100))}%`,
-          borderRadius: 999,
-          backgroundColor: c,
-        }}
-      />
+      {indeterminate ? (
+        <Animated.View
+          style={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            width: '38%',
+            borderRadius: 999,
+            backgroundColor: c,
+            left: slide.interpolate({ inputRange: [0, 1], outputRange: ['-38%', '100%'] }),
+          }}
+        />
+      ) : (
+        <View
+          style={{
+            height: '100%',
+            width: `${Math.max(0, Math.min(100, pct * 100))}%`,
+            borderRadius: 999,
+            backgroundColor: c,
+          }}
+        />
+      )}
     </View>
   );
 }

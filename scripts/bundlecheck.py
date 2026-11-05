@@ -237,9 +237,16 @@ DEFAULT_NEEDLES = [
     # minifier keeps it verbatim.
     "This is the move you chose in your own game",
     "ChessForge would take",
-    # ...and the Profile copy that spells the unlock thresholds out in full, which is
-    # the one place all five middle names appear together on screen.
-    "Levels unlock as mastery grows",
+    # 2026-11-05: the puzzle-mining phase of an engine scan. It shares the Analyse
+    # bar with the per-game count, so it is the one string that proves the scan still
+    # tells the user what it is doing while it mines — the phase that used to read as
+    # a stalled bar. Straight ASCII, and the static head of a template literal in
+    # `scanPlan.ts`, so the minifier keeps it verbatim.
+    #
+    # (The former "Levels unlock as mastery grows" needle was removed here: the
+    # ProfileScreen legend it named was deleted with the Lichess-only refactor, so the
+    # needle could never be satisfied and every build refused at GATE 1b.)
+    "Mining your games.",
     # 2026-10-02: the four puzzle/endgame DIFFICULTY bands, renamed from chess strength
     # titles to warm-up / steady / sharp / relentless, plus the light default.
     #

@@ -204,6 +204,7 @@ export async function fetchLichessBotGames(
       maxGames,
       perfType: perfTypeFor(timeClass),
       rated: true,
+      expected: profile.gameCount,
       disabledHint: profile.disabled,
       onProgress: (p) =>
         onProgress({
