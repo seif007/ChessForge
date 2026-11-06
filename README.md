@@ -439,6 +439,8 @@ on every run so the exemption is visible rather than silent.
 
 ## Licence
 
-See [`LICENSE`](LICENSE). Stockfish is bundled under **GPL-3.0**; its licence
-text and provenance are documented in
+ChessForge's own source is MIT — see [`LICENSE`](LICENSE). The bundled
+**Stockfish** engine is **GPL-3.0**; its licence text, provenance and the
+corresponding-source offer are in
+[`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md) and
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#engine-licensing).

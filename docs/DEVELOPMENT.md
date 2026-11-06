@@ -370,7 +370,7 @@ What is left is one unavoidable exception: **the gate's own file contains the wo
 A detector that does not hold its needle cannot detect, so it excludes itself by name — and it prints
 how many times it does so on every run, so the exemption is counted rather than trusted.
 
-**One trap worth knowing:** `C:\Users\seifg\Downloads\ChessForge\chessforge` is a
+**One trap worth knowing:** the checkout's absolute path is a
 *directory*, not a name. The case-preserving rewrite broke it inside
 `scripts/audit-expo-versions.py` and `.bench/harness.html`, and nothing noticed
 because a script with a bad path only fails when it is next run. GATE 1h caught
@@ -503,7 +503,7 @@ app directory). It checks, and must pass all of:
 Run it with the interpreter that has `python-chess` available:
 
 ```bash
-PYTHONPATH="/c/Users/seifg/.workbuddy-ai/binaries/python/pylibs" \
+PYTHONPATH="$HOME/.workbuddy-ai/binaries/python/pylibs" \
   python ../.tmp-verify/verify_repertoire.py chessforge/src/data/ruy-lopez.json
 ```
 
@@ -526,7 +526,7 @@ The managed interpreter has no packages of its own. Set `PYTHONPATH` to the
 project's library directory (POSIX form, `;` separator on Windows):
 
 ```
-/c/Users/seifg/.workbuddy-ai/binaries/python/pylibs
+$HOME/.workbuddy-ai/binaries/python/pylibs
 ```
 
 ---

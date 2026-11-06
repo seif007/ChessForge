@@ -9,7 +9,7 @@ import json
 import os
 import re
 
-ROOT = r"C:\Users\seifg\Downloads\ChessForge\chessforge"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def read_json(path):

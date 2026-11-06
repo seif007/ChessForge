@@ -552,6 +552,11 @@ this application's own source. The upstream project is at
 that build; `stockfish-18-lite-single.wasm` is the compiled engine binary. Both
 are committed so a fresh clone builds without network access.
 
+The full GPL-3.0 text ships at
+[`assets/engine/LICENSE-GPL-3.0.txt`](../assets/engine/LICENSE-GPL-3.0.txt), and
+the corresponding-source offer is in
+[`THIRD-PARTY-NOTICES.md`](../THIRD-PARTY-NOTICES.md).
+
 ---
 
 ## Known constraints

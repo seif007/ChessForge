@@ -41,8 +41,8 @@ set -uo pipefail
 # ---------------------------------------------------------------------------
 # THIS SCRIPT MUST RUN UNDER GIT BASH, NOT WSL.
 #
-# `bash` on this machine resolves to C:\Users\seifg\AppData\Local\Microsoft\WindowsApps\
-# bash.exe, which is the WSL launcher. So the obvious `bash scripts/build-apk.sh` runs the
+# `bash` on this machine resolves to the Microsoft Store WSL launcher under
+# %LOCALAPPDATA%\Microsoft\WindowsApps\bash.exe. So the obvious `bash scripts/build-apk.sh` runs the
 # whole release build inside WSL, and every Windows tool it touches then misbehaves in a
 # different way:
 #
@@ -521,7 +521,7 @@ echo "--- checking repertoire freshness ---"
 # The interpreter is a Windows build, so hand it a Windows path — a Git-Bash
 # `/c/...` path is resolved relative to the current drive and becomes
 # `C:\c\...`, which does not exist.
-PY_GATE="/c/Users/seifg/.workbuddy-ai/binaries/python/versions/3.13.12/python.exe"
+PY_GATE="${HOME}/.workbuddy-ai/binaries/python/versions/3.13.12/python.exe"
 if [ ! -x "$PY_GATE" ]; then PY_GATE="$(command -v python || command -v python3 || true)"; fi
 if [ -z "$PY_GATE" ]; then
   echo "*** REFUSING TO BUILD: no Python interpreter found to run the freshness gate. ***"

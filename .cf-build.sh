@@ -8,7 +8,7 @@ export PATH="/c/Program Files/Microsoft/jdk-21.0.12.101-hotspot/bin:/c/AndroidSD
 unset NODE_OPTIONS
 unset REACT_NATIVE_NODE_ARGS
 
-ROOT="/c/Users/seifg/Downloads/ChessForge/chessforge"
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT/android" || exit 1
 
 STAMP=$(date +%Y%m%d-%H%M%S)
