@@ -101,9 +101,9 @@ ok(!hasPersonalContact(README), 'README.md publishes no personal contact address
 ok(!hasPersonalContact(PRIVACY), 'PRIVACY.md publishes no personal contact address');
 ok(/##\s*Contact/i.test(PRIVACY), 'the notice has a Contact section to find it in');
 ok(/public issue tracker/i.test(README),
-   'README.md states the contact to add at the public release');
-ok(/private/i.test(README) && /MIT/i.test(README),
-   'and says why the contact is deferred (private now, MIT on release)');
+   'README.md points at the public issue tracker (now live)');
+ok(/MIT/i.test(README) && /public/i.test(README),
+   'and states that the repository is public under MIT');
 
 /*
  * CONTROL — a notice carrying an address must fail the same check. This is the

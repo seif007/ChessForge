@@ -53,11 +53,10 @@ device.
 
 ## Contact
 
-The repository is private until the first public release, so the issue tracker
-is not reachable yet. Once it is public under MIT, privacy questions can be
-raised through the public issue tracker. No personal contact address is
-published before then. The Lichess request User-Agent is
-`ChessForge/1.0 (Android)` and carries no personal contact.
+The repository is public under MIT, so privacy questions can be raised through
+the public issue tracker at <https://github.com/seif007/ChessForge/issues>.
+The Lichess request User-Agent is `ChessForge/1.0 (Android)` and carries no
+personal contact.
 
 ## Independence
 

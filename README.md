@@ -6,15 +6,17 @@ opening repertoire trainer, a spaced-repetition study system, tactical puzzles,
 endgame drills, game analysis, a grounded on-device coach, and bots built from
 public game archives in one offline-first app.
 
-This is a personal/private project. The app is the `chessforge/` React Native
+This is a personal project. The app is the `chessforge/` React Native
 project in this repository. It is a native port of an earlier Next.js web
 prototype, which is no longer part of this repository.
 
-**Release status.** The repository stays private until the app is finished,
-then goes public under MIT. The Lichess client identifies itself as
-`ChessForge/1.0 (Android)` in `src/lib/lichess.ts`; no personal contact address
-is embedded. When the repository is public, the public issue tracker can be
-added to the User-Agent and the privacy notice.
+**Release status.** The repository is public under MIT, and a release-signed
+sideload APK is published on the
+[v1.0.0 release page](https://github.com/seif007/ChessForge/releases/tag/v1.0.0).
+The Lichess client identifies itself as `ChessForge/1.0 (Android)` in
+`src/lib/lichess.ts`; no personal contact address is embedded. Bugs and privacy
+questions go to the
+[public issue tracker](https://github.com/seif007/ChessForge/issues).
 
 `.bench/ua.contact.test.mjs` guards that identity: it fails if a personal email
 address is put back into the User-Agent or the privacy notice.
