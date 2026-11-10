@@ -411,23 +411,6 @@ material.
 
 ---
 
-## Naming
-
-The app is **ChessForge** everywhere: the launcher label, the URL scheme, the
-repository, the directory, the Expo slug, the npm package, the SQLite filename, the
-storage-key namespace and the Android applicationId. Renaming the last three costs
-the existing local data — the app opens with a fresh database, and the build is a
-new application id rather than an upgrade. That was a deliberate choice, and the
-reasoning is in [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).
-
-The previous brand name appears nowhere in this repository — not in code, not in
-comments, not in the docs, anywhere. Gate 1h enforces that and fails the build on a
-single occurrence. The only place the word still exists is inside that gate's own
-source, which has to contain it in order to search for it; the gate prints the count
-on every run so the exemption is visible rather than silent.
-
----
-
 ## Documentation
 
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — engine bridge, data model, coach,
