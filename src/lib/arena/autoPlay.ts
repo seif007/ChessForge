@@ -24,6 +24,7 @@ import { weightsFromMimicry } from '@/lib/bots/mimic';
 import { botMoveFor, botShouldResign } from '@/lib/bots/play';
 import { arenaPgn, outcomeFromChess, replayArenaGame } from './game';
 import type { ArenaOutcome } from './game';
+import { isBotOnlyGame } from './pairing';
 import { saveTournamentGameResult } from './store';
 import type { ArenaGame, ArenaMove, ArenaTournament } from './types';
 
@@ -32,14 +33,6 @@ export const SIM_MOVETIME_MS = 320;
 
 /** Hard stop so a degenerate position cannot spin forever. */
 export const SIM_MAX_PLIES = 300;
-
-/** True when both sides of a game are bots (a bye is not a bot game). */
-export function isBotOnlyGame(tournament: ArenaTournament, game: ArenaGame): boolean {
-  if (!game.blackId) return false;
-  const white = tournament.participants.find((p) => p.id === game.whiteId);
-  const black = tournament.participants.find((p) => p.id === game.blackId);
-  return !!white?.bot && !!black?.bot;
-}
 
 function nameOf(tournament: ArenaTournament, id: string | null): string {
   if (!id) return 'Bot';

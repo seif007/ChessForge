@@ -416,6 +416,21 @@ export function nextPendingGame(tournament: ArenaTournament): ArenaGame | null {
   return pending[0] ?? null;
 }
 
+/** True when both sides of a game are bots. A bye (`blackId` null) is not a bot game. */
+export function isBotOnlyGame(tournament: ArenaTournament, game: ArenaGame): boolean {
+  if (!game.blackId) return false;
+  const white = tournament.participants.find((p) => p.id === game.whiteId);
+  const black = tournament.participants.find((p) => p.id === game.blackId);
+  return !!white?.bot && !!black?.bot;
+}
+
+/** The bot-versus-bot boards of `round` that have not finished yet. */
+export function pendingBotOnlyGames(tournament: ArenaTournament, round: number): ArenaGame[] {
+  return tournament.games.filter(
+    (g) => g.round === round && g.status !== 'done' && isBotOnlyGame(tournament, g),
+  );
+}
+
 /** Points, Buchholz, Sonneborn-Berger and a transparent performance estimate. */
 export function computeStandings(tournament: ArenaTournament): ArenaStanding[] {
   const rows = new Map<string, ArenaStanding>();

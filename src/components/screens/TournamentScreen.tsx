@@ -18,8 +18,15 @@ import { colors, fonts, radii, themedStyles } from '@/theme/tokens';
 import { ARENA_FORMAT_LABEL, ARENA_MODE_LABEL, resultLabel } from '@/lib/arena/labels';
 import { playTournamentSound } from '@/lib/sounds';
 import { useAppStore } from '@/lib/store';
-import { championTiebreakNote, computeStandings, nextPendingGame, roundComplete } from '@/lib/arena/pairing';
-import { isBotOnlyGame, simulateBotGame } from '@/lib/arena/autoPlay';
+import {
+  championTiebreakNote,
+  computeStandings,
+  isBotOnlyGame,
+  nextPendingGame,
+  pendingBotOnlyGames,
+  roundComplete,
+} from '@/lib/arena/pairing';
+import { simulateBotGame } from '@/lib/arena/autoPlay';
 import {
   advanceTournamentAndSave,
   loadTournament,
@@ -195,6 +202,10 @@ export function TournamentScreen({
   /** Games we already tried, so a failing simulation cannot retry forever. */
   const simTried = useRef<Set<string>>(new Set());
   const simRunning = useRef(false);
+  /** Which round's board and results the list shows; 'all' keeps the whole schedule. */
+  const [viewRound, setViewRound] = useState<number | 'all'>('all');
+  /** Bumped when a board cannot be played, so the pass moves on to the next one. */
+  const [simTick, setSimTick] = useState(0);
 
   /*
    * THE ARRIVAL. Entering a tournament is an event, and the owner asked for the
@@ -221,6 +232,14 @@ export function TournamentScreen({
     [tournament],
   );
   const next = tournament ? nextPendingGame(tournament) : null;
+  /*
+   * What to offer next. The human's own pairing is the only thing to "play"; a
+   * bot-only board is never the user's job — it is played for them — so it must
+   * not turn the card into a "watch this" prompt. It stays in the list below,
+   * where any finished or pending board can be opened.
+   */
+  const nextIsYours = !!(tournament && next && !isBotOnlyGame(tournament, next));
+  const myNext = nextIsYours ? next : null;
   const done = tournament?.status === 'completed';
   const draft = tournament?.status === 'draft';
   const roundDone = tournament ? roundComplete(tournament, tournament.currentRound) : false;
@@ -284,7 +303,8 @@ export function TournamentScreen({
   }, [autoStart, onOpenGame, tournament]);
 
   /*
-   * THE OTHER BOARDS PLAY THEMSELVES — ONE AT A TIME, IN THE BACKGROUND.
+   * THE OTHER BOARDS PLAY THEMSELVES — ONE AT A TIME, IN THE BACKGROUND, IN EVERY
+   * TOURNAMENT.
    *
    * The owner: *"the user shouldnt stop and watch games between bots. he plays
    * his games and gets the results of other bots in the page, and if he want to
@@ -292,41 +312,77 @@ export function TournamentScreen({
    * it"*. So each pass simulates ONE pending bot-only board, saves it, and
    * reloads; the reload re-runs this effect for the next board. A finished board
    * stays in the games list and can be opened to watch at any time.
+   *
+   * A bot championship runs the same pass, so its boards are played out here too:
+   * the results are simply there, and any of them still opens as a replay.
    */
   useEffect(() => {
-    if (!tournament || tournament.status !== 'active' || tournament.mode !== 'human') return;
+    if (!tournament || tournament.status !== 'active') return;
     if (simRunning.current) return;
-    const game = tournament.games.find((g) =>
-      g.round === tournament.currentRound
-      && g.status !== 'done'
-      && !!g.blackId
-      && isBotOnlyGame(tournament, g)
-      && !simTried.current.has(g.id));
+    const game = pendingBotOnlyGames(tournament, tournament.currentRound)
+      .find((g) => !simTried.current.has(g.id));
     if (!game) return;
 
     simRunning.current = true;
-    simTried.current.add(game.id);
     let alive = true;
     const white = tournament.participants.find((p) => p.id === game.whiteId)?.name ?? 'Bot';
     const black = tournament.participants.find((p) => p.id === game.blackId)?.name ?? 'Bot';
     setSimulating(`${white} vs ${black}`);
     void (async () => {
       const played = await simulateBotGame(tournament, game).catch(() => false);
-      const fresh = await loadTournament(tournament.id);
       simRunning.current = false;
       if (!alive) return;
       setSimulating(null);
-      if (played && fresh) setTournament(fresh);
+      if (played) {
+        simTried.current.delete(game.id);
+        const fresh = await loadTournament(tournament.id);
+        if (fresh && alive) setTournament(fresh);
+        return;
+      }
+      /*
+       * The engine could not play this board. Remember it so this pass moves on to
+       * the rest rather than spinning on the same one, and leave it pending: it can
+       * still be opened, and drawing the round retries it once more.
+       */
+      simTried.current.add(game.id);
+      setSimTick((n) => n + 1);
     })();
     return () => {
       alive = false;
       simRunning.current = false;
     };
-  }, [tournament]);
+  }, [simTick, tournament]);
+
+  /*
+   * Close the round before drawing the next one. The background pass above usually
+   * gets there first; this is the guarantee. Drawing the round plays out whatever
+   * bot-only boards are still pending — fast, with nobody needing to watch them —
+   * so every round closes with real results.
+   */
+  const completeBotBoards = useCallback(async () => {
+    /*
+     * Hold the background pass off while this runs: both would otherwise pick the
+     * same pending board and play it twice.
+     */
+    simRunning.current = true;
+    try {
+      for (let guard = 0; guard < 40; guard++) {
+        const fresh = await loadTournament(tournamentId);
+        if (!fresh || fresh.status !== 'active') return;
+        const pending = pendingBotOnlyGames(fresh, fresh.currentRound)[0];
+        if (!pending) return;
+        const played = await simulateBotGame(fresh, pending).catch(() => false);
+        if (!played) return;
+      }
+    } finally {
+      simRunning.current = false;
+    }
+  }, [tournamentId]);
 
   const advance = useCallback(async () => {
     setAdvancing(true);
     try {
+      await completeBotBoards();
       const data = await advanceTournamentAndSave(tournamentId);
       const t = data.tournaments.find((x) => x.id === tournamentId) ?? null;
       setTournament(t);
@@ -335,7 +391,7 @@ export function TournamentScreen({
     } finally {
       setAdvancing(false);
     }
-  }, [tournamentId]);
+  }, [completeBotBoards, tournamentId]);
 
   const editTime: ArenaTimeControl = useMemo(() => {
     if (editTimeId !== 'custom') return timeControlById(editTimeId);
@@ -513,65 +569,67 @@ export function TournamentScreen({
               <Text style={styles.nextLabel}>
                 {roundDone
                   ? 'Round complete'
-                  : next?.armageddon
+                  : myNext?.armageddon
                     ? `Armageddon tiebreak · round ${tournament.currentRound}`
-                    : `Next game · round ${tournament.currentRound}`}
+                    : myNext
+                      ? `Next game · round ${tournament.currentRound}`
+                      : 'The other boards are playing'}
               </Text>
-              {next?.armageddon ? <Chip text="ARMAGEDDON" color={colors.gold} /> : null}
+              {myNext?.armageddon ? <Chip text="ARMAGEDDON" color={colors.gold} /> : null}
               <Chip text={`${played}/${total} games`} />
             </View>
-            {next?.armageddon ? (
+            {myNext?.armageddon ? (
               <Text style={styles.note}>
                 The match is level. Black advances on a draw; White has the longer clock.
               </Text>
             ) : null}
-            {next ? (
+            {myNext ? (
               <>
                 <View style={styles.matchup}>
                   <View style={styles.side}>
                     <Text style={styles.sideColor}>WHITE</Text>
-                    <Text style={styles.sideName} numberOfLines={1}>{nameOf(tournament, next.whiteId)}</Text>
+                    <Text style={styles.sideName} numberOfLines={1}>{nameOf(tournament, myNext.whiteId)}</Text>
                   </View>
                   <Text style={styles.vs}>vs</Text>
                   <View style={[styles.side, { alignItems: 'flex-end' }]}>
                     <Text style={styles.sideColor}>BLACK</Text>
-                    <Text style={styles.sideName} numberOfLines={1}>{nameOf(tournament, next.blackId)}</Text>
+                    <Text style={styles.sideName} numberOfLines={1}>{nameOf(tournament, myNext.blackId)}</Text>
                   </View>
                 </View>
                 <Btn
-                  label={
-                    next.armageddon
-                      ? 'Play the tiebreak'
-                      : tournament.mode === 'human' && (next.blackId === 'you' || next.whiteId === 'you')
-                        ? 'Play this game'
-                        : 'Watch this game'
-                  }
+                  label={myNext.armageddon ? 'Play the tiebreak' : 'Play this game'}
                   variant="gold"
-                  onPress={() => onOpenGame(next.id)}
+                  onPress={() => onOpenGame(myNext.id)}
                 />
                 <Text style={styles.note}>
-                  {next.armageddon
+                  {myNext.armageddon
                     ? 'Armageddon'
                     : `${tournament.timeControl.label} · ${tournament.rated ? 'Rated ChessForge game' : 'Unrated'}`}
-                  {next.leg ? ` · leg ${next.leg} of ${tournament.knockoutLegs ?? 1}` : ''}
+                  {myNext.leg ? ` · leg ${myNext.leg} of ${tournament.knockoutLegs ?? 1}` : ''}
                 </Text>
               </>
             ) : (
               <>
                 <Text style={styles.roundDoneTitle}>
-                  {finalRound ? 'All scheduled games are finished.' : 'All games in this round are finished.'}
+                  {roundDone
+                    ? finalRound ? 'All scheduled games are finished.' : 'All games in this round are finished.'
+                    : simulating
+                      ? `Simulating ${simulating}`
+                      : 'The other boards still have to play.'}
                 </Text>
                 <Text style={styles.note}>
-                  {finalRound
-                    ? 'Finish the tournament to crown the champion.'
-                    : tournament.format === 'round-robin' || tournament.format === 'double-round-robin'
-                      ? 'Open the next scheduled round.'
-                      : 'Draw the next round from the current standings.'}
+                  {roundDone
+                    ? finalRound
+                      ? 'Finish the tournament to crown the champion.'
+                      : tournament.format === 'round-robin' || tournament.format === 'double-round-robin'
+                        ? 'Open the next scheduled round.'
+                        : 'Draw the next round from the current standings.'
+                    : 'Drawing the next round plays the remaining boards out and records their results.'}
                 </Text>
                 <Btn
                   label={
                     advancing
-                      ? finalRound ? 'Finishing…' : 'Drawing…'
+                      ? finalRound ? 'Finishing...' : 'Drawing...'
                       : finalRound ? 'Finish tournament' : 'Draw next round'
                   }
                   variant="gold"
@@ -638,7 +696,39 @@ export function TournamentScreen({
               <Text style={styles.sectionTitle}>Pairings & games</Text>
               <Text style={styles.sectionMeta}>{total} games</Text>
             </View>
-            {allRounds.map((round) => {
+            {/*
+             * ANY ROUND, ONE TAP. Every round keeps its pairings and scores, so the
+             * results of any of them can be read back; the picker just saves
+             * scrolling a nine-round schedule to find one.
+             */}
+            {allRounds.length > 1 ? (
+              <ScrollView
+                horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={styles.roundPicker}
+              >
+                <Pressable
+                  onPress={() => setViewRound('all')}
+                  style={[styles.roundChip, viewRound === 'all' ? styles.roundChipOn : null]}
+                >
+                  <Text style={[styles.roundChipText, viewRound === 'all' ? styles.roundChipTextOn : null]}>
+                    All
+                  </Text>
+                </Pressable>
+                {[...allRounds].sort((a, b) => a - b).map((round) => (
+                  <Pressable
+                    key={round}
+                    onPress={() => setViewRound(round)}
+                    style={[styles.roundChip, viewRound === round ? styles.roundChipOn : null]}
+                  >
+                    <Text style={[styles.roundChipText, viewRound === round ? styles.roundChipTextOn : null]}>
+                      Round {round}
+                    </Text>
+                  </Pressable>
+                ))}
+              </ScrollView>
+            ) : null}
+            {allRounds.filter((round) => viewRound === 'all' || round === viewRound).map((round) => {
               const games = tournament.games
                 .filter((g) => g.round === round)
                 .sort((a, b) => a.board - b.board);
@@ -939,6 +1029,16 @@ const styles = themedStyles(() => ({
   roundBlock: { gap: 4, marginTop: 4 },
   roundHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 3 },
   roundTitle: { fontFamily: fonts.sansSemiBold, fontSize: 11, color: colors.foreground },
+  roundPicker: { flexDirection: 'row', gap: 8, paddingTop: 6, paddingBottom: 2 },
+  roundChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 999,
+    backgroundColor: colors.subtleFill,
+  },
+  roundChipOn: { backgroundColor: colors.primary },
+  roundChipText: { fontFamily: fonts.sansSemiBold, fontSize: 11, color: colors.mutedForeground },
+  roundChipTextOn: { color: colors.foreground },
   gameRow: {
     flexDirection: 'row',
     alignItems: 'center',

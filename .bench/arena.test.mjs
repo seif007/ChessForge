@@ -1022,7 +1022,7 @@ eq(custom.untimed, false, 'custom positive time is timed');
   );
   ok(/FORMAT_RULES/.test(sheetSrc) && /A level match goes to Armageddon/.test(sheetSrc),
     'the sheet says what the chosen format does');
-  ok(/next\?\.armageddon/.test(sheetSrc) && /Play the tiebreak/.test(sheetSrc),
+  ok(/myNext\?\.armageddon/.test(sheetSrc) && /Play the tiebreak/.test(sheetSrc),
     'a pending Armageddon is named and has its own play button');
 }
 
